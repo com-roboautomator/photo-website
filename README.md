@@ -7,8 +7,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Download node.js & other relevant packages
 - npx create-react-app my-app
 - npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+- npm install --save react-transition-group
+- npm install @material-ui/core
 
 full tutorial can be found at: https://www.smashingmagazine.com/2020/05/typescript-modern-react-projects-webpack-babel/
+
+## Full list of Material.ui Components
+
+https://material-ui.com/components/buttons/
 
 ## Available Scripts
 

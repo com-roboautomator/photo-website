@@ -1,49 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import { Route, Switch, useLocation, withRouter } from 'react-router-dom';
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Error from './pages/Error';
+import NavigationBar from './NavigationBar';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
+const ContextMenu = withRouter(props => <NavigationBar {...props} />)
 
 class App extends React.Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <main>
+        <div>
+          <ContextMenu />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/gallery" component={Gallery} exact />
+            <Route path="/about" component={About} exact />
+            <Route path="/contact" component={Contact} exact />
+            <Route path="/*" component={Error} />
+          </Switch>
+        </div>
+      </main>
     );
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
