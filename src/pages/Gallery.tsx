@@ -1,7 +1,6 @@
 import { WithStyles } from '@material-ui/core';
 import { createStyles, withStyles } from '@material-ui/styles';
 import React from 'react';
-import NavigationBar from '../NavigationBar';
 
 interface GalleryProps extends WithStyles<typeof styles> {
 }
@@ -14,7 +13,6 @@ class Gallery extends React.Component<GalleryProps>{
         return (
             <main>
                 <div>
-                    {/* <NavigationBar selectedPage={"Gallery"} /> */}
                     <div className={classes.container}>
                         Gallery
                     </div>

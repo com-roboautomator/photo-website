@@ -1,6 +1,5 @@
 import { createStyles, withStyles, WithStyles } from '@material-ui/styles';
 import React from 'react';
-import NavigationBar from '../NavigationBar';
 
 
 interface ContactProps extends WithStyles<typeof styles> {
@@ -14,9 +13,6 @@ class Contact extends React.Component<ContactProps> {
 
         return (
             <main>
-                <div>
-                    {/* <NavigationBar selectedPage={"Contact"} /> */}
-                </div>
                 <div className={classes.container}>
                     Contact
                 </div>

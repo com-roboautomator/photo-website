@@ -1,7 +1,5 @@
 import { createStyles, withStyles, WithStyles } from '@material-ui/styles';
 import React from 'react';
-import NavigationBar from '../NavigationBar';
-import banner from '../images/banner/About_Image_Banner.jpg'
 
 interface AboutProps extends WithStyles<typeof styles> {
 }
@@ -14,12 +12,6 @@ class About extends React.Component<AboutProps> {
 
             <main>
                 <div className={classes.container}>
-                    {/* <div className={classes.navBar}>
-                        <NavigationBar selectedPage={"About"} />
-                    </div> */}
-                    <div className={classes.banner}>
-                        <img src={banner} alt="test" width="100%" height="270" />
-                    </div>
                     <div className={classes.description}>
                         About
                     </div>
@@ -33,6 +25,8 @@ class About extends React.Component<AboutProps> {
 
 const styles = () => createStyles({
     container: {
+        zIndex: 0,
+        position: 'relative',
         // left: 0,
         // right: 0,
         // top: 0,
@@ -44,19 +38,10 @@ const styles = () => createStyles({
         // //padding: "70px",
         // fontsize: 120,
     },
-    navBar: {
-        position: 'relative',
-        zIndex: 99,
-    },
-    banner: {
-        position: 'relative',
-        width: "100%",
-        //backgroundColor: '#666666',
-        zIndex: 0,
-        //paddingTop: "5px",
 
-    },
     description: {
+        position: 'relative',
+        zIndex: 0,
         backgroundColor: '#999999'
     }
 })

@@ -1,6 +1,5 @@
 import { createStyles, WithStyles, withStyles } from "@material-ui/styles";
 import React from "react";
-import NavigationBar from "../NavigationBar";
 
 interface HomeProps extends WithStyles<typeof styles> {
 }
@@ -14,12 +13,11 @@ class Home extends React.Component<HomeProps>{
         return (
             <main>
 
-                <div>
-                {/* <NavigationBar selectedPage={"Home"} /> */}
+
                     <div className={classes.container}>
                         Home Page
                     </div>
-                </div>
+
 
             </main>
         );
