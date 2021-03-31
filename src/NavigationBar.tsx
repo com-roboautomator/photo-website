@@ -2,8 +2,8 @@ import { createStyles, WithStyles } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import Logo from "./images/Logo.png"
-import Button from './pages/components/NavigationMenuButton'
+import Button from './pages/components/NavigationMenuButton';
+import Logo from './pages/components/NavigationMenuLogo';
 
 interface NavigationBarProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
     selectedPage?: "Home" | "About" | "Contact" | "Gallery"
@@ -16,9 +16,7 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
 
         return (
             <div className={classes.container}>
-                <div className={classes.logo}>
-                    <img src={Logo} alt="" />
-                </div>
+                <Logo />
                 <div className={classes.items_container}>
                     <Button text="HOME" path="/" selected={(location === "/")} />
                     <Button text="GALLERY" path="/gallery" selected={(location === "/gallery")} />
@@ -45,10 +43,6 @@ const styles = () => createStyles({
     items_container: {
         display: 'flex',
         flexDirection: 'row',
-    },
-
-    logo: {
-        paddingLeft: '70px',
     },
 })
 

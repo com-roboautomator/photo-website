@@ -6,19 +6,16 @@ interface HomeProps extends WithStyles<typeof styles> {
 
 class Home extends React.Component<HomeProps>{
 
-
     render() {
         const classes = this.props.classes;
 
         return (
             <main>
-
-
-                    <div className={classes.container}>
-                        Home Page
+                <div className={classes.container}>
+                    <div className={classes.description}>
+                        HOME PAGE
                     </div>
-
-
+                </div>
             </main>
         );
     };
@@ -27,18 +24,20 @@ class Home extends React.Component<HomeProps>{
 
 const styles = () => createStyles({
     container: {
-        left: 0,
-        right: 0,
-        top: 80,
-        bottom: 0,
-        position: "absolute",
-        width: "100%",
-        //backgroundColor: '#666666',
-        textAlign: "center",
-        padding: "70px",
-        fontsize: 120,
+        zIndex: 0,
+        position: 'relative',
+    },
+
+    description: {
+        position: 'absolute',
+        width: '100%',
+        paddingTop: '5%',
+        fontSize: 30,
+        fontFamily: 'Open Sans',
+        textAlign: 'center',
+        alignContent: 'center',
+        zIndex: 0,
     }
 })
-
 
 export default withStyles(styles)(Home);

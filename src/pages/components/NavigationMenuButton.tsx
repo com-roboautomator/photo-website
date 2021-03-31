@@ -37,6 +37,7 @@ const styles = () => createStyles({
         fontfamily: "Open Sans",
         alignSelf: 'center',
         color: 'black',
+        fontWeight: "bold",
     },
     item_unselected: {
         fontSize: 16,

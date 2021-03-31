@@ -14,7 +14,9 @@ class Contact extends React.Component<ContactProps> {
         return (
             <main>
                 <div className={classes.container}>
-                    Contact
+                    <div className={classes.description}>
+                        CONTACT
+                    </div>
                 </div>
             </main>
         );
@@ -22,15 +24,19 @@ class Contact extends React.Component<ContactProps> {
 }
 const styles = () => createStyles({
     container: {
-        left: 0,
-        right: 0,
-        top: 80,
-        bottom: 0,
-        position: "absolute",
-        width: "100%",
-        //backgroundColor: '#666666',
-        textAlign: "center",
-        padding: "70px",
+        zIndex: 0,
+        position: 'relative',
+    },
+
+    description: {
+        position: 'absolute',
+        width: '100%',
+        paddingTop: '5%',
+        fontSize: 30,
+        fontFamily: 'Open Sans',
+        textAlign: 'center',
+        alignContent: 'center',
+        zIndex: 0,
     }
 })
 

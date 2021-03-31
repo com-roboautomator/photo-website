@@ -13,7 +13,7 @@ class About extends React.Component<AboutProps> {
             <main>
                 <div className={classes.container}>
                     <div className={classes.description}>
-                        About
+                        ABOUT
                     </div>
                 </div>
             </main>
@@ -27,22 +27,17 @@ const styles = () => createStyles({
     container: {
         zIndex: 0,
         position: 'relative',
-        // left: 0,
-        // right: 0,
-        // top: 0,
-        // bottom: 0,
-        // position: "absolute",
-        // width: "100%",
-        // //backgroundColor: '#666666',
-        // textAlign: "center",
-        // //padding: "70px",
-        // fontsize: 120,
     },
 
     description: {
-        position: 'relative',
+        position: 'absolute',
+        width: '100%',
+        paddingTop: '5%',
+        fontSize: 30,
+        fontFamily: 'Open Sans',
+        textAlign: 'center',
+        alignContent: 'center',
         zIndex: 0,
-        backgroundColor: '#999999'
     }
 })
 
