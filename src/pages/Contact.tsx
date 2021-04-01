@@ -2,9 +2,7 @@ import { createStyles, withStyles, WithStyles } from '@material-ui/styles';
 import React from 'react';
 
 
-interface ContactProps extends WithStyles<typeof styles> {
-    value: string;
-}
+interface ContactProps extends WithStyles<typeof styles> {}
 
 class Contact extends React.Component<ContactProps> {
 

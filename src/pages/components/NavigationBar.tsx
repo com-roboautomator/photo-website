@@ -5,8 +5,7 @@ import { RouteComponentProps } from "react-router-dom";
 import Button from './NavigationMenuButton';
 import Logo from './NavigationMenuLogo';
 
-interface NavigationBarProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
-}
+interface NavigationBarProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
 class NavigationBar extends React.Component<NavigationBarProps, any> {
 
@@ -19,7 +18,7 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
                 <Logo />
                 <div className={classes.items_container}>
                     <Button  text="HOME" path="/" selected={(location === "/")} />
-                    <Button  text="GALLERY" path="/gallery" selected={(location === "/gallery")} />
+                    <Button  text="GALLERY" path="/gallery/0" selected={(location.includes("/gallery"))} />
                     <Button  text="ABOUT" path="/about" selected={(location === "/about")} />
                     <Button  text="CONTACT" path="/contact" selected={(location === "/contact")} />
                 </div>

@@ -3,8 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoImage from "../../images/Logo.png"
 
-interface LogoProps extends WithStyles <typeof styles>{
-}
+interface LogoProps extends WithStyles <typeof styles>{}
 
 class NavigationMenuLogo extends React.Component <LogoProps>{
 

@@ -1,21 +1,21 @@
 import { WithStyles } from '@material-ui/core';
 import { createStyles, withStyles } from '@material-ui/styles';
 import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 
-interface GalleryProps extends WithStyles<typeof styles> {
-}
+interface GalleryProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
 class Gallery extends React.Component<GalleryProps>{
 
     render() {
         const classes = this.props.classes
-
+        const {id} = this.props.match.params
         return (
             <main>
                 <div>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            GALLERY
+                            GALLERY: {id}
                         </div>
                     </div>
                 </div>

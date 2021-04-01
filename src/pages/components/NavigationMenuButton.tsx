@@ -7,7 +7,6 @@ interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
     text: string
 }
 
-
 class NavigationMenuButton extends React.Component<NavigationMenuButtonProps>{
 
     render() {

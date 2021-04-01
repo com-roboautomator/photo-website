@@ -1,8 +1,7 @@
 import { createStyles, WithStyles, withStyles } from '@material-ui/styles';
 import React from 'react';
 
-interface ErrorProps extends WithStyles<typeof styles> {
-}
+interface ErrorProps extends WithStyles<typeof styles> {}
 
 class Error extends React.Component<ErrorProps> {
 
