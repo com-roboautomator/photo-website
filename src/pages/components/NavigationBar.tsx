@@ -2,14 +2,14 @@ import { createStyles, WithStyles } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import Button from './pages/components/NavigationMenuButton';
-import Logo from './pages/components/NavigationMenuLogo';
+import Button from './NavigationMenuButton';
+import Logo from './NavigationMenuLogo';
 
 interface NavigationBarProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
-    selectedPage?: "Home" | "About" | "Contact" | "Gallery"
 }
 
 class NavigationBar extends React.Component<NavigationBarProps, any> {
+
     render() {
         const classes = this.props.classes
         const location = this.props.location.pathname
@@ -18,10 +18,10 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
             <div className={classes.container}>
                 <Logo />
                 <div className={classes.items_container}>
-                    <Button text="HOME" path="/" selected={(location === "/")} />
-                    <Button text="GALLERY" path="/gallery" selected={(location === "/gallery")} />
-                    <Button text="ABOUT" path="/about" selected={(location === "/about")} />
-                    <Button text="CONTACT" path="/contact" selected={(location === "/contact")} />
+                    <Button  text="HOME" path="/" selected={(location === "/")} />
+                    <Button  text="GALLERY" path="/gallery" selected={(location === "/gallery")} />
+                    <Button  text="ABOUT" path="/about" selected={(location === "/about")} />
+                    <Button  text="CONTACT" path="/contact" selected={(location === "/contact")} />
                 </div>
             </div>
         );

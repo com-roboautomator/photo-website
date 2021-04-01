@@ -7,13 +7,19 @@ interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
     text: string
 }
 
+
 class NavigationMenuButton extends React.Component<NavigationMenuButtonProps>{
+
     render() {
         const classes = this.props.classes
+
         return (
             <div className={classes.wrapper}>
                 <div className={(this.props.selected) ? classes.line_selected : classes.line_unselected}>
-                    <Button href={this.props.path} className={(this.props.selected) ? classes.item_selected : classes.item_unselected}>
+                    <Button
+                        href={this.props.path}
+                        className={(this.props.selected) ? classes.item_selected : classes.item_unselected}
+                    >
                         {this.props.text}
                     </Button>
                 </div>
