@@ -1,12 +1,13 @@
-import { WithStyles } from '@material-ui/core';
-import { createStyles, withStyles } from '@material-ui/styles';
-import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import {WithStyles} from '@material-ui/core'
+import {createStyles, withStyles} from '@material-ui/styles'
+import React from 'react'
+import {RouteComponentProps} from 'react-router-dom'
 
-interface GalleryProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
+interface GalleryProps
+    extends WithStyles<typeof styles>,
+        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
-class Gallery extends React.Component<GalleryProps>{
-
+class Gallery extends React.Component<GalleryProps> {
     render() {
         const classes = this.props.classes
         const {imageId} = this.props.match.params
@@ -17,37 +18,36 @@ class Gallery extends React.Component<GalleryProps>{
                 <div>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            GALLERY 
+                            GALLERY
                             <p>
-                            {(imageId) ? "image id: " + imageId : "" } {(collectionId) ? "collection id: " + collectionId : ""}
+                                {imageId ? 'image id: ' + imageId : ''}{' '}
+                                {collectionId ? 'collection id: ' + collectionId : ''}
                             </p>
                         </div>
                     </div>
                 </div>
-
             </main>
-        );
-    };
-
+        )
+    }
 }
 
-const styles = () => createStyles({
-    container: {
-        zIndex: 0,
-        position: 'relative',
-    },
+const styles = () =>
+    createStyles({
+        container: {
+            zIndex: 0,
+            position: 'relative',
+        },
 
-    description: {
-        position: 'absolute',
-        width: '100%',
-        paddingTop: '5%',
-        fontSize: 30,
-        fontFamily: 'Open Sans',
-        textAlign: 'center',
-        alignContent: 'center',
-        zIndex: 0,
-    }
-})
+        description: {
+            position: 'absolute',
+            width: '100%',
+            paddingTop: '5%',
+            fontSize: 30,
+            fontFamily: 'Open Sans',
+            textAlign: 'center',
+            alignContent: 'center',
+            zIndex: 0,
+        },
+    })
 
-
-export default withStyles(styles)(Gallery);
+export default withStyles(styles)(Gallery)
