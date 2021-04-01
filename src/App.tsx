@@ -16,7 +16,9 @@ class App extends React.Component {
           <Route render={(props) => (<NavigationBar {...props} />)} />
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/gallery/:id" render={(props) => <Gallery {...props} />} />
+            <Route path="/gallery" component={Gallery} exact  />
+            <Route path="/gallery/image/:imageId" render={(props) => <Gallery {...props} />} />
+            <Route path="/gallery/collection/:collectionId" render={(props) => <Gallery {...props} />} />
             <Route path="/about" component={About} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/*" component={Error} />

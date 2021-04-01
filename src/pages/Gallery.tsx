@@ -9,13 +9,18 @@ class Gallery extends React.Component<GalleryProps>{
 
     render() {
         const classes = this.props.classes
-        const {id} = this.props.match.params
+        const {imageId} = this.props.match.params
+        const {collectionId} = this.props.match.params
+
         return (
             <main>
                 <div>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            GALLERY: {id}
+                            GALLERY 
+                            <p>
+                            {(imageId) ? "image id: " + imageId : "" } {(collectionId) ? "collection id: " + collectionId : ""}
+                            </p>
                         </div>
                     </div>
                 </div>

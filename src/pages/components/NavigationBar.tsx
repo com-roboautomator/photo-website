@@ -18,7 +18,7 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
                 <Logo />
                 <div className={classes.items_container}>
                     <Button  text="HOME" path="/" selected={(location === "/")} />
-                    <Button  text="GALLERY" path="/gallery/0" selected={(location.includes("/gallery"))} />
+                    <Button  text="GALLERY" path="/gallery" selected={(location.includes("/gallery"))} />
                     <Button  text="ABOUT" path="/about" selected={(location === "/about")} />
                     <Button  text="CONTACT" path="/contact" selected={(location === "/contact")} />
                 </div>
