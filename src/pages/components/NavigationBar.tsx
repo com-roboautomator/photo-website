@@ -15,17 +15,29 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
         const location = this.props.location.pathname
 
         return (
-            <div className={classes.container} data-testid={'NavBar'}>
+            <div className={classes.container} data-testid={'NavigationBar'}>
                 <Logo />
                 <div className={classes.items_container}>
-                    <Button text="HOME" path="/" selected={location === '/'} />
+                    <Button
+                        text="HOME"
+                        path="/"
+                        selected={location === '/'}
+                    />
                     <Button
                         text="GALLERY"
                         path="/gallery"
                         selected={location.includes('/gallery')}
                     />
-                    <Button text="ABOUT" path="/about" selected={location === '/about'} />
-                    <Button text="CONTACT" path="/contact" selected={location === '/contact'} />
+                    <Button
+                        text="ABOUT"
+                        path="/about"
+                        selected={location === '/about'}
+                    />
+                    <Button
+                        text="CONTACT"
+                        path="/contact"
+                        selected={location === '/contact'}
+                    />
                 </div>
             </div>
         )

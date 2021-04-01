@@ -9,7 +9,9 @@ class Error extends React.Component<ErrorProps> {
         return (
             <main>
                 <div className={classes.container}>
-                    <div className={classes.description}>404 - PAGE NOT FOUND</div>
+                    <div className={classes.description}>
+                        404 - PAGE NOT FOUND
+                    </div>
                 </div>
             </main>
         )

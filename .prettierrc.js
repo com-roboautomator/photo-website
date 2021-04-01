@@ -4,7 +4,7 @@ module.exports = {
      *
      * Default: 80
      */
-    printWidth: 100,
+    printWidth: 80,
 
     /**
      * Print spaces between brackets.

@@ -12,15 +12,20 @@ class NavigationMenuButton extends React.Component<NavigationMenuButtonProps> {
         const classes = this.props.classes
 
         return (
-            <div className={classes.wrapper}>
+            <div className={classes.wrapper} data-testid={`Button-${this.props.text}`}>
                 <div
                     className={
-                        this.props.selected ? classes.line_selected : classes.line_unselected
+                        this.props.selected
+                            ? classes.line_selected
+                            : classes.line_unselected
                     }>
                     <Button
                         href={this.props.path}
+                        data-testid={`Button-${this.props.text}-Button`}
                         className={
-                            this.props.selected ? classes.item_selected : classes.item_unselected
+                            this.props.selected
+                                ? classes.item_selected
+                                : classes.item_unselected
                         }>
                         {this.props.text}
                     </Button>

@@ -21,7 +21,9 @@ class Gallery extends React.Component<GalleryProps> {
                             GALLERY
                             <p>
                                 {imageId ? 'image id: ' + imageId : ''}{' '}
-                                {collectionId ? 'collection id: ' + collectionId : ''}
+                                {collectionId
+                                    ? 'collection id: ' + collectionId
+                                    : ''}
                             </p>
                         </div>
                     </div>
