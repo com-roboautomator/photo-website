@@ -15,7 +15,7 @@ class Gallery extends React.Component<GalleryProps> {
 
         return (
             <main>
-                <div>
+                <div data-testid={"GALLERY PAGE"}>
                     <div className={classes.container}>
                         <div className={classes.description}>
                             GALLERY

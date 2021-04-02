@@ -9,7 +9,7 @@ class Contact extends React.Component<ContactProps> {
 
         return (
             <main>
-                <div className={classes.container}>
+                <div data-testid={"CONTACT PAGE"} className={classes.container}>
                     <div className={classes.description}>CONTACT</div>
                 </div>
             </main>

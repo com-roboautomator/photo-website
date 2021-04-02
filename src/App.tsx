@@ -1,11 +1,11 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Error from './pages/Error'
-import NavigationBar from './pages/components/NavigationBar'
+import NavigationBar from './pages/components/navigation/NavigationBar'
 
 class App extends React.Component {
     render() {

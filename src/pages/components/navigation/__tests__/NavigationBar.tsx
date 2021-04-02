@@ -1,7 +1,7 @@
 import NavigationBar from '../NavigationBar'
 import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
-import {act, fireEvent, render} from '@testing-library/react'
+import {render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 
 describe('NavigationBar', () => {
@@ -43,8 +43,9 @@ describe('NavigationBar', () => {
 
         // Then
         expect(component.queryByTestId('Button-HOME')).toBeTruthy()
-        expect(component.getByTestId('Button-HOME-Button').firstChild?.textContent)
-            .toEqual('HOME')
+        expect(
+            component.getByTestId('Button-HOME-Button').firstChild?.textContent
+        ).toEqual('HOME')
     })
 
     it('should render Gallery button', () => {
@@ -58,8 +59,10 @@ describe('NavigationBar', () => {
 
         // Then
         expect(component.queryByTestId('Button-GALLERY')).toBeTruthy()
-        expect(component.getByTestId('Button-GALLERY-Button').firstChild?.textContent)
-            .toEqual('GALLERY')
+        expect(
+            component.getByTestId('Button-GALLERY-Button').firstChild
+                ?.textContent
+        ).toEqual('GALLERY')
     })
 
     it('should render About button', () => {
@@ -73,8 +76,9 @@ describe('NavigationBar', () => {
 
         // Then
         expect(component.queryByTestId('Button-ABOUT')).toBeTruthy()
-        expect(component.getByTestId('Button-ABOUT-Button').firstChild?.textContent)
-            .toEqual('ABOUT')
+        expect(
+            component.getByTestId('Button-ABOUT-Button').firstChild?.textContent
+        ).toEqual('ABOUT')
     })
 
     it('should render Contact button', () => {
@@ -88,7 +92,9 @@ describe('NavigationBar', () => {
 
         // Then
         expect(component.queryByTestId('Button-CONTACT')).toBeTruthy()
-        expect(component.getByTestId('Button-CONTACT-Button').firstChild?.textContent)
-            .toEqual('CONTACT')
+        expect(
+            component.getByTestId('Button-CONTACT-Button').firstChild
+                ?.textContent
+        ).toEqual('CONTACT')
     })
 })

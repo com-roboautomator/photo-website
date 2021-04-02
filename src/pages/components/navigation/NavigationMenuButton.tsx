@@ -1,4 +1,4 @@
-import {Button, createStyles, WithStyles, withStyles} from '@material-ui/core'
+import { Button, createStyles, WithStyles, withStyles } from '@material-ui/core'
 import React from 'react'
 
 interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
@@ -8,20 +8,24 @@ interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
 }
 
 class NavigationMenuButton extends React.Component<NavigationMenuButtonProps> {
+
     render() {
         const classes = this.props.classes
 
         return (
-            <div className={classes.wrapper} data-testid={`Button-${this.props.text}`}>
+            <div
+                className={classes.wrapper}
+                data-testid={`Button-${this.props.text}`}>
                 <div
+                    data-testid={`Button-${this.props.text}-Underline`}
                     className={
                         this.props.selected
                             ? classes.line_selected
                             : classes.line_unselected
                     }>
                     <Button
-                        href={this.props.path}
                         data-testid={`Button-${this.props.text}-Button`}
+                        href={this.props.path}
                         className={
                             this.props.selected
                                 ? classes.item_selected
