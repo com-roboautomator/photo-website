@@ -49,3 +49,20 @@ jobs:
       # Make production build
       - name: Build for production
         run: make build
+
+  deployment:
+    name: Package and Deploy
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      # Tags repository with build versions of code
+      - name: Tagging repository
+        run: |
+          git tag $(make current_version)
+          git push origin $(make current_version)
