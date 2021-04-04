@@ -1,17 +1,19 @@
-import {WithStyles} from '@material-ui/core'
-import {createStyles, withStyles} from '@material-ui/styles'
+import { WithStyles } from '@material-ui/core'
+import { createStyles, withStyles } from '@material-ui/styles'
 import React from 'react'
-import {RouteComponentProps} from 'react-router-dom'
+import { RouteComponentProps } from 'react-router-dom'
+import ImageSlider from './components/card/ImageSlider'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
-        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
+    React.PropsWithChildren<RouteComponentProps<any, any, unknown>> { }
 
-class Gallery extends React.Component<GalleryProps> {
+class Gallery extends React.Component<GalleryProps, any> {
+
     render() {
         const classes = this.props.classes
-        const {imageId} = this.props.match.params
-        const {collectionId} = this.props.match.params
+        const { imageId } = this.props.match.params
+        const { collectionId } = this.props.match.params
 
         return (
             <main>
@@ -25,6 +27,12 @@ class Gallery extends React.Component<GalleryProps> {
                                     ? 'collection id: ' + collectionId
                                     : ''}
                             </p>
+                            <div className={classes.slider}>
+                                <ImageSlider />
+                            </div>
+
+                            <div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,11 +45,11 @@ const styles = () =>
     createStyles({
         container: {
             zIndex: 0,
-            position: 'relative',
+            //position: 'relative',
         },
 
         description: {
-            position: 'absolute',
+            //position: 'absolute',
             width: '100%',
             paddingTop: '5%',
             fontSize: 30,
@@ -50,6 +58,14 @@ const styles = () =>
             alignContent: 'center',
             zIndex: 0,
         },
+
+        slider: {
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            overflowX: 'hidden',
+        },
+
     })
 
 export default withStyles(styles)(Gallery)
