@@ -1,4 +1,4 @@
-import { Button, createStyles, WithStyles, withStyles } from '@material-ui/core'
+import {Button, createStyles, WithStyles, withStyles} from '@material-ui/core'
 import React from 'react'
 
 interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
@@ -8,7 +8,6 @@ interface NavigationMenuButtonProps extends WithStyles<typeof styles> {
 }
 
 class NavigationMenuButton extends React.Component<NavigationMenuButtonProps> {
-
     render() {
         const classes = this.props.classes
 
