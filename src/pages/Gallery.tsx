@@ -1,27 +1,24 @@
-import { WithStyles } from '@material-ui/core'
-import { createStyles, withStyles } from '@material-ui/styles'
+import {WithStyles} from '@material-ui/core'
+import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
+import {RouteComponentProps} from 'react-router-dom'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
-    React.PropsWithChildren<RouteComponentProps<any, any, unknown>> { }
+        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
 class Gallery extends React.Component<GalleryProps, any> {
-
     render() {
         const classes = this.props.classes
-        const { imageId } = this.props.match.params
-        const { collectionId } = this.props.match.params
+        const {imageId} = this.props.match.params
+        const {collectionId} = this.props.match.params
 
         return (
             <main>
-                <div data-testid={"GALLERY PAGE"}>
+                <div data-testid={'GALLERY PAGE'}>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            <p className={classes.title}>
-                                GALLERY
-                            </p>
+                            <p className={classes.title}>GALLERY</p>
                             <p>
                                 {imageId ? 'image id: ' + imageId : ''}{' '}
                                 {collectionId
@@ -55,7 +52,6 @@ const styles = () =>
             fontFamily: 'Open-Sans-Regular',
             fontSize: 80,
         },
-
     })
 
 export default withStyles(styles)(Gallery)

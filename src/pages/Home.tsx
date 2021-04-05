@@ -1,15 +1,15 @@
-import { createStyles, WithStyles, withStyles } from '@material-ui/styles'
+import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
 
-interface HomeProps extends WithStyles<typeof styles> { }
+interface HomeProps extends WithStyles<typeof styles> {}
 
 class Home extends React.Component<HomeProps> {
     render() {
         const classes = this.props.classes
         return (
             <main>
-                <div data-testid={"HOME PAGE"} className={classes.container}>
+                <div data-testid={'HOME PAGE'} className={classes.container}>
                     <div>
                         <ImageSlider />
                     </div>

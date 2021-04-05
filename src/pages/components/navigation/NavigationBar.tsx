@@ -1,13 +1,13 @@
-import { createStyles, WithStyles } from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+import {createStyles, WithStyles} from '@material-ui/core'
+import {withStyles} from '@material-ui/styles'
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
+import {RouteComponentProps} from 'react-router-dom'
 import Button from './NavigationMenuButton'
 import Logo from './NavigationMenuLogo'
 
 interface NavigationBarProps
     extends WithStyles<typeof styles>,
-    React.PropsWithChildren<RouteComponentProps<any, any, unknown>> { }
+        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
 class NavigationBar extends React.Component<NavigationBarProps, any> {
     render() {
@@ -18,10 +18,7 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
             <div className={classes.container} data-testid={'NavigationBar'}>
                 <Logo />
                 <div className={classes.items_container}>
-                    <Button
-                        text="HOME"
-                        path="/"
-                        selected={location === '/'} />
+                    <Button text="HOME" path="/" selected={location === '/'} />
                     <Button
                         text="GALLERY"
                         path="/gallery"

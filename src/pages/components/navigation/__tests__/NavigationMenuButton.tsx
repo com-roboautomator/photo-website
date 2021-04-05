@@ -1,9 +1,8 @@
-import { render} from '@testing-library/react'
+import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Button from '../NavigationMenuButton'
 
 describe('NavigationMenuButton', () => {
-
     it('should render correctly when selected', () => {
         //When
         //Given
@@ -26,7 +25,6 @@ describe('NavigationMenuButton', () => {
                 .getByTestId('Button-Test-Underline')
                 .className.includes('line_selected')
         ).toBeTruthy()
-
     })
 
     it('should render correctly when unselected', () => {
