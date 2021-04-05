@@ -81,10 +81,7 @@ const styles = () =>
             opacity: '90%',
         },
         container: {
-            //border: '1px solid black',
-
             width: 350,
-            //height: 200,
             borderTopLeftRadius: '25px',
             borderTopRightRadius: '25px',
             borderBottomLeftRadius: '25px',
@@ -96,8 +93,6 @@ const styles = () =>
             borderTopRightRadius: '25px',
         },
         image_wrapper: {
-            //border: '1px solid black',
-
             position: 'relative',
             borderTopLeftRadius: '25px',
             borderTopRightRadius: '25px',
@@ -106,8 +101,6 @@ const styles = () =>
             flexDirection: 'row',
         },
         text_wrapper: {
-            //border: '1px solid black',
-
             position: 'relative',
             zIndex: 99,
             display: 'flex',
@@ -125,8 +118,6 @@ const styles = () =>
             alignSelf: 'center',
         },
         text: {
-            //border: '1px solid black',
-
             fontFamily: 'Open-Sans-Regular',
             fontStyle: 'normal',
             textAlign: 'left',
@@ -136,13 +127,10 @@ const styles = () =>
             alignSelf: 'center',
         },
         tag: {
-            //border: '1px solid black',
-
             position: 'relative',
             paddingLeft: '10px',
             paddingRight: '20px',
             width: '25%',
-            //height: '30px',
             alignSelf: 'center',
         },
     })

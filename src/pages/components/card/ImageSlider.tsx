@@ -97,24 +97,18 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 const styles = () =>
     createStyles({
         container: {
-            //border: '1px solid black',
-
             position: 'relative',
             display: 'flex',
             justifyContent: 'center',
             overflowX: 'hidden',
         },
         card_slider: {
-            //border: '1px solid black',
-
             position: 'relative',
             maxWidth: '370px',
             width: '370px',
             height: '270px',
         },
         button_wrapper: {
-            //border: '1px solid black',
-
             zIndex: 99,
             position: 'absolute',
             width: '100vw',
@@ -127,8 +121,6 @@ const styles = () =>
                 'linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)',
         },
         card_slider_wrapper: {
-            //border: '1px solid black',
-
             display: 'flex',
             position: 'absolute',
             margin: '10px',
