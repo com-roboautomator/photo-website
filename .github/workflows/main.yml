@@ -68,7 +68,7 @@ jobs:
     name: Package and Deploy
     needs: [ build ]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
