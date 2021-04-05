@@ -20,19 +20,15 @@ class Gallery extends React.Component<GalleryProps, any> {
                 <div data-testid={"GALLERY PAGE"}>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            GALLERY
+                            <p className={classes.title}>
+                                GALLERY
+                            </p>
                             <p>
                                 {imageId ? 'image id: ' + imageId : ''}{' '}
                                 {collectionId
                                     ? 'collection id: ' + collectionId
                                     : ''}
                             </p>
-                            <div className={classes.slider}>
-                                <ImageSlider />
-                            </div>
-
-                            <div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,25 +41,20 @@ const styles = () =>
     createStyles({
         container: {
             zIndex: 0,
-            //position: 'relative',
         },
 
         description: {
-            //position: 'absolute',
             width: '100%',
-            paddingTop: '5%',
             fontSize: 30,
-            fontFamily: 'Open Sans',
             textAlign: 'center',
             alignContent: 'center',
             zIndex: 0,
+            fontFamily: 'Open-Sans-Regular',
         },
 
-        slider: {
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            overflowX: 'hidden',
+        title: {
+            fontFamily: 'Open-Sans-Regular',
+            fontSize: 80,
         },
 
     })

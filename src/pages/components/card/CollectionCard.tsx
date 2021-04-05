@@ -44,19 +44,19 @@ const styles = () => createStyles({
 
     spacing_selected: {
 
-        //border: '1px solid black',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        WebkitTransition: 'opacity 0.7s',
+        position: 'relative',
+        zIndex: 99,
+        WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
+        transform: 'scale(1)',
+        opacity: '100%',
         flex: 1,
-        
-
     },
     spacing_unselected:{
-        paddingLeft: '10px',
-        paddingRight: '10px',
+
         flex: 1,
-        opacity: '50%',
+        WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
+        transform: 'scale(0.8)',
+        opacity: '90%',
 
     },
     container: {
@@ -70,6 +70,7 @@ const styles = () => createStyles({
         borderBottomLeftRadius: '25px',
         borderBottomRightRadius: '25px',
         boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
+
 
 
     },
