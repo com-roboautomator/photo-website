@@ -1,16 +1,19 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core';
+import { createStyles, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
-import CollectionTag from './CollectionTag';
+import CollectionTag from './CollectionTag'
 
-interface CollectionCardProps extends WithStyles<typeof styles> { 
+interface CollectionCardProps extends WithStyles<typeof styles> {
     coverSrc: string
     title: string
+    tagTitle?: string
+    tagColour?: string
     selected: boolean
 }
 
 class CollectionCard extends React.Component<CollectionCardProps> {
+
 
     render() {
         const classes = this.props.classes
@@ -28,7 +31,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                                 {this.props.title}
                             </p>
                             <div className={classes.tag}>
-                            <CollectionTag colour='#47742c' title='NATURE'/>
+                                <CollectionTag colour={(this.props.tagColour) ? this.props.tagColour : '#323232'} title={(this.props.tagTitle) ? this.props.tagTitle : 'Default'} />
                             </div>
                         </div>
                     </div>
@@ -51,7 +54,7 @@ const styles = () => createStyles({
         opacity: '100%',
         flex: 1,
     },
-    spacing_unselected:{
+    spacing_unselected: {
 
         flex: 1,
         WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
@@ -99,7 +102,7 @@ const styles = () => createStyles({
         display: 'flex',
         flex: 1,
         flexDirection: 'row',
-        fontSize: 20,
+        fontSize: '100%',
         color: 'black',
         borderBottomLeftRadius: '25px',
         borderBottomRightRadius: '25px',

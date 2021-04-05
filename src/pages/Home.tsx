@@ -10,7 +10,6 @@ class Home extends React.Component<HomeProps> {
         return (
             <main>
                 <div data-testid={"HOME PAGE"} className={classes.container}>
-                    <div className={classes.description}>HOME PAGE</div>
                     <div>
                         <ImageSlider />
                     </div>

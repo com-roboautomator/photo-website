@@ -21,6 +21,7 @@ class CollectionTag extends React.Component<CollectionTagProps>{
                 paddingLeft: 5,
                 paddingRight: 5,
                 paddingBottom: 5,
+                textAlign: 'center',
                 color: 'white',
             }}>
                 {this.props.title}

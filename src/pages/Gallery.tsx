@@ -2,7 +2,6 @@ import { WithStyles } from '@material-ui/core'
 import { createStyles, withStyles } from '@material-ui/styles'
 import React from 'react'
 import { RouteComponentProps } from 'react-router-dom'
-import ImageSlider from './components/card/ImageSlider'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,

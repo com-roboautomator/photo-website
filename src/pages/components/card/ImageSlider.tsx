@@ -1,13 +1,10 @@
-import { Button, createStyles, withStyles, WithStyles } from '@material-ui/core';
+import { createStyles, withStyles, WithStyles } from '@material-ui/core';
 import React from 'react'
 import { data } from '../card/TestData'
 import CollectionCard from './CollectionCard';
-import RightArrow from './Arrow';
 import Arrow from './Arrow';
-import { findByLabelText } from '@testing-library/react';
 
-interface ImageSliderProps extends WithStyles<typeof styles> {
-}
+interface ImageSliderProps extends WithStyles<typeof styles> {}
 
 class ImageSlider extends React.Component<ImageSliderProps, any> {
 
@@ -44,15 +41,12 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 
         return (
             <main>
-
-
-
                 <div className={classes.container}>
                     <div className={classes.button_wrapper}>
-                        <div className={classes.right_arrow}>
+                        <div className={classes.arrow}>
                             <Arrow disabled={property.index === 0} onClick={this.previous} orientation={"Left"} />
                         </div>
-                        <div className={classes.left_arrow}>
+                        <div className={classes.arrow}>
                             <Arrow disabled={property.index === properties.length - 1} onClick={this.next} orientation={"Right"} />
                         </div>
                     </div>
@@ -63,7 +57,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                         }}>
 
                             {
-                                properties.map((property: { url: string; title: string; index: number }) => <CollectionCard coverSrc={property.url} title={property.title} selected={this.state.selected === property.index} />)
+                                properties.map((property: { url: string; title: string; tagTitle: string; tagColour: string; index: number }) => <CollectionCard coverSrc={property.url} title={property.title} selected={this.state.selected === property.index} tagTitle={property.tagTitle} tagColour={property.tagColour} />)
                             }
                         </div>
                     </div>
@@ -108,9 +102,6 @@ const styles = () => createStyles({
         width: '100vw',
         paddingTop: '70px',
         paddingBottom: '70px',
-        //margin: '20px',
-
-        //height: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         alignSelf: 'center',
@@ -130,28 +121,10 @@ const styles = () => createStyles({
 
     },
 
-    left_arrow: {
-        //flex: 1,
-        // position: 'absolute',
-        //alignSelf: '',
-        // justifySelf: 'flex-start',
-        // margin: '20px',
-        //flex: 1,
+    arrow: {
         margin: '20px',
-
-
     },
 
-    right_arrow: {
-        //position: 'absolute',
-        //flex: 1,
-        margin: '20px',
-
-
-        // margin: '20px',
-
-
-    },
 
 })
 

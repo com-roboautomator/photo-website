@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@kennethormandy/react-fittext": "^0.6.0",
     "@material-ui/core": "^4.11.3",
     "@material-ui/styles": "^4.11.3",
     "@testing-library/user-event": "^12.8.3",
@@ -15,8 +16,11 @@
     "react-material-ui-carousel": "^2.2.2",
     "react-router-dom": "^5.2.0",
     "react-router-transition": "^2.1.0",
+    "react-scale-text": "^1.2.2",
     "react-scripts": "4.0.3",
+    "react-textfit": "^1.1.1",
     "react-transition-group": "^4.4.1",
+    "scale-text": "^0.2.2",
     "typeface-open-sans": "^1.1.13",
     "typescript": "^4.2.3",
     "web-vitals": "^1.1.1"
