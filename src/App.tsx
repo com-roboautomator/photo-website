@@ -18,7 +18,7 @@ class App extends React.Component {
                         <Route path="/gallery" component={Gallery} exact />
                         <Route
                             path="/gallery/image/:imageId"
-                            render={(props) => <Gallery {...props} />}
+                            render={(props) => <Gallery  {...props} />}
                         />
                         <Route
                             path="/gallery/collection/:collectionId"

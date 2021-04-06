@@ -1,4 +1,4 @@
-import {createStyles, withStyles, WithStyles} from '@material-ui/core'
+import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
@@ -10,20 +10,26 @@ interface CollectionCardProps extends WithStyles<typeof styles> {
     tagTitle?: string
     tagColour?: string
     selected: boolean
+    onClick?: () => void
 }
 
 class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-            <main>
-                <div
-                    className={
-                        this.props.selected
-                            ? classes.spacing_selected
-                            : classes.spacing_unselected
-                    }>
-                    <div className={classes.container}>
+
+
+            <div
+                className={
+                    this.props.selected
+                        ? classes.spacing_selected
+                        : classes.spacing_unselected
+                }>
+
+
+
+                <div className={classes.container}>
+                    <Link href={this.props.coverSrc} target="_blank">
                         <div className={classes.image_wrapper}>
                             <img
                                 className={classes.image}
@@ -33,33 +39,35 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                                 height="200"
                             />
                         </div>
-                        <div className={classes.text_wrapper}>
-                            <img
-                                className={classes.icon}
-                                src={imageIcon}
-                                alt=""
-                                width={20}
-                                height={20}
+                    </Link>
+
+                    <div className={classes.text_wrapper}>
+                        <img
+                            className={classes.icon}
+                            src={imageIcon}
+                            alt=""
+                            width={20}
+                            height={20}
+                        />
+                        <p className={classes.text}>{this.props.title}</p>
+                        <div className={classes.tag}>
+                            <CollectionTag
+                                colour={
+                                    this.props.tagColour
+                                        ? this.props.tagColour
+                                        : '#323232'
+                                }
+                                title={
+                                    this.props.tagTitle
+                                        ? this.props.tagTitle
+                                        : 'Default'
+                                }
                             />
-                            <p className={classes.text}>{this.props.title}</p>
-                            <div className={classes.tag}>
-                                <CollectionTag
-                                    colour={
-                                        this.props.tagColour
-                                            ? this.props.tagColour
-                                            : '#323232'
-                                    }
-                                    title={
-                                        this.props.tagTitle
-                                            ? this.props.tagTitle
-                                            : 'Default'
-                                    }
-                                />
-                            </div>
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
+
         )
     }
 }
@@ -67,6 +75,8 @@ class CollectionCard extends React.Component<CollectionCardProps> {
 const styles = () =>
     createStyles({
         spacing_selected: {
+            pointerEvents: 'auto',
+            userSelect: 'none',
             position: 'relative',
             zIndex: 99,
             WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
@@ -75,6 +85,8 @@ const styles = () =>
             flex: 1,
         },
         spacing_unselected: {
+            pointerEvents: 'auto',
+            userSelect: 'none',
             flex: 1,
             WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
             transform: 'scale(0.8)',

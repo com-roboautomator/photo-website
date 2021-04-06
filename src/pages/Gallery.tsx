@@ -2,6 +2,7 @@ import {WithStyles} from '@material-ui/core'
 import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
+import ImageViewer from './ImageViewer'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
@@ -20,7 +21,8 @@ class Gallery extends React.Component<GalleryProps, any> {
                         <div className={classes.description}>
                             <p className={classes.title}>GALLERY</p>
                             <p>
-                                {imageId ? 'image id: ' + imageId : ''}{' '}
+                                {/* {alert(imageId)} */}
+                                {imageId ?  <ImageViewer source={imageId} /> : ''}
                                 {collectionId
                                     ? 'collection id: ' + collectionId
                                     : ''}
@@ -50,7 +52,7 @@ const styles = () =>
 
         title: {
             fontFamily: 'Open-Sans-Regular',
-            fontSize: 80,
+            fontSize: 50,
         },
     })
 
