@@ -11,6 +11,7 @@ class Home extends React.Component<HomeProps> {
         return (
             <main>
                 <div data-testid={'HOME PAGE'} className={classes.container}>
+                <p className={classes.title}>HOME PAGE</p>
                     <div>
                         <ImageSlider data={data} />
                     </div>
@@ -26,7 +27,6 @@ const styles = () =>
             zIndex: 0,
             position: 'relative',
         },
-
         description: {
             position: 'absolute',
             width: '100%',
@@ -36,6 +36,11 @@ const styles = () =>
             textAlign: 'center',
             alignContent: 'center',
             zIndex: 0,
+        },
+        title: {
+            alignText: 'center',
+            fontFamily: 'Open-Sans-Regular',
+            fontSize: 50,
         },
     })
 

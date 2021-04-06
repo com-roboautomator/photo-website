@@ -1,5 +1,4 @@
 import NavigationBar from '../NavigationBar'
-import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 import {render} from '@testing-library/react'
 import renderer from 'react-test-renderer'

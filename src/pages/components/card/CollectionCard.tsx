@@ -17,17 +17,13 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-
-
             <div
+                data-testid="Collection-Card-Spacing"
                 className={
                     this.props.selected
                         ? classes.spacing_selected
                         : classes.spacing_unselected
                 }>
-
-
-
                 <div className={classes.container}>
                     <Link href={this.props.coverSrc} target="_blank">
                         <div className={classes.image_wrapper}>
@@ -40,7 +36,6 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             />
                         </div>
                     </Link>
-
                     <div className={classes.text_wrapper}>
                         <img
                             className={classes.icon}
@@ -67,7 +62,6 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                     </div>
                 </div>
             </div>
-
         )
     }
 }
