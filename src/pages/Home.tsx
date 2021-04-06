@@ -1,6 +1,7 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
+import { data } from '../assets/data/TestData'
 
 interface HomeProps extends WithStyles<typeof styles> {}
 
@@ -11,7 +12,7 @@ class Home extends React.Component<HomeProps> {
             <main>
                 <div data-testid={'HOME PAGE'} className={classes.container}>
                     <div>
-                        <ImageSlider />
+                        <ImageSlider data={data} />
                     </div>
                 </div>
             </main>
