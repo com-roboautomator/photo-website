@@ -3,6 +3,7 @@ import React from 'react'
 import CollectionCard from './CollectionCard'
 import Arrow from './Arrow'
 import Underscore from 'underscore'
+import {v4} from 'uuid'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: { url: string; title: string; tagTitle?: string | undefined; tagColour?: string | undefined; index: number; }[]
@@ -79,6 +80,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                         }}>
                         {properties.map(
                             (property: {
+                                key: string
                                 url: string
                                 title: string
                                 tagTitle: string
@@ -86,6 +88,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                 index: number
                             }) => (
                                 <CollectionCard
+                                    key={v4()}
                                     coverSrc={property.url}
                                     title={property.title}
                                     selected={

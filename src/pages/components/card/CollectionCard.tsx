@@ -5,6 +5,7 @@ import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './CollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
+    key?: string
     coverSrc: string
     title: string
     tagTitle?: string
@@ -28,6 +29,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                     <Link href={this.props.coverSrc} target="_blank">
                         <div className={classes.image_wrapper}>
                             <img
+                                data-testid="Collection-Card-Image"
                                 className={classes.image}
                                 src={this.props.coverSrc}
                                 alt=""
@@ -36,15 +38,22 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             />
                         </div>
                     </Link>
-                    <div className={classes.text_wrapper}>
+                    <div
+                        data-testid="Collection-Card-Text-Wrapper"
+                        className={classes.text_wrapper}>
                         <img
+                            data-testid="Collection-Card-Image-Icon"
                             className={classes.icon}
                             src={imageIcon}
                             alt=""
                             width={20}
                             height={20}
                         />
-                        <p className={classes.text}>{this.props.title}</p>
+                        <p
+                            data-testid="Collection-Card-Title"
+                            className={classes.text}>
+                            {this.props.title}
+                        </p>
                         <div className={classes.tag}>
                             <CollectionTag
                                 colour={

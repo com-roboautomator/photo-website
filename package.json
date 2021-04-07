@@ -10,6 +10,7 @@
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@types/uuid": "^8.3.0",
     "normalize-wheel": "^1.0.1",
     "open-sans-fonts": "^1.6.2",
     "react": "^17.0.2",
@@ -21,10 +22,12 @@
     "react-scripts": "4.0.3",
     "react-textfit": "^1.1.1",
     "react-transition-group": "^4.4.1",
+    "react-uuid": "^1.0.2",
     "scale-text": "^0.2.2",
     "typeface-open-sans": "^1.1.13",
     "typescript": "^4.2.3",
     "underscore": "^1.12.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
