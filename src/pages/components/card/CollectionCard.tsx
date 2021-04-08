@@ -56,16 +56,8 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                         </p>
                         <div className={classes.tag}>
                             <CollectionTag
-                                colour={
-                                    this.props.tagColour
-                                        ? this.props.tagColour
-                                        : '#323232'
-                                }
-                                title={
-                                    this.props.tagTitle
-                                        ? this.props.tagTitle
-                                        : 'Default'
-                                }
+                                colour={this.props.tagColour}
+                                title={this.props.tagTitle}
                             />
                         </div>
                     </div>
