@@ -11,7 +11,8 @@ interface ImageSliderProps extends WithStyles<typeof styles> {
 class ImageSlider extends React.Component<ImageSliderProps, any> {
     constructor(props: ImageSliderProps) {
         super(props)
-        this.handleWheelMovement = Underscore.throttle(this.handleWheelMovement, 300);
+        this.handleWheelMovement = Underscore.debounce(this.handleWheelMovement, 30, true)
+
         this.state = {
             selected: 0,
             properties: this.props.data,
@@ -38,7 +39,9 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
     }
 
     handleWheelMovement = (e: React.WheelEvent<HTMLDivElement>) => {
-        const movement = (e.deltaY) ? e.deltaY : e.deltaX
+        let movement = (e.deltaX) ? e.deltaX : e.deltaY
+        //movement /= 5
+        console.log(movement)
         if (movement > 0) {
             this.next()
         } else {
