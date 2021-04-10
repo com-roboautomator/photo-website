@@ -56,7 +56,7 @@ export const data: {
             key: '812a0676-cf2c-42ec-add4-c0a0f537a085',
             url:
                 'https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg',
-            title: 'Nature Collection',
+            title: 'Second Nature Collection',
             index: 5,
         },
 
@@ -64,7 +64,7 @@ export const data: {
             key: '7b418354-ed67-48ff-9c9f-9f5d9ac1be75',
             url:
                 'https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs',
-            title: 'Urban Collection',
+            title: 'Second Urban Collection',
             index: 6,
         },
 
@@ -72,7 +72,7 @@ export const data: {
             key: '5101a14a-e48b-43cf-82ba-ff8de139a274',
             url:
                 'https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII',
-            title: 'Animal Collection',
+            title: 'Second Animal Collection',
             index: 7,
         },
 
@@ -80,7 +80,7 @@ export const data: {
             key: '6eb00d3d-7f76-4913-b1f7-34cf78512be2',
             url:
                 'https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ',
-            title: 'Mechanical Collection',
+            title: 'Second Mechanical Collection',
             index: 8,
         },
 
@@ -88,7 +88,7 @@ export const data: {
             key: '767b9766-3ea4-4b49-af66-8dfaa569d74c',
             url:
                 'https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c',
-            title: 'Party Collection',
+            title: 'Second Party Collection',
             index: 9,
         },
         {

@@ -17,9 +17,13 @@ class Arrow extends React.Component<ArrowProps> {
     render() {
         const props = this.props
         return (
-            <div data-testid="Arrow-Button">
-                <Button onClick={props.disabled ? void 0 : props.onClick}>
-                    <img 
+            <div>
+                <Button
+                    data-testid={`Arrow-Button-${props.orientation}`}
+                    disabled={props.disabled}
+                    onClick={props.onClick}
+                    >
+                    <img
                         data-testid="Arrow-Button-Image"
                         src={props.disabled ? ArrowDisabled : ArrowEnabled}
                         alt=""

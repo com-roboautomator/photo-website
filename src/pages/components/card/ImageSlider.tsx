@@ -6,6 +6,7 @@ import Underscore from 'underscore'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: { url: string; title: string; tagTitle?: string | undefined; tagColour?: string | undefined; index: number; }[]
+    startingIndex?: number
 }
 
 class ImageSlider extends React.Component<ImageSliderProps, any> {
@@ -14,9 +15,9 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
         this.handleWheelMovement = Underscore.debounce(this.handleWheelMovement, 30, true)
 
         this.state = {
-            selected: 0,
+            selected: (this.props.startingIndex) ? this.props.startingIndex : 0,
             properties: this.props.data,
-            property: this.props.data[0]
+            property: this.props.data[(this.props.startingIndex) ? this.props.startingIndex : 0]
         }
     }
 
@@ -40,8 +41,6 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 
     handleWheelMovement = (e: React.WheelEvent<HTMLDivElement>) => {
         let movement = (e.deltaX) ? e.deltaX : e.deltaY
-        //movement /= 5
-        console.log(movement)
         if (movement > 0) {
             this.next()
         } else {
@@ -73,7 +72,9 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                         />
                     </div>
                 </div>
-                <div className={classes.card_slider} onWheel={(e) => { this.handleWheelMovement(e) }}>
+                <div 
+                data-testid="Image-Slider-Card-Slider"
+                className={classes.card_slider} onWheel={(e) => { this.handleWheelMovement(e) }}>
                     <div
                         className={classes.card_slider_wrapper}
                         style={{
@@ -112,7 +113,6 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 const styles = () =>
     createStyles({
         container: {
-
             pointerEvents: 'auto',
             position: 'relative',
             display: 'flex',

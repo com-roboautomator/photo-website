@@ -18,51 +18,53 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-            <div
-                data-testid="Collection-Card-Spacing"
-                className={
-                    this.props.selected
-                        ? classes.spacing_selected
-                        : classes.spacing_unselected
-                }>
-                <div className={classes.container}>
-                    <Link href={this.props.coverSrc} target="_blank">
-                        <div className={classes.image_wrapper}>
+            <main data-testid={`Collection-Card-${this.props.title}`}>
+                <div
+                    data-testid="Collection-Card-Spacing"
+                    className={
+                        this.props.selected
+                            ? classes.spacing_selected
+                            : classes.spacing_unselected
+                    }>
+                    <div className={classes.container}>
+                        <Link href={this.props.coverSrc} target="_blank">
+                            <div className={classes.image_wrapper}>
+                                <img
+                                    data-testid="Collection-Card-Image"
+                                    className={classes.image}
+                                    src={this.props.coverSrc}
+                                    alt=""
+                                    width="350"
+                                    height="200"
+                                />
+                            </div>
+                        </Link>
+                        <div
+                            data-testid="Collection-Card-Text-Wrapper"
+                            className={classes.text_wrapper}>
                             <img
-                                data-testid="Collection-Card-Image"
-                                className={classes.image}
-                                src={this.props.coverSrc}
+                                data-testid="Collection-Card-Image-Icon"
+                                className={classes.icon}
+                                src={imageIcon}
                                 alt=""
-                                width="350"
-                                height="200"
+                                width={20}
+                                height={20}
                             />
-                        </div>
-                    </Link>
-                    <div
-                        data-testid="Collection-Card-Text-Wrapper"
-                        className={classes.text_wrapper}>
-                        <img
-                            data-testid="Collection-Card-Image-Icon"
-                            className={classes.icon}
-                            src={imageIcon}
-                            alt=""
-                            width={20}
-                            height={20}
-                        />
-                        <p
-                            data-testid="Collection-Card-Title"
-                            className={classes.text}>
-                            {this.props.title}
-                        </p>
-                        <div className={classes.tag}>
-                            <CollectionTag
-                                colour={this.props.tagColour}
-                                title={this.props.tagTitle}
-                            />
+                            <p
+                                data-testid="Collection-Card-Title"
+                                className={classes.text}>
+                                {this.props.title}
+                            </p>
+                            <div className={classes.tag}>
+                                <CollectionTag
+                                    colour={this.props.tagColour}
+                                    title={this.props.tagTitle}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         )
     }
 }
