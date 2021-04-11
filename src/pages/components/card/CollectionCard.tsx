@@ -1,4 +1,4 @@
-import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'

@@ -1,9 +1,9 @@
-import { createStyles, WithStyles, withStyles } from '@material-ui/styles'
+import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
-import { data } from '../assets/data/TestData'
+import {data} from '../assets/data/TestData'
 
-interface HomeProps extends WithStyles<typeof styles> { }
+interface HomeProps extends WithStyles<typeof styles> {}
 
 class Home extends React.Component<HomeProps> {
     render() {

@@ -1,28 +1,41 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import CollectionCard from './CollectionCard'
 import Arrow from './Arrow'
 import Underscore from 'underscore'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
-    data: { url: string; title: string; tagTitle?: string | undefined; tagColour?: string | undefined; index: number; }[]
+    data: {
+        url: string
+        title: string
+        tagTitle?: string | undefined
+        tagColour?: string | undefined
+        index: number
+    }[]
     startingIndex?: number
 }
 
 class ImageSlider extends React.Component<ImageSliderProps, any> {
     constructor(props: ImageSliderProps) {
         super(props)
-        this.handleWheelMovement = Underscore.debounce(this.handleWheelMovement, 30, true)
+        this.handleWheelMovement = Underscore.debounce(
+            this.handleWheelMovement,
+            30,
+            true
+        )
 
         this.state = {
-            selected: (this.props.startingIndex) ? this.props.startingIndex : 0,
+            selected: this.props.startingIndex ? this.props.startingIndex : 0,
             properties: this.props.data,
-            property: this.props.data[(this.props.startingIndex) ? this.props.startingIndex : 0]
+            property: this.props.data[
+                this.props.startingIndex ? this.props.startingIndex : 0
+            ],
         }
     }
 
     next = () => {
-        if (this.state.property.index === this.state.properties.length - 1) return
+        if (this.state.property.index === this.state.properties.length - 1)
+            return
         const newIndex = this.state.property.index + 1
         this.setState({
             property: this.state.properties[newIndex],
@@ -40,7 +53,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
     }
 
     handleWheelMovement = (e: React.WheelEvent<HTMLDivElement>) => {
-        let movement = (e.deltaX) ? e.deltaX : e.deltaY
+        let movement = e.deltaX ? e.deltaX : e.deltaY
         if (movement > 0) {
             this.next()
         } else {
@@ -50,36 +63,44 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 
     render() {
         const classes = this.props.classes
-        const { properties, property } = this.state
+        const {properties, property} = this.state
 
         return (
-            <div className={classes.container} >
-                <div className={classes.button_wrapper}>
-                    <div className={classes.arrow} >
+            <div
+                data-testid="ImageSlider-Container"
+                className={classes.container}>
+                <div
+                    data-testid="ImageSlider-button-wrapper"
+                    className={classes.button_wrapper}>
+                    <div className={classes.arrow}>
                         <Arrow
                             disabled={property.index === 0}
                             onClick={this.previous}
                             orientation={'Left'}
                         />
                     </div>
-                    <div className={classes.arrow}>
+                    <div
+                        data-testid="ImageSlider-arrow"
+                        className={classes.arrow}>
                         <Arrow
-                            disabled={
-                                property.index === properties.length - 1
-                            }
+                            disabled={property.index === properties.length - 1}
                             onClick={this.next}
                             orientation={'Right'}
                         />
                     </div>
                 </div>
-                <div 
-                data-testid="Image-Slider-Card-Slider"
-                className={classes.card_slider} onWheel={(e) => { this.handleWheelMovement(e) }}>
+                <div
+                    data-testid="ImageSlider-Card-Slider"
+                    className={classes.card_slider}
+                    onWheel={(e) => {
+                        this.handleWheelMovement(e)
+                    }}>
                     <div
                         className={classes.card_slider_wrapper}
                         style={{
-                            transform: `translateX(-${property.index * (100 / properties.length)
-                                }%)`,
+                            transform: `translateX(-${
+                                property.index * (100 / properties.length)
+                            }%)`,
                         }}>
                         {properties.map(
                             (property: {
@@ -95,8 +116,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                     coverSrc={property.url}
                                     title={property.title}
                                     selected={
-                                        this.state.selected ===
-                                        property.index
+                                        this.state.selected === property.index
                                     }
                                     tagTitle={property.tagTitle}
                                     tagColour={property.tagColour}

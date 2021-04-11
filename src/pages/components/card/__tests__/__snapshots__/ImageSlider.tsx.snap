@@ -3,9 +3,11 @@
 exports[`Image Slider renders correctly when there are no items 1`] = `
 <div
   className="ImageSlider-container-1"
+  data-testid="ImageSlider-Container"
 >
   <div
     className="ImageSlider-button_wrapper-3"
+    data-testid="ImageSlider-button-wrapper"
   >
     <div
       className="ImageSlider-arrow-5"
@@ -50,6 +52,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
     </div>
     <div
       className="ImageSlider-arrow-5"
+      data-testid="ImageSlider-arrow"
     >
       <div>
         <button
@@ -92,7 +95,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
   </div>
   <div
     className="ImageSlider-card_slider-2"
-    data-testid="Image-Slider-Card-Slider"
+    data-testid="ImageSlider-Card-Slider"
     onWheel={[Function]}
   >
     <div

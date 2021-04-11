@@ -22,7 +22,11 @@ class Gallery extends React.Component<GalleryProps, any> {
                             <p className={classes.title}>GALLERY</p>
                             <p>
                                 {/* {alert(imageId)} */}
-                                {imageId ?  <ImageViewer source={imageId} /> : ''}
+                                {imageId ? (
+                                    <ImageViewer source={imageId} />
+                                ) : (
+                                    ''
+                                )}
                                 {collectionId
                                     ? 'collection id: ' + collectionId
                                     : ''}
