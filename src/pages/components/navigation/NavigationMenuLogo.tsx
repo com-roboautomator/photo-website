@@ -9,11 +9,9 @@ class NavigationMenuLogo extends React.Component<LogoProps> {
     render() {
         const classes = this.props.classes
         return (
-            <div 
-            data-testid={"Menu-Logo"}
-            className={classes.logo}>
+            <div data-testid={'Menu-Logo'} className={classes.logo}>
                 <Link to="/">
-                    <img data-testid={"Menu-Logo-Image"} src={LOGO} alt="" />
+                    <img data-testid={'Menu-Logo-Image'} src={LOGO} alt="" />
                 </Link>
             </div>
         )

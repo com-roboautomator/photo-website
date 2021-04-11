@@ -56,9 +56,17 @@ jobs:
       - name: Install dependencies
         run: make install
 
+      # Runs linting
+      - name: Run ESLint
+        run: npm run lint
+
       # Runs unit tests with coverage
       - name: Run unit tests with coverage
         run: make test
+
+      # Runs integration tests with coverage
+      - name: Run integration tests
+        run: make integration
 
       # Make production build
       - name: Build for production

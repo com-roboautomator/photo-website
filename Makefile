@@ -10,6 +10,12 @@ test:
 		&& echo "Finished running unit tests" \
 		|| echo "One or more test failures"
 
+integration:
+	@echo "Running Cypress tests" \
+		&& npm run integration \
+		&& echo "Finished running Cypress tests" \
+		|| echo "One or more Cypress test failures"
+
 build:
 	@echo "Building for production" \
 		&& CI=true npm run build \
