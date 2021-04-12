@@ -8,7 +8,7 @@ class About extends React.Component<AboutProps> {
     render() {
         return (
             <div data-testid="About-Page">
-                <PageTitle title="ABOUT" src="https://picsum.photos/1500/200" />
+                <PageTitle title="ABOUT" src="https://picsum.photos/id/10/1500/200" />
             </div>
         )
     }

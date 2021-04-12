@@ -50,7 +50,7 @@ const styles = () =>
             flexDirection: 'row',
             alignContent: 'center',
             justifyContent: 'space-between',
-            boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
+            boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.9)',
             paddingRight: 80,
         },
         items_container: {

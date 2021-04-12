@@ -19,7 +19,6 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
         }
     }
 
-
     render() {
 
         const classes = this.props.classes
@@ -30,7 +29,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                     onLoad={() => this.setState({ loaded: true })}
                     className={(this.state.loaded) ? classes.image_loaded : classes.image_loading}
                     src={this.props.src} alt="" />
-                <div className={classes.title}>
+                <div className={(this.state.loaded) ? classes.title_loaded : classes.title_loading}>
                     {this.props.title}
                 </div>
             </div>
@@ -49,14 +48,28 @@ const styles = () => createStyles({
         width: '100%',
         height: '200px',
         opacity: '100',
-        transition: 'opacity 3s',
+        transition: 'opacity ease-in 200ms, filter ease-in 600ms',
     },
     image_loading: {
-        width: '80%',
+        width: '100%',
         height: '200px',
         opacity: '0',
+        filter: 'blur(2px)',
     },
-    title: {
+    title_loading: {
+        position: 'absolute',
+        alignSelf: 'center',
+        color: "black",
+        fontFamily: "Open-Sans-Regular",
+        fontSize: '35px',
+        marginLeft: '150px',
+        marginTop: '40px',
+        paddingLeft: '10px',
+        borderLeft: '5px solid #7baab5',
+        filter: 'blur(2px)',
+        opacity: '0',
+    },
+    title_loaded: {
         position: 'absolute',
         alignSelf: 'center',
         color: "white",
@@ -66,6 +79,8 @@ const styles = () => createStyles({
         marginTop: '40px',
         paddingLeft: '10px',
         borderLeft: '5px solid #7baab5',
+        opacity: '100',
+        transition: 'opacity ease-in 200ms, filter ease-in 200ms'
     },
 
 })

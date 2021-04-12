@@ -6,6 +6,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Error from './pages/Error'
 import NavigationBar from './pages/components/navigation/NavigationBar'
+import PageSignature from './pages/components/text/PageSignature'
 
 class App extends React.Component {
     render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
                         <Route path="/contact" component={Contact} exact />
                         <Route path="/*" component={Error} />
                     </Switch>
+                    <Route component={PageSignature} exact />
                 </BrowserRouter>
             </main>
         )

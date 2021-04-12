@@ -9,7 +9,7 @@ class Contact extends React.Component<ContactProps> {
 
         return (
             <div data-testid="Contact-Page">
-                <PageTitle title="CONTACT" src="https://picsum.photos/1500/200" />
+                <PageTitle title="CONTACT" src="https://picsum.photos/id/1058/1500/200" />
             </div>
         )
     }

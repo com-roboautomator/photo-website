@@ -12,7 +12,7 @@ class Home extends React.Component<HomeProps> {
         return (
             <main>
                 <div data-testid={'Home-Page'} className={classes.container}>
-                    <PageTitle title="HOME" src="https://picsum.photos/1500/200" />
+                    <PageTitle title="HOME" src="https://picsum.photos/id/1014/1500/200" />
                     <div>
                         <ImageSlider data={data} />
                     </div>

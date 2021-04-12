@@ -13,7 +13,7 @@ class Gallery extends React.Component<GalleryProps, any> {
 
         return (
             <div data-testid="Gallery-Page">
-                <PageTitle title="GALLERY" src="https://picsum.photos/1500/200" />
+                <PageTitle title="GALLERY" src="https://picsum.photos/id/103/1500/200" />
                 {/* <p>
                     {imageId ? (
                         <ImageViewer source={imageId} />
