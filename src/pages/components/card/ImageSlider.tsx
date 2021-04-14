@@ -150,7 +150,7 @@ const styles = () =>
             zIndex: 99,
             pointerEvents: 'none',
             position: 'absolute',
-            width: '100vw',
+            width: '100%',
             paddingTop: '70px',
             paddingBottom: '70px',
             display: 'flex',

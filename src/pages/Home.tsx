@@ -13,7 +13,7 @@ class Home extends React.Component<HomeProps> {
             <main>
                 <div data-testid={'Home-Page'} className={classes.container}>
                     <PageTitle title="HOME" src="https://picsum.photos/id/1014/1500/200" />
-                    <div>
+                    <div className={classes.wapper}>
                         <ImageSlider data={data} />
                     </div>
                 </div>
@@ -27,6 +27,10 @@ const styles = () =>
         container: {
             zIndex: 0,
             position: 'relative',
+        },
+        wapper: {
+            marginLeft: '80px',
+            marginRight: '80px',
         },
         description: {
             position: 'absolute',
