@@ -12,9 +12,21 @@ class ProfileImage extends React.Component<ProfileImageProps> {
         const classes = this.props.classes
 
         return (
-            <div className={classes.container}>
-                <img className={classes.image} src={Image} alt="" />
-                <div className={classes.text}>
+
+            <div
+                data-testid="ProfileImage-Container"
+                className={classes.container}
+            >
+                <img
+                    data-testid="ProfileImage-Image"
+                    className={classes.image}
+                    src={Image}
+                    alt=""
+                />
+                <div
+                    data-testid="ProfileImage-Text"
+                    className={classes.text}
+                >
                     Sara Doneux
                 </div>
             </div>
@@ -36,7 +48,8 @@ const styles = () => createStyles({
         textAlign: 'center',
         fontFamily: 'Open-Sans-Bold',
         fontSize: '18px',
-        marginTop: '5px'
+        marginTop: '5px',
+        color: '#5f5f5f'
     },
 })
 

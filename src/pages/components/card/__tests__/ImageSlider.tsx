@@ -226,7 +226,7 @@ describe('Image Slider', () => {
             'position: absolute'
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
-            'width: 100vw'
+            'width: 100%'
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'paddingTop: 70px'

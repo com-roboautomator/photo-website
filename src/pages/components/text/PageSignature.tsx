@@ -10,7 +10,9 @@ class PageSignature extends React.Component<PageSignatureProps> {
     render() {
         const classes = this.props.classes
         return (
-                <div className={classes.text}>
+                <div
+                    data-testid='Page-Signature-Text' 
+                    className={classes.text}>
                     ©2021, All images on this site are the copyright of Sara Doneux and may not be reproduced without permission
                 </div>
         )

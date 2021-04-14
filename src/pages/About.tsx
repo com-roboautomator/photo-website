@@ -38,16 +38,14 @@ const styles = () =>
     createStyles({
 
         container: {
-
             display: 'flex',
             justifyContent: 'center',
         },
         wrapper: {
-
             display: 'flex',
             width: '70%',
             height: '50%',
-            marginTop: '40px',
+            marginTop: '90px',
             marginBottom: '20px',
             padding: '10px',
         },
@@ -57,6 +55,7 @@ const styles = () =>
         text: {
             whiteSpace: 'pre-wrap',
             fontFamily: 'Open-Sans-Regular',
+            color: '#5f5f5f'
         },
 
     })
