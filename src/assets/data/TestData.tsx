@@ -1,11 +1,13 @@
-export const data: {
+interface ImageData {
     key: string
     url: string
     title: string
     tagTitle?: string
     tagColour?: string
     index: number
-}[] = [
+}
+
+export const data: ImageData[] = [
     {
         key: '017a317f-8285-4cfb-a4e7-668d85721b76',
         url:
