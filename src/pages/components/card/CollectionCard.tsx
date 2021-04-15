@@ -1,15 +1,15 @@
-import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
+import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import imageIcon from '../../../assets/images/icons/collection-image-o.png'
-import CollectionTag from './CollectionTag'
+import CollectionCardImage from './CollectionCardImage'
+import CollectionCardText from './CollectionCardText'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
     key?: string
-    coverSrc: string
     title: string
     tagTitle?: string
     tagColour?: string
+    coverSrc: string
     selected: boolean
     onClick?: () => void
 }
@@ -18,7 +18,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-            <main data-testid={`Collection-Card-${this.props.title}`}>
+            <main>
                 <div
                     data-testid="Collection-Card-Spacing"
                     className={
@@ -27,41 +27,14 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             : classes.spacing_unselected
                     }>
                     <div className={classes.container}>
-                        <Link href={this.props.coverSrc} target="_blank">
-                            <div className={classes.image_wrapper}>
-                                <img
-                                    data-testid="Collection-Card-Image"
-                                    className={classes.image}
-                                    src={this.props.coverSrc}
-                                    alt=""
-                                    width="350"
-                                    height="200"
-                                />
-                            </div>
+                        <Link
+                            href={this.props.coverSrc}
+                            target="_blank"
+                            underline="none"
+                        >
+                            <CollectionCardImage src={this.props.coverSrc} />
+                            <CollectionCardText title={this.props.title} tagTitle={this.props.tagTitle} tagColour={this.props.tagColour} />
                         </Link>
-                        <div
-                            data-testid="Collection-Card-Text-Wrapper"
-                            className={classes.text_wrapper}>
-                            <img
-                                data-testid="Collection-Card-Image-Icon"
-                                className={classes.icon}
-                                src={imageIcon}
-                                alt=""
-                                width={20}
-                                height={20}
-                            />
-                            <p
-                                data-testid="Collection-Card-Title"
-                                className={classes.text}>
-                                {this.props.title}
-                            </p>
-                            <div className={classes.tag}>
-                                <CollectionTag
-                                    colour={this.props.tagColour}
-                                    title={this.props.tagTitle}
-                                />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </main>
@@ -97,51 +70,7 @@ const styles = () =>
             borderBottomRightRadius: '25px',
             boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
         },
-        image: {
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-        },
-        image_wrapper: {
-            position: 'relative',
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-        },
-        text_wrapper: {
-            position: 'relative',
-            zIndex: 99,
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-            fontSize: '100%',
-            color: 'black',
-            borderBottomLeftRadius: '25px',
-            borderBottomRightRadius: '25px',
-            borderTop: '1px solid gray',
-            height: '45px',
-        },
-        icon: {
-            paddingLeft: '20px',
-            alignSelf: 'center',
-        },
-        text: {
-            fontFamily: 'Open-Sans-Regular',
-            fontStyle: 'normal',
-            textAlign: 'left',
-            position: 'relative',
-            paddingLeft: '10px',
-            width: '75%',
-            alignSelf: 'center',
-        },
-        tag: {
-            position: 'relative',
-            paddingLeft: '10px',
-            paddingRight: '20px',
-            width: '25%',
-            alignSelf: 'center',
-        },
+
     })
 
 export default withStyles(styles)(CollectionCard)
