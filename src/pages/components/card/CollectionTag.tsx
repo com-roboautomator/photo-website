@@ -1,4 +1,4 @@
-import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
+import { createStyles, WithStyles, withStyles } from '@material-ui/styles'
 import React from 'react'
 
 interface CollectionTagProps extends WithStyles<typeof styles> {
@@ -11,16 +11,11 @@ class CollectionTag extends React.Component<CollectionTagProps> {
         return (
             <div
                 data-testid="tag-layout"
+                className={this.props.classes.layout}
                 style={{
                     background: this.props.colour
                         ? this.props.colour
                         : '#323232',
-                    borderRadius: '7px',
-                    fontFamily: 'Open-Sans-Bold',
-                    fontSize: 14,
-                    padding: 5,
-                    textAlign: 'center',
-                    color: 'white',
                 }}>
                 {this.props.title ? this.props.title : 'Default'}
             </div>
@@ -28,6 +23,15 @@ class CollectionTag extends React.Component<CollectionTagProps> {
     }
 }
 
-const styles = () => createStyles({})
+const styles = () => createStyles({
+    layout: {
+        borderRadius: '7px',
+        fontFamily: 'Open-Sans-Bold',
+        fontSize: 14,
+        padding: 5,
+        textAlign: 'center',
+        color: 'white',
+    },
+})
 
 export default withStyles(styles)(CollectionTag)
