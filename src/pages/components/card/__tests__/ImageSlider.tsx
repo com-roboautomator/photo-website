@@ -28,20 +28,20 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
 
         fireEvent.click(component.getByTestId('Arrow-Button-Right'))
 
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
     })
 
     it('should decrement image index on arrow button click', () => {
@@ -59,22 +59,22 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
 
         fireEvent.click(component.getByTestId('Arrow-Button-Left'))
 
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
     })
 
     it('should increment image index on positive wheel move', () => {
@@ -91,10 +91,10 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
 
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
             deltaY: 30,
@@ -103,10 +103,10 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
     })
 
     it('should decrement image index on negative wheel move', () => {
@@ -123,11 +123,11 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
 
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
             deltaY: -30,
@@ -136,11 +136,11 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-9')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-8')
     })
 
     it('should set left arrow button to disabled when index is 0', () => {

@@ -18,7 +18,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-            <main>
+            <main data-testid={`Collection-Card-${this.props.title}`}>
                 <div
                     data-testid="Collection-Card-Spacing"
                     className={
