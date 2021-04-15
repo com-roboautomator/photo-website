@@ -1,8 +1,8 @@
-import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
+import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
 import React from 'react'
 import ArrowEnabled from '../../../assets/images/icons/arrow-enabled.png'
 import ArrowDisabled from '../../../assets/images/icons/arrow-disabled.png'
-import {Button} from '@material-ui/core'
+import { Button } from '@material-ui/core'
 
 interface ArrowProps extends WithStyles<typeof styles> {
     disabled: boolean
@@ -21,14 +21,9 @@ class Arrow extends React.Component<ArrowProps> {
                     onClick={props.onClick}>
                     <img
                         data-testid="Arrow-Button-Image"
+                        className={(props.orientation === 'Left') ? props.classes.left : props.classes.right}
                         src={props.disabled ? ArrowDisabled : ArrowEnabled}
-                        alt=""
-                        width="40"
-                        style={{
-                            transform: `rotate(${
-                                props.orientation === 'Left' ? 180 : 0
-                            }deg)`,
-                        }}
+                        alt="nata"
                     />
                 </Button>
             </div>
@@ -36,6 +31,14 @@ class Arrow extends React.Component<ArrowProps> {
     }
 }
 
-const styles = () => createStyles({})
+const styles = () => createStyles({
+    left: {
+        width: '40px',
+        transform: 'rotate(180deg)'
+    },
+    right: {
+        width: '40px',
+    }
+})
 
 export default withStyles(styles)(Arrow)
