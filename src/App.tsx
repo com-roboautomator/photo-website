@@ -15,7 +15,6 @@ interface AppProps extends WithStyles <typeof styles>{
 
 class App extends React.Component <AppProps>{
     render() {
-
         const classes = this.props.classes
         return (
             <main className={classes.page_container}>
