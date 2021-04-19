@@ -7,6 +7,7 @@ interface InputFieldProps extends WithStyles<typeof style> {
     id: string
     multiLine?: boolean
     rows?: number
+    errorText?: string
     onChange: (input: string) => void
 }
 
@@ -24,6 +25,8 @@ class InputField extends React.Component<InputFieldProps, any>{
                         rows={props.rows}
                         onChange={(event) => props.onChange(event.target.value)}
                         label={props.label} variant='outlined'
+                        error={props.errorText !== ""}
+                        helperText={props.errorText}
                     />
                 </FormControl>
             </div>

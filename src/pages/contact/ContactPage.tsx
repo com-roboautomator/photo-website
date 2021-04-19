@@ -12,9 +12,13 @@ class Contact extends React.Component<ContactProps, any> {
     constructor(props: ContactProps) {
         super(props)
         this.state = {
-            name: "name",
-            address: "address",
-            message: "message"
+            name: "",
+            address: "",
+            message: "",
+
+            nameError: "",
+            addressError: "",
+            messageError: "",
         }
     }
 
@@ -31,9 +35,9 @@ class Contact extends React.Component<ContactProps, any> {
                             <br />
                             Please fill in this form and I will do my best to respond as soon as I can
                         </p>
-                        <InputField onChange={this.handleNameUpdate.bind(this)} id="full-name" label="Full Name" />
-                        <InputField onChange={this.handleAddressUpdate.bind(this)} id="address" label="Email Address" />
-                        <InputField onChange={this.handleMessageUpdate.bind(this)} id="message" label="Message" multiLine={true} rows={8} />
+                        <InputField errorText={this.state.nameError} onChange={this.handleNameUpdate.bind(this)} id="full-name" label="Full Name" />
+                        <InputField errorText={this.state.addressError} onChange={this.handleAddressUpdate.bind(this)} id="address" label="Email Address" />
+                        <InputField errorText={this.state.messageError} onChange={this.handleMessageUpdate.bind(this)} id="message" label="Message" multiLine={true} rows={8} />
                         <SubmitButton onSubmit={this.handleSubmit.bind(this)} />
                     </div>
 
@@ -61,7 +65,19 @@ class Contact extends React.Component<ContactProps, any> {
     }
 
     handleSubmit() {
-        sendEmail(this.state.name, this.state.address, this.state.message)
+        const nameErrorUpdate = (this.state.name === "" || this.state.name === undefined) ? "required" : ""
+        const addressErrorUpdate = (this.state.address === "" || this.state.address === undefined) ? "required" : ""
+        const messageErrorUpdate = (this.state.message === "" || this.state.message === undefined) ? "required" : ""
+
+        this.setState({
+            nameError: nameErrorUpdate,
+            addressError: addressErrorUpdate,
+            messageError: messageErrorUpdate
+        })
+
+        if (nameErrorUpdate === "" && addressErrorUpdate === "" && messageErrorUpdate === "") {
+            sendEmail(this.state.name, this.state.address, this.state.message)
+        }
     }
 
 }
