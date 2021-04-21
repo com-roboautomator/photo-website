@@ -2,22 +2,20 @@ import {Button} from '@material-ui/core'
 import {WithStyles, createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 
-interface SubmitButtonProps extends WithStyles<typeof styles> {
-    onSubmit?: () => void
-}
+interface HomeButtonProps extends WithStyles<typeof styles> {}
 
-class SubmitButton extends React.Component<SubmitButtonProps> {
+class HomeButton extends React.Component<HomeButtonProps> {
     render() {
         const classes = this.props.classes
         return (
             <div className={classes.container}>
                 <Button
-                    data-testid="Submit-Button"
+                    data-testid="Home-Button"
                     className={classes.button}
-                    onClick={this.props.onSubmit}
+                    href="/"
                     variant="contained"
                     color="primary">
-                    Submit
+                    Home
                 </Button>
             </div>
         )
@@ -43,4 +41,4 @@ const styles = () =>
         },
     })
 
-export default withStyles(styles)(SubmitButton)
+export default withStyles(styles)(HomeButton)
