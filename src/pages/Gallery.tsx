@@ -3,6 +3,9 @@ import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import PageTitle from './components/text/PageTitle'
+import {data} from '../assets/data/TestData'
+import ImageSlider from './components/card/ImageSlider'
+
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
@@ -16,6 +19,7 @@ class Gallery extends React.Component<GalleryProps, any> {
                     title="GALLERY"
                     src="https://picsum.photos/id/103/1500/200"
                 />
+                <ImageSlider height={460} mode="Gallery" data={data} />
                 {/* <p>
                     {imageId ? (
                         <ImageViewer source={imageId} />
