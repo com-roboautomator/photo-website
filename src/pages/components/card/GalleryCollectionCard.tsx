@@ -1,4 +1,4 @@
-import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
+import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
@@ -10,40 +10,62 @@ interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
     title: string
     tagTitle?: string
     tagColour?: string
-    selected: boolean
+    selected: number
     height: number
     onClick?: () => void
 }
+
+
 
 class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-           
-                <div
-                    data-testid="Collection-Card-Spacing"
-                    className={
-                        this.props.selected
-                            ? classes.spacing_selected
-                            : classes.spacing_unselected
-                    }>
-                    <div className={classes.container}>
-                        <Link href={this.props.coverSrc} target="_blank">
-                            <div className={classes.image_wrapper}>
-                                <img
-                                    data-testid="Collection-Card-Image"
-                                    className={classes.image}
-                                    src={this.props.coverSrc}
-                                    alt=""
-                                    width="350"
-                                    height={this.props.height - 20}
-                                />
-                            </div>
-                        </Link>
-                    </div>
+
+            <div
+                data-testid="Collection-Card-Spacing"
+                className={
+                    this.getLocationSpacing(this.props.selected)
+                }
+            >
+                <div className={classes.container}>
+                    <Link href={this.props.coverSrc} target="_blank">
+                        <div className={classes.image_wrapper}>
+                            <img
+                                data-testid="Collection-Card-Image"
+                                className={classes.image}
+                                src={this.props.coverSrc}
+                                alt=""
+                                width="350"
+                                height={this.props.height - 20}
+                            />
+                        </div>
+                    </Link>
                 </div>
+            </div>
         )
     }
+
+    getLocationSpacing(input: number) {
+
+        switch (input) {
+            case 0:
+                return this.props.classes.spacing_selected
+            case 1:
+                return this.props.classes.spacing_immediate_background
+            case -1:
+                return this.props.classes.spacing_immediate_background
+            case 2:
+                return this.props.classes.spacing_distant_background
+            case -2:
+                return this.props.classes.spacing_distant_background
+            default:
+                return this.props.classes.spacing_not_rendered
+
+        }
+
+    }
+
 }
 
 const styles = () =>
@@ -58,13 +80,37 @@ const styles = () =>
             opacity: '100%',
             flex: 1,
         },
-        spacing_unselected: {
+        spacing_immediate_background: {
             pointerEvents: 'auto',
             userSelect: 'none',
             flex: 1,
+            zIndex: 98,
+            marginLeft: '-100px',
+            marginRight: '-100px',
             WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
             transform: 'scale(0.8)',
-            opacity: '90%',
+            opacity: '80%',
+        },
+        spacing_distant_background: {
+            pointerEvents: 'auto',
+            userSelect: 'none',
+            zIndex: 97,
+            flex: 1,
+            marginLeft: '-100px',
+            marginRight: '-100px',
+            WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
+            transform: 'scale(0.5)',
+            opacity: '60%',
+        },
+        spacing_not_rendered: {
+            pointerEvents: 'auto',
+            userSelect: 'none',
+            flex: 1,
+            marginLeft: '-100px',
+            marginRight: '-100px',
+            WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
+            transform: 'scale(0.2)',
+            opacity: '0%',
         },
         container: {
             //width: 350,
