@@ -89,7 +89,8 @@ const styles = () =>
             marginRight: '-100px',
             WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
             transform: 'scale(0.8)',
-            opacity: '80%',
+            opacity: '95%',
+            filter: 'blur(1px)'
         },
         spacing_distant_background: {
             pointerEvents: 'auto',
@@ -101,6 +102,8 @@ const styles = () =>
             WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s',
             transform: 'scale(0.5)',
             opacity: '60%',
+            filter: 'blur(4px)'
+
         },
         spacing_not_rendered: {
             pointerEvents: 'auto',

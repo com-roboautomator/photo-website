@@ -4,6 +4,7 @@ import CollectionCardHome from './HomeCollectionCard'
 import CollectionCardGallery from './GalleryCollectionCard'
 import Arrow from './Arrow'
 import Underscore from 'underscore'
+import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: {
@@ -75,28 +76,13 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
             <div
                 data-testid="ImageSlider-Container"
                 className={classes.container}>
-                <div
-                    data-testid="ImageSlider-button-wrapper"
-                    className={classes.button_wrapper}
-                    style={{ width: (this.props.mode === 'Gallery') ? '60%' : '100%' }}
-                >
-                    <div className={classes.arrow}>
-                        <Arrow
-                            disabled={property.index === 0}
-                            onClick={this.previous}
-                            orientation={'Left'}
-                        />
-                    </div>
-                    <div
-                        data-testid="ImageSlider-arrow"
-                        className={classes.arrow}>
-                        <Arrow
-                            disabled={property.index === properties.length - 1}
-                            onClick={this.next}
-                            orientation={'Right'}
-                        />
-                    </div>
-                </div>
+                <ImageSliderButtonWrapper
+                    mode={this.props.mode}
+                    index={property.index}
+                    length={properties.length}
+                    next={this.next}
+                    previous={this.previous}
+                />
                 <div
                     data-testid="ImageSlider-Card-Slider"
                     className={classes.card_slider}
@@ -152,9 +138,6 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 }
 
 const styles = () =>
-
-
-
     createStyles({
         container: {
             pointerEvents: 'auto',
@@ -169,30 +152,12 @@ const styles = () =>
             maxWidth: '370px',
             width: '370px',
         },
-        button_wrapper: {
-            zIndex: 99,
-            pointerEvents: 'none',
-            position: 'absolute',
-            width: '60%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignSelf: 'center',
-            background:
-                'linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)',
-        },
         card_slider_wrapper: {
             pointerEvents: 'auto',
             display: 'flex',
             position: 'absolute',
             margin: '10px',
             transition: '300ms cubic-bezier(0.455, 0.03, 0.515, 0.955)',
-        },
-
-        arrow: {
-            pointerEvents: 'auto',
-            margin: '20px',
-            alignSelf: 'center',
         },
     })
 
