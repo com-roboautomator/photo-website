@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import CollectionCard from '../CollectionCard'
+import CollectionCard from '../HomeCollectionCard'
 
 describe('Collection Card', () => {
     it('should render collection card spacing correctly when unselected', () => {

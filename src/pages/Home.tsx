@@ -17,7 +17,7 @@ class Home extends React.Component<HomeProps> {
                         src="https://picsum.photos/id/1014/1500/200"
                     />
                     <div className={classes.wapper}>
-                        <ImageSlider data={data} />
+                        <ImageSlider height={280} mode="Home" data={data} />
                     </div>
                 </div>
             </main>
