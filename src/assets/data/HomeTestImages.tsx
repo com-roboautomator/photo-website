@@ -1,11 +1,6 @@
-export const data: {
-    key: string
-    url: string
-    title: string
-    tagTitle?: string
-    tagColour?: string
-    index: number
-}[] = [
+import collection from "./ImageDataStructure";
+
+export const data: collection [] = [
     {
         key: '017a317f-8285-4cfb-a4e7-668d85721b76',
         url:

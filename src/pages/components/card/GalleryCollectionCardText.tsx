@@ -1,11 +1,13 @@
 import { WithStyles, createStyles, withStyles } from '@material-ui/styles';
 import React from 'react'
+import GalleryCollectionCardItemsText from './GalleryCollectionCardItemsText';
 import GalleryCollectionCardViewIcon from './GalleryCollectionCardViewIcon';
 
 interface GalleryCollectionCardTextProps extends WithStyles<typeof styles> {
     text?: string
     tagTitle?: string
     colour?: string
+    itemNumber?: number
 }
 
 class GalleryCollectionCard extends React.Component<GalleryCollectionCardTextProps> {
@@ -24,6 +26,7 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardTextPro
                     className={classes.text}
                 >
                     {this.props.text}
+                    <GalleryCollectionCardItemsText items={this.props.itemNumber}/>
                 </div>
                 <GalleryCollectionCardViewIcon />
 

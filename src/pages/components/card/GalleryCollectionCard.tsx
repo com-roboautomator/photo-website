@@ -1,17 +1,15 @@
 import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
+import collection from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
-import GalleryCollectionCardViewIcon from './GalleryCollectionCardViewIcon'
+
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
-    key?: string
-    coverSrc: string
-    title: string
-    tagTitle?: string
-    tagColour?: string
     selected: number
     height: number
+
+    collection: collection
     onClick?: () => void
 }
 
@@ -27,16 +25,21 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                 }
             >
                 <div className={classes.container}>
-                    <Link href={this.props.coverSrc} target="_blank">
+                    <Link href={this.props.collection.url} target="_blank">
                         <div className={classes.image_wrapper}>
                             <img
                                 data-testid="Collection-Card-Image"
-                                src={this.props.coverSrc}
+                                src={this.props.collection.url}
                                 alt=""
                                 width="350"
                                 height={this.props.height - 20}
                             />
-                            <GalleryCollectionCardText text={this.props.title} tagTitle={this.props.tagTitle} colour={this.props.tagColour} />
+                            <GalleryCollectionCardText
+                                text={this.props.collection.title}
+                                tagTitle={this.props.collection.tagTitle}
+                                colour={this.props.collection.tagColour}
+                                itemNumber={this.props.collection.images?.length}
+                                />
                         </div>
                     </Link>
                 </div>

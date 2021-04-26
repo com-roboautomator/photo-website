@@ -1,15 +1,12 @@
 import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
+import collection from '../../../assets/data/ImageDataStructure'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './HomeCollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
-    key?: string
-    coverSrc: string
-    title: string
-    tagTitle?: string
-    tagColour?: string
+    collection: collection
     selected: boolean
     onClick?: () => void
 }
@@ -18,7 +15,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         return (
-            <main data-testid={`Collection-Card-${this.props.title}`}>
+            <main data-testid={`Collection-Card-${this.props.collection.title}`}>
                 <div
                     data-testid="Collection-Card-Spacing"
                     className={
@@ -27,12 +24,12 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             : classes.spacing_unselected
                     }>
                     <div className={classes.container}>
-                        <Link href={this.props.coverSrc} target="_blank">
+                        <Link href={this.props.collection.url} target="_blank">
                             <div className={classes.image_wrapper}>
                                 <img
                                     data-testid="Collection-Card-Image"
                                     className={classes.image}
-                                    src={this.props.coverSrc}
+                                    src={this.props.collection.url}
                                     alt=""
                                     width="350"
                                     height="200"
@@ -53,12 +50,12 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             <p
                                 data-testid="Collection-Card-Title"
                                 className={classes.text}>
-                                {this.props.title}
+                                {this.props.collection.title}
                             </p>
                             <div className={classes.tag}>
                                 <CollectionTag
-                                    colour={this.props.tagColour}
-                                    title={this.props.tagTitle}
+                                    colour={this.props.collection.tagColour}
+                                    title={this.props.collection.tagTitle}
                                 />
                             </div>
                         </div>

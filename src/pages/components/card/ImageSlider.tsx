@@ -5,15 +5,10 @@ import CollectionCardGallery from './GalleryCollectionCard'
 import Underscore from 'underscore'
 import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
 import ImageSliderTitle from './ImageSliderTitle'
+import Collection from '../../../assets/data/ImageDataStructure'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
-    data: {
-        url: string
-        title: string
-        tagTitle?: string | undefined
-        tagColour?: string | undefined
-        index: number
-    }[]
+    data: Collection[]
     startingIndex?: number
     mode: "Home" | "Gallery"
     height: number
@@ -101,36 +96,21 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                     }%)`,
                             }}>
                             {properties.map(
-                                (property: {
-                                    key: string
-                                    url: string
-                                    title: string
-                                    tagTitle: string
-                                    tagColour: string
-                                    index: number
-                                }) => (
+                                (property: Collection) => (
                                     (this.props.mode === "Home") ?
                                         <CollectionCardHome
-                                            key={property.key}
-                                            coverSrc={property.url}
-                                            title={property.title}
+                                            collection={property}
                                             selected={
                                                 this.state.selected === property.index
                                             }
-                                            tagTitle={property.tagTitle}
-                                            tagColour={property.tagColour}
                                         />
                                         :
                                         <CollectionCardGallery
-                                            key={property.key}
-                                            coverSrc={property.url}
-                                            title={property.title}
                                             selected={
                                                 this.state.selected - property.index
                                             }
-                                            tagTitle={property.tagTitle}
-                                            tagColour={property.tagColour}
                                             height={this.props.height}
+                                            collection={property}
                                         />
                                 )
                             )}
