@@ -2,7 +2,7 @@ import {fireEvent, render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import ImageSlider from '../ImageSlider'
-import {data} from '../../../../assets/data/TestData'
+import {data} from '../../../../assets/data/HomeTestImages'
 
 describe('Image Slider', () => {
     it('renders correctly when there are no items', () => {

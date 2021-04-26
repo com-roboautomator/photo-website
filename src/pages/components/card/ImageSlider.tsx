@@ -2,9 +2,9 @@ import { createStyles, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import CollectionCardHome from './HomeCollectionCard'
 import CollectionCardGallery from './GalleryCollectionCard'
-import Arrow from './Arrow'
 import Underscore from 'underscore'
 import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
+import ImageSliderTitle from './ImageSliderTitle'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: {
@@ -17,7 +17,8 @@ interface ImageSliderProps extends WithStyles<typeof styles> {
     startingIndex?: number
     mode: "Home" | "Gallery"
     height: number
-
+    titleColour?: string
+    title?: string
 }
 
 class ImageSlider extends React.Component<ImageSliderProps, any> {
@@ -73,66 +74,70 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
         console.log(property.index * (85 / properties.length))
 
         return (
-            <div
-                data-testid="ImageSlider-Container"
-                className={classes.container}>
-                <ImageSliderButtonWrapper
-                    mode={this.props.mode}
-                    index={property.index}
-                    length={properties.length}
-                    next={this.next}
-                    previous={this.previous}
-                />
+
+            <main className={classes.container}>
+                <ImageSliderTitle show={this.props.mode === "Gallery"} text={this.props.title} colour={this.props.titleColour} />
                 <div
-                    data-testid="ImageSlider-Card-Slider"
-                    className={classes.card_slider}
-                    style={{ height: `${this.props.height}px` }}
-                    onWheel={(e) => {
-                        this.handleWheelMovement(e)
-                    }}>
+                    data-testid="ImageSlider-Container"
+                    className={classes.wrapper}>
+                    <ImageSliderButtonWrapper
+                        mode={this.props.mode}
+                        index={property.index}
+                        length={properties.length}
+                        next={this.next}
+                        previous={this.previous}
+                    />
                     <div
-                        className={classes.card_slider_wrapper}
-                        style={{
-                            transform: `translateX(-${property.index * (((this.props.mode === "Gallery") ? 90.6 : 100) / properties.length)
-                                }%)`,
+                        data-testid="ImageSlider-Card-Slider"
+                        className={classes.card_slider}
+                        style={{ height: `${this.props.height}px` }}
+                        onWheel={(e) => {
+                            this.handleWheelMovement(e)
                         }}>
-                        {properties.map(
-                            (property: {
-                                key: string
-                                url: string
-                                title: string
-                                tagTitle: string
-                                tagColour: string
-                                index: number
-                            }) => (
-                                (this.props.mode === "Home") ?
-                                    <CollectionCardHome
-                                        key={property.key}
-                                        coverSrc={property.url}
-                                        title={property.title}
-                                        selected={
-                                            this.state.selected === property.index
-                                        }
-                                        tagTitle={property.tagTitle}
-                                        tagColour={property.tagColour}
-                                    />
-                                    :
-                                    <CollectionCardGallery
-                                        key={property.key}
-                                        coverSrc={property.url}
-                                        title={property.title}
-                                        selected={
-                                            this.state.selected - property.index
-                                        }
-                                        tagTitle={property.tagTitle}
-                                        tagColour={property.tagColour}
-                                        height={this.props.height}
-                                    />
-                            )
-                        )}
+                        <div
+                            className={classes.card_slider_wrapper}
+                            style={{
+                                transform: `translateX(-${property.index * 100 / ((this.props.mode === 'Gallery') ? properties.length + 1.3 : properties.length)
+                                    }%)`,
+                            }}>
+                            {properties.map(
+                                (property: {
+                                    key: string
+                                    url: string
+                                    title: string
+                                    tagTitle: string
+                                    tagColour: string
+                                    index: number
+                                }) => (
+                                    (this.props.mode === "Home") ?
+                                        <CollectionCardHome
+                                            key={property.key}
+                                            coverSrc={property.url}
+                                            title={property.title}
+                                            selected={
+                                                this.state.selected === property.index
+                                            }
+                                            tagTitle={property.tagTitle}
+                                            tagColour={property.tagColour}
+                                        />
+                                        :
+                                        <CollectionCardGallery
+                                            key={property.key}
+                                            coverSrc={property.url}
+                                            title={property.title}
+                                            selected={
+                                                this.state.selected - property.index
+                                            }
+                                            tagTitle={property.tagTitle}
+                                            tagColour={property.tagColour}
+                                            height={this.props.height}
+                                        />
+                                )
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         )
     }
 }
@@ -140,6 +145,11 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 const styles = () =>
     createStyles({
         container: {
+            display: 'flex',
+            flexDirection: 'column',
+            userSelect: 'none',
+        },
+        wrapper: {
             pointerEvents: 'auto',
             position: 'relative',
             display: 'flex',

@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import CollectionTag from '../CollectionTag'
+import CollectionTag from '../HomeCollectionTag'
 
 describe('Collection Tag', () => {
     it('should render tag correctly when given props', () => {

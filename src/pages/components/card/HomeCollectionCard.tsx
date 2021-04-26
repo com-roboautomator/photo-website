@@ -2,7 +2,7 @@ import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
-import CollectionTag from './CollectionTag'
+import CollectionTag from './HomeCollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
     key?: string

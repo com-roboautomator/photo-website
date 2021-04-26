@@ -1,7 +1,7 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
-import {data} from '../assets/data/TestData'
+import {data} from '../assets/data/HomeTestImages'
 import PageTitle from './components/text/PageTitle'
 
 interface HomeProps extends WithStyles<typeof styles> {}
