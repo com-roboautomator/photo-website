@@ -1,7 +1,7 @@
 import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection from '../../../assets/data/ImageDataStructure'
+import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 
@@ -16,6 +16,9 @@ interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
 class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> {
     render() {
         const classes = this.props.classes
+        const url: string = (this.props.collection.images === undefined) ? placeholder.url : this.props.collection.images[this.props.collection.titleImage ?? 0].url
+
+        //const image: image = this.props.collection.images[0] ?? placeholder
         return (
 
             <div
@@ -25,11 +28,11 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                 }
             >
                 <div className={classes.container}>
-                    <Link href={this.props.collection.url} target="_blank">
+                    <Link href={url} target="_blank">
                         <div className={classes.image_wrapper}>
                             <img
                                 data-testid="Collection-Card-Image"
-                                src={this.props.collection.url}
+                                src={url}
                                 alt=""
                                 width="350"
                                 height={this.props.height - 20}
@@ -39,7 +42,7 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                                 tagTitle={this.props.collection.tagTitle}
                                 colour={this.props.collection.tagColour}
                                 itemNumber={this.props.collection.images?.length}
-                                />
+                            />
                         </div>
                     </Link>
                 </div>

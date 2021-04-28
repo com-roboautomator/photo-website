@@ -1,7 +1,7 @@
 import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection from '../../../assets/data/ImageDataStructure'
+import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './HomeCollectionTag'
 
@@ -14,6 +14,7 @@ interface CollectionCardProps extends WithStyles<typeof styles> {
 class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
+        const url: string = (this.props.collection.images === undefined) ? placeholder.url : this.props.collection.images[this.props.collection.titleImage ?? 0].url
         return (
             <main data-testid={`Collection-Card-${this.props.collection.title}`}>
                 <div
@@ -24,12 +25,12 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             : classes.spacing_unselected
                     }>
                     <div className={classes.container}>
-                        <Link href={this.props.collection.url} target="_blank">
+                        <Link href={url} target="_blank">
                             <div className={classes.image_wrapper}>
                                 <img
                                     data-testid="Collection-Card-Image"
                                     className={classes.image}
-                                    src={this.props.collection.url}
+                                    src={url}
                                     alt=""
                                     width="350"
                                     height="200"

@@ -34,8 +34,9 @@ const styles = () => createStyles({
         width: '80%',
         alignSelf: 'center',
         borderBottomStyle: 'solid',
-        borderBottomWidth: '5px',
-        marginTop: '40px',
+        borderBottomWidth: '4px',
+        paddingBottom: '10px',
+        marginTop: '50px',
         marginBottom: '30px',
     },
     hidden: {}
