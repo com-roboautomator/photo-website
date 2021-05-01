@@ -1,7 +1,7 @@
-import collection from "./ImageDataStructure";
-import {v4 as uuid} from "uuid"
+import collection from './ImageDataStructure'
+import {v4 as uuid} from 'uuid'
 
-export const data: collection [] = [
+export const data: collection[] = [
     {
         key: '017a317f-8285-4cfb-a4e7-668d85721b76',
         // url:
@@ -14,12 +14,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1018/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
-
+                url: 'https://picsum.photos/id/1018/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -33,11 +32,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/101/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/101/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -52,11 +51,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1024/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/1024/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -71,11 +70,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/111/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/111/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -88,11 +87,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/158/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/158/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
     {
         key: '812a0676-cf2c-42ec-add4-c0a0f537a085',
@@ -104,11 +103,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1018/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/1018/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -121,11 +120,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/101/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/101/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -138,11 +137,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1024/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/1024/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -155,11 +154,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/111/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/111/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 
     {
@@ -172,11 +171,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/158/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/158/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
     {
         key: '277734f3-91c6-428d-b0da-7b74280ae105',
@@ -188,11 +187,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1013/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/1013/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
     {
         key: '761734a6-9afe-419a-8fb1-f71a633ba733',
@@ -204,11 +203,11 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1023/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/1023/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
     {
         key: '01758230-6fc5-4a4f-99ad-b55aebc2c446',
@@ -220,10 +219,10 @@ export const data: collection [] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/375/200",
-                title: "Nature",
-                index: 0 
-            }
-        ]
+                url: 'https://picsum.photos/id/375/200',
+                title: 'Nature',
+                index: 0,
+            },
+        ],
     },
 ]

@@ -1,11 +1,12 @@
 import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
+import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './HomeCollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
+    key?: string
     collection: collection
     selected: boolean
     onClick?: () => void
@@ -14,9 +15,15 @@ interface CollectionCardProps extends WithStyles<typeof styles> {
 class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
-        const url: string = (this.props.collection.images === undefined) ? placeholder.url : this.props.collection.images[this.props.collection.titleImage ?? 0].url
+        const url: string =
+            this.props.collection.images === undefined
+                ? placeholder.url
+                : this.props.collection.images[
+                      this.props.collection.titleImage ?? 0
+                  ].url
         return (
-            <main data-testid={`Collection-Card-${this.props.collection.title}`}>
+            <main
+                data-testid={`Collection-Card-${this.props.collection.title}`}>
                 <div
                     data-testid="Collection-Card-Spacing"
                     className={

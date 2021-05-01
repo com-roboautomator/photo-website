@@ -1,5 +1,5 @@
-import Collection from "./ImageDataStructure";
-import { v4 as uuid } from 'uuid'
+import Collection from './ImageDataStructure'
+import {v4 as uuid} from 'uuid'
 
 export const natureImages: Collection[] = [
     {
@@ -13,66 +13,65 @@ export const natureImages: Collection[] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1003/500",
-                title: "Deer",
-                index: 0
+                url: 'https://picsum.photos/id/1003/500',
+                title: 'Deer',
+                index: 0,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1020/500",
-                title: "Bear & Cub",
-                index: 1
+                url: 'https://picsum.photos/id/1020/500',
+                title: 'Bear & Cub',
+                index: 1,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1024/500",
-                title: "Buzzard",
-                index: 2
+                url: 'https://picsum.photos/id/1024/500',
+                title: 'Buzzard',
+                index: 2,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1025/500",
-                title: "Pug",
-                index: 3
+                url: 'https://picsum.photos/id/1025/500',
+                title: 'Pug',
+                index: 3,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1074/500",
-                title: "Lion",
-                index: 4
+                url: 'https://picsum.photos/id/1074/500',
+                title: 'Lion',
+                index: 4,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1084/500",
-                title: "Walrus",
-                index: 5
+                url: 'https://picsum.photos/id/1084/500',
+                title: 'Walrus',
+                index: 5,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/169/500",
-                title: "Dogs",
-                index: 6
+                url: 'https://picsum.photos/id/169/500',
+                title: 'Dogs',
+                index: 6,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/200/500",
-                title: "Moo Cow",
-                index: 7
+                url: 'https://picsum.photos/id/200/500',
+                title: 'Moo Cow',
+                index: 7,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/237/500",
-                title: "Dog",
-                index: 8
+                url: 'https://picsum.photos/id/237/500',
+                title: 'Dog',
+                index: 8,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/244/500",
-                title: "Heron",
-                index: 9
+                url: 'https://picsum.photos/id/244/500',
+                title: 'Heron',
+                index: 9,
             },
-
-        ]
+        ],
     },
 
     {
@@ -86,23 +85,23 @@ export const natureImages: Collection[] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/256/500",
-                title: "Landscape #1",
-                index: 0
+                url: 'https://picsum.photos/id/256/500',
+                title: 'Landscape #1',
+                index: 0,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/261/500",
-                title: "Sand",
-                index: 1
+                url: 'https://picsum.photos/id/261/500',
+                title: 'Sand',
+                index: 1,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/277/500",
-                title: "Grass",
-                index: 2
+                url: 'https://picsum.photos/id/277/500',
+                title: 'Grass',
+                index: 2,
             },
-        ]
+        ],
     },
 
     {
@@ -115,17 +114,17 @@ export const natureImages: Collection[] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/1004/500",
-                title: "People",
-                index: 0
+                url: 'https://picsum.photos/id/1004/500',
+                title: 'People',
+                index: 0,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/336/500",
-                title: "Locks",
-                index: 1
+                url: 'https://picsum.photos/id/336/500',
+                title: 'Locks',
+                index: 1,
             },
-        ]
+        ],
     },
 
     {
@@ -136,21 +135,19 @@ export const natureImages: Collection[] = [
         index: 3,
 
         images: [
-
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/328/500",
-                title: "Skiing",
-                index: 0
+                url: 'https://picsum.photos/id/328/500',
+                title: 'Skiing',
+                index: 0,
             },
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/386/500",
-                title: "Hiking",
-                index: 1
+                url: 'https://picsum.photos/id/386/500',
+                title: 'Hiking',
+                index: 1,
             },
-
-        ]
+        ],
     },
 
     {
@@ -163,17 +160,10 @@ export const natureImages: Collection[] = [
         images: [
             {
                 key: uuid(),
-                url: "https://picsum.photos/id/158/500",
-                title: "Party",
-                index: 0
+                url: 'https://picsum.photos/id/158/500',
+                title: 'Party',
+                index: 0,
             },
-            {
-                key: uuid(),
-                url: "https://picsum.photos/id/390/500",
-                title: "Jumping",
-                index: 1
-            },
-        ]
+        ],
     },
-
 ]

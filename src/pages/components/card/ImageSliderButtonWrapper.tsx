@@ -1,4 +1,4 @@
-import { WithStyles, createStyles, withStyles } from '@material-ui/styles'
+import {WithStyles, createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import Arrow from './Arrow'
 
@@ -11,19 +11,18 @@ interface ImageSliderButtonWrapperProps extends WithStyles<typeof styles> {
 }
 
 class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperProps> {
-
     render() {
         const classes = this.props.classes
         return (
-
             <div
                 data-testid="ImageSlider-button-wrapper"
                 className={classes.button_wrapper}
                 style={{
                     background:
-                        (this.props.mode === 'Home') ? 'linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)' : 'none',
-                }}
-            >
+                        this.props.mode === 'Home'
+                            ? 'linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)'
+                            : 'none',
+                }}>
                 <div className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === 0}
@@ -31,10 +30,7 @@ class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperP
                         orientation={'Left'}
                     />
                 </div>
-                <div
-                    data-testid="ImageSlider-arrow"
-                    className={classes.arrow}
-                >
+                <div data-testid="ImageSlider-arrow" className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === this.props.length - 1}
                         onClick={this.props.next}
@@ -42,29 +38,27 @@ class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperP
                     />
                 </div>
             </div>
-
         )
-
     }
-
 }
 
-const styles = () => createStyles({
-    button_wrapper: {
-        zIndex: 99,
-        pointerEvents: 'none',
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignSelf: 'center',
-    },
-    arrow: {
-        pointerEvents: 'auto',
-        margin: '20px',
-        alignSelf: 'center',
-    },
-})
+const styles = () =>
+    createStyles({
+        button_wrapper: {
+            zIndex: 99,
+            pointerEvents: 'none',
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignSelf: 'center',
+        },
+        arrow: {
+            pointerEvents: 'auto',
+            margin: '20px',
+            alignSelf: 'center',
+        },
+    })
 
 export default withStyles(styles)(ImageSliderButtonWrapper)

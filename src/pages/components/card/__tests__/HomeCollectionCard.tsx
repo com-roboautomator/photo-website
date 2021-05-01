@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import HomeCollectionCard from '../HomeCollectionCard'
 
@@ -6,7 +6,11 @@ describe('Home Collection Card', () => {
     it('should render collection card spacing correctly when unselected', () => {
         const component = render(
             <HomeCollectionCard
-                collection={{ key: "key", title: "Home-Collection-Card-Title", index: 0 }}
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={false}
             />
         )
@@ -35,8 +39,12 @@ describe('Home Collection Card', () => {
     it('should render collection card spacing correctly when selected', () => {
         const component = render(
             <HomeCollectionCard
-            collection={{ key: "key", title: "Home-Collection-Card-Title", index: 0 }}
-            selected={true}
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
+                selected={true}
             />
         )
 
@@ -70,8 +78,12 @@ describe('Home Collection Card', () => {
     it('should render card image correctly', () => {
         const component = render(
             <HomeCollectionCard
-            collection={{ key: "key", title: "Home-Collection-Card-Title", index: 0 }}
-            selected={true}
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
+                selected={true}
             />
         )
 
@@ -102,8 +114,12 @@ describe('Home Collection Card', () => {
     it('should render card text wrapper correctly', () => {
         const component = render(
             <HomeCollectionCard
-            collection={{ key: "key", title: "Home-Collection-Card-Title", index: 0 }}
-            selected={true}
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
+                selected={true}
             />
         )
 
@@ -146,8 +162,12 @@ describe('Home Collection Card', () => {
     it('should render card image icon correctly', () => {
         const component = render(
             <HomeCollectionCard
-            collection={{ key: "key", title: "Home-Collection-Card-Title", index: 0 }}
-            selected={true}
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
+                selected={true}
             />
         )
 
@@ -166,8 +186,12 @@ describe('Home Collection Card', () => {
     it('should render card title correctly', () => {
         const component = render(
             <HomeCollectionCard
-            collection={{ key: "key", title: "test-collection-card-title", index: 0 }}
-            selected={true}
+                collection={{
+                    key: 'key',
+                    title: 'test-collection-card-title',
+                    index: 0,
+                }}
+                selected={true}
             />
         )
 

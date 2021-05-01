@@ -7,14 +7,14 @@ import {data} from '../../../../assets/data/HomeTestImages'
 describe('Image Slider', () => {
     it('renders correctly when there are no items', () => {
         const ImageSliderRender = renderer
-            .create(<ImageSlider data={data} mode='Home' />)
+            .create(<ImageSlider data={data} mode="Home" />)
             .toJSON()
 
         expect(ImageSliderRender).toMatchSnapshot()
     })
 
     it('should increment image index on arrow button click', () => {
-        const component = render(<ImageSlider data={data} mode='Home' />)
+        const component = render(<ImageSlider data={data} mode="Home" />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Right')).toBeTruthy()
@@ -45,7 +45,9 @@ describe('Image Slider', () => {
     })
 
     it('should decrement image index on arrow button click', () => {
-        const component = render(<ImageSlider data={data} startingIndex={3} mode='Home' />)
+        const component = render(
+            <ImageSlider data={data} startingIndex={3} mode="Home" />
+        )
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Left')).toBeTruthy()
@@ -78,7 +80,7 @@ describe('Image Slider', () => {
     })
 
     it('should increment image index on positive wheel move', () => {
-        const component = render(<ImageSlider data={data} mode='Home' />)
+        const component = render(<ImageSlider data={data} mode="Home" />)
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toBeTruthy()
         expect(
@@ -110,7 +112,9 @@ describe('Image Slider', () => {
     })
 
     it('should decrement image index on negative wheel move', () => {
-        const component = render(<ImageSlider data={data} startingIndex={3} mode='Home' />)
+        const component = render(
+            <ImageSlider data={data} startingIndex={3} mode="Home" />
+        )
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toBeTruthy()
         expect(
@@ -144,7 +148,9 @@ describe('Image Slider', () => {
     })
 
     it('should set left arrow button to disabled when index is 0', () => {
-        const component = render(<ImageSlider data={data} startingIndex={0} mode='Home' />)
+        const component = render(
+            <ImageSlider data={data} startingIndex={0} mode="Home" />
+        )
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Left')).toBeTruthy()
@@ -158,7 +164,11 @@ describe('Image Slider', () => {
 
     it('should set Right arrow button to disabled when index is max length', () => {
         const component = render(
-            <ImageSlider data={data} startingIndex={data.length - 1} mode='Home' />
+            <ImageSlider
+                data={data}
+                startingIndex={data.length - 1}
+                mode="Home"
+            />
         )
 
         expect(component).toBeTruthy()
@@ -172,7 +182,7 @@ describe('Image Slider', () => {
     })
 
     it('should render image slider correctly', () => {
-        const component = render(<ImageSlider data={data} mode='Home' />)
+        const component = render(<ImageSlider data={data} mode="Home" />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('ImageSlider-Container')).toHaveClass(

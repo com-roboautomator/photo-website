@@ -1,4 +1,4 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import CollectionCardHome from './HomeCollectionCard'
 import CollectionCardGallery from './GalleryCollectionCard'
@@ -6,11 +6,12 @@ import Underscore from 'underscore'
 import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
 import ImageSliderTitle from './ImageSliderTitle'
 import Collection from '../../../assets/data/ImageDataStructure'
+import {v4 as uuid} from 'uuid'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: Collection[]
     startingIndex?: number
-    mode: "Home" | "Gallery"
+    mode: 'Home' | 'Gallery'
     height?: number
     titleColour?: string
     title?: string
@@ -64,14 +65,15 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 
     render() {
         const classes = this.props.classes
-        const { properties, property } = this.state
-
-        console.log(property.index * (85 / properties.length))
+        const {properties, property} = this.state
 
         return (
-
             <main className={classes.container}>
-                <ImageSliderTitle show={this.props.mode === "Gallery"} text={this.props.title} colour={this.props.titleColour} />
+                <ImageSliderTitle
+                    show={this.props.mode === 'Gallery'}
+                    text={this.props.title}
+                    colour={this.props.titleColour}
+                />
                 <div
                     data-testid="ImageSlider-Container"
                     className={classes.wrapper}>
@@ -85,33 +87,43 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                     <div
                         data-testid="ImageSlider-Card-Slider"
                         className={classes.card_slider}
-                        style={{ height: `${this.props.height}px` }}
+                        style={{height: `${this.props.height}px`}}
                         onWheel={(e) => {
                             this.handleWheelMovement(e)
                         }}>
                         <div
                             className={classes.card_slider_wrapper}
                             style={{
-                                transform: `translateX(-${property.index * 100 / ((this.props.mode === 'Gallery') ? properties.length + 1.3 : properties.length)
-                                    }%)`,
+                                transform: `translateX(-${
+                                    (property.index * 100) /
+                                    (this.props.mode === 'Gallery'
+                                        ? properties.length + 1.3
+                                        : properties.length)
+                                }%)`,
                             }}>
-                            {properties.map(
-                                (property: Collection) => (
-                                    (this.props.mode === "Home") ?
-                                        <CollectionCardHome
-                                            collection={property}
-                                            selected={
-                                                this.state.selected === property.index
-                                            }
-                                        />
-                                        :
-                                        <CollectionCardGallery
-                                            selected={
-                                                this.state.selected - property.index
-                                            }
-                                            height={(this.props.height === undefined) ? 460 : this.props.height}
-                                            collection={property}
-                                        />
+                            {properties.map((property: Collection) =>
+                                this.props.mode === 'Home' ? (
+                                    <CollectionCardHome
+                                        //key={uuid()}
+                                        collection={property}
+                                        selected={
+                                            this.state.selected ===
+                                            property.index
+                                        }
+                                    />
+                                ) : (
+                                    <CollectionCardGallery
+                                        //key={uuid()}
+                                        selected={
+                                            this.state.selected - property.index
+                                        }
+                                        height={
+                                            this.props.height === undefined
+                                                ? 460
+                                                : this.props.height
+                                        }
+                                        collection={property}
+                                    />
                                 )
                             )}
                         </div>

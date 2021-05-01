@@ -1,34 +1,36 @@
-import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
+import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
-
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
     selected: number
     height: number
+    key?: string
 
     collection: collection
-    onClick?: () => void
 }
 
 class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> {
     render() {
         const classes = this.props.classes
-        const url: string = (this.props.collection.images === undefined) ? placeholder.url : this.props.collection.images[this.props.collection.titleImage ?? 0].url
+        const url: string =
+            this.props.collection.images === undefined
+                ? placeholder.url
+                : this.props.collection.images[
+                      this.props.collection.titleImage ?? 0
+                  ].url
 
-        //const image: image = this.props.collection.images[0] ?? placeholder
         return (
-
             <div
                 data-testid="Collection-Card-Spacing"
-                className={
-                    this.getLocationSpacing(this.props.selected)
-                }
-            >
+                className={this.getLocationSpacing(this.props.selected)}>
                 <div className={classes.container}>
-                    <Link href={url} target="_blank">
+                    <Link
+                        data-testid="Collection-Card-Link"
+                        href={url}
+                        target="_blank">
                         <div className={classes.image_wrapper}>
                             <img
                                 data-testid="Collection-Card-Image"
@@ -41,7 +43,9 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                                 text={this.props.collection.title}
                                 tagTitle={this.props.collection.tagTitle}
                                 colour={this.props.collection.tagColour}
-                                itemNumber={this.props.collection.images?.length}
+                                itemNumber={
+                                    this.props.collection.images?.length
+                                }
                             />
                         </div>
                     </Link>
@@ -51,7 +55,6 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
     }
 
     getLocationSpacing(input: number) {
-
         switch (input) {
             case 0:
                 return this.props.classes.spacing_selected
@@ -65,9 +68,7 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                 return this.props.classes.spacing_distant_background
             default:
                 return this.props.classes.spacing_not_rendered
-
         }
-
     }
 }
 
@@ -78,7 +79,8 @@ const styles = () =>
             userSelect: 'none',
             position: 'relative',
             zIndex: 98,
-            WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s, fliter 0.5s',
+            WebkitTransition:
+                'opacity 0.7s, transform 0.4s, margin 0.4s, fliter 0.5s',
             transform: 'scale(1)',
             opacity: '100%',
             flex: 1,
@@ -90,10 +92,11 @@ const styles = () =>
             zIndex: 97,
             marginLeft: '-100px',
             marginRight: '-100px',
-            WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s, filter 0.5s',
+            WebkitTransition:
+                'opacity 0.7s, transform 0.4s, margin 0.4s, filter 0.5s',
             transform: 'scale(0.8)',
             opacity: '95%',
-            filter: 'blur(1px)'
+            filter: 'blur(1px)',
         },
         spacing_distant_background: {
             pointerEvents: 'auto',
@@ -102,11 +105,11 @@ const styles = () =>
             flex: 1,
             marginLeft: '-100px',
             marginRight: '-100px',
-            WebkitTransition: 'opacity 0.7s, transform 0.4s, margin 0.4s, filter 0.5s',
+            WebkitTransition:
+                'opacity 0.7s, transform 0.4s, margin 0.4s, filter 0.5s',
             transform: 'scale(0.5)',
             opacity: '60%',
-            filter: 'blur(4px)'
-
+            filter: 'blur(4px)',
         },
         spacing_not_rendered: {
             pointerEvents: 'auto',

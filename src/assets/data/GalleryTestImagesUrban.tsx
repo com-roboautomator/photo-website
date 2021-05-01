@@ -1,5 +1,5 @@
-import collection from "./ImageDataStructure";
-import { v4 as uuid } from 'uuid'
+import collection from './ImageDataStructure'
+import {v4 as uuid} from 'uuid'
 
 export const urbanImages: collection[] = [
     {
@@ -47,7 +47,7 @@ export const urbanImages: collection[] = [
                 title: 'Lake Side View',
                 index: 5,
             },
-        ]
+        ],
     },
 
     {
@@ -83,7 +83,7 @@ export const urbanImages: collection[] = [
                 title: 'Cycling',
                 index: 3,
             },
-        ]
+        ],
     },
 
     {
@@ -98,7 +98,7 @@ export const urbanImages: collection[] = [
             {
                 key: uuid(),
                 url: 'https://picsum.photos/id/122/300/300',
-                title: 'Looks a little like London, but fairly sure it isn\'t',
+                title: "Looks a little like London, but fairly sure it isn't",
                 index: 0,
             },
             {
@@ -113,8 +113,7 @@ export const urbanImages: collection[] = [
                 title: 'Bridge',
                 index: 2,
             },
-
-        ]
+        ],
     },
 
     {
@@ -162,7 +161,6 @@ export const urbanImages: collection[] = [
                 title: 'Cityscape #6',
                 index: 0,
             },
-
-        ]
+        ],
     },
 ]
