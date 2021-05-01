@@ -1,4 +1,5 @@
 import collection from "./ImageDataStructure";
+import {v4 as uuid} from "uuid"
 
 export const data: collection [] = [
     {
@@ -9,6 +10,16 @@ export const data: collection [] = [
         tagTitle: 'Nature',
         tagColour: '#47742c',
         index: 0,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1018/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
+
     },
 
     {
@@ -18,6 +29,15 @@ export const data: collection [] = [
         title: 'Urban Collection',
         tagTitle: 'Urban',
         index: 1,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/101/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -28,6 +48,15 @@ export const data: collection [] = [
         tagTitle: 'Nature',
         tagColour: '',
         index: 2,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1024/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -38,6 +67,15 @@ export const data: collection [] = [
         tagTitle: 'Technology',
         tagColour: '#50b1d6',
         index: 3,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/111/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -46,6 +84,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c',
         title: 'Party Collection',
         index: 4,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/158/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
     {
         key: '812a0676-cf2c-42ec-add4-c0a0f537a085',
@@ -53,6 +100,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg',
         title: 'Second Nature Collection',
         index: 5,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1018/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -61,6 +117,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs',
         title: 'Second Urban Collection',
         index: 6,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/101/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -69,6 +134,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII',
         title: 'Second Animal Collection',
         index: 7,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1024/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -77,6 +151,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ',
         title: 'Second Mechanical Collection',
         index: 8,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/111/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 
     {
@@ -85,6 +168,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c',
         title: 'Second Party Collection',
         index: 9,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/158/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
     {
         key: '277734f3-91c6-428d-b0da-7b74280ae105',
@@ -92,6 +184,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/1013/4256/2832.jpg?hmac=UmYgZfqY_sNtHdug0Gd73bHFyf1VvzFWzPXSr5VTnDA',
         title: 'Wedding Collection',
         index: 10,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1013/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
     {
         key: '761734a6-9afe-419a-8fb1-f71a633ba733',
@@ -99,6 +200,15 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/1023/3955/2094.jpg?hmac=AW_7mARdoPWuI7sr6SG8t-2fScyyewuNscwMWtQRawU',
         title: 'Sport Collection',
         index: 11,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/1023/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
     {
         key: '01758230-6fc5-4a4f-99ad-b55aebc2c446',
@@ -106,5 +216,14 @@ export const data: collection [] = [
         //     'https://i.picsum.photos/id/375/5184/3456.jpg?hmac=3OUWWnSmq1CUXU7cmTnctSvhQYvyME_osftkbJynX04',
         title: 'People Collection',
         index: 12,
+
+        images: [
+            {
+                key: uuid(),
+                url: "https://picsum.photos/id/375/200",
+                title: "Nature",
+                index: 0 
+            }
+        ]
     },
 ]

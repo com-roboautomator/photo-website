@@ -7,14 +7,14 @@ import {data} from '../../../../assets/data/HomeTestImages'
 describe('Image Slider', () => {
     it('renders correctly when there are no items', () => {
         const ImageSliderRender = renderer
-            .create(<ImageSlider data={data} />)
+            .create(<ImageSlider data={data} mode='Home' />)
             .toJSON()
 
         expect(ImageSliderRender).toMatchSnapshot()
     })
 
     it('should increment image index on arrow button click', () => {
-        const component = render(<ImageSlider data={data} />)
+        const component = render(<ImageSlider data={data} mode='Home' />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Right')).toBeTruthy()
@@ -28,24 +28,24 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
 
         fireEvent.click(component.getByTestId('Arrow-Button-Right'))
 
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
     })
 
     it('should decrement image index on arrow button click', () => {
-        const component = render(<ImageSlider data={data} startingIndex={3} />)
+        const component = render(<ImageSlider data={data} startingIndex={3} mode='Home' />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Left')).toBeTruthy()
@@ -59,26 +59,26 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
 
         fireEvent.click(component.getByTestId('Arrow-Button-Left'))
 
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
     })
 
     it('should increment image index on positive wheel move', () => {
-        const component = render(<ImageSlider data={data} />)
+        const component = render(<ImageSlider data={data} mode='Home' />)
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toBeTruthy()
         expect(
@@ -91,10 +91,10 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
 
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
             deltaY: 30,
@@ -103,14 +103,14 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Nature Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
         expect(
             component.getByTestId('Collection-Card-Urban Collection').firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
     })
 
     it('should decrement image index on negative wheel move', () => {
-        const component = render(<ImageSlider data={data} startingIndex={3} />)
+        const component = render(<ImageSlider data={data} startingIndex={3} mode='Home' />)
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toBeTruthy()
         expect(
@@ -123,11 +123,11 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
 
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
             deltaY: -30,
@@ -136,15 +136,15 @@ describe('Image Slider', () => {
         expect(
             component.getByTestId('Collection-Card-Mechanical Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_unselected-7')
+        ).toHaveClass('CollectionCard-spacing_unselected-10')
         expect(
             component.getByTestId('Collection-Card-Animal Collection')
                 .firstChild
-        ).toHaveClass('CollectionCard-spacing_selected-6')
+        ).toHaveClass('CollectionCard-spacing_selected-9')
     })
 
     it('should set left arrow button to disabled when index is 0', () => {
-        const component = render(<ImageSlider data={data} startingIndex={0} />)
+        const component = render(<ImageSlider data={data} startingIndex={0} mode='Home' />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Left')).toBeTruthy()
@@ -158,7 +158,7 @@ describe('Image Slider', () => {
 
     it('should set Right arrow button to disabled when index is max length', () => {
         const component = render(
-            <ImageSlider data={data} startingIndex={data.length - 1} />
+            <ImageSlider data={data} startingIndex={data.length - 1} mode='Home' />
         )
 
         expect(component).toBeTruthy()
@@ -172,11 +172,11 @@ describe('Image Slider', () => {
     })
 
     it('should render image slider correctly', () => {
-        const component = render(<ImageSlider data={data} />)
+        const component = render(<ImageSlider data={data} mode='Home' />)
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('ImageSlider-Container')).toHaveClass(
-            'ImageSlider-container-1'
+            'ImageSlider-wrapper-2'
         )
         expect(component.getByTestId('ImageSlider-Container')).toHaveStyle(
             'pointerEvents: auto'
@@ -195,7 +195,7 @@ describe('Image Slider', () => {
         )
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveClass(
-            'ImageSlider-card_slider-2'
+            'ImageSlider-card_slider-3'
         )
         expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveStyle(
             'pointerEvents: auto'
@@ -209,12 +209,9 @@ describe('Image Slider', () => {
         expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveStyle(
             'width: 370px'
         )
-        expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveStyle(
-            'height: 270px'
-        )
 
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveClass(
-            'ImageSlider-button_wrapper-3'
+            'ImageSliderButtonWrapper-button_wrapper-7'
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'zIndex: 99'
@@ -227,12 +224,6 @@ describe('Image Slider', () => {
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'width: 100%'
-        )
-        expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
-            'paddingTop: 70px'
-        )
-        expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
-            'paddingBottom: 70px'
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'display: flex'
@@ -248,7 +239,7 @@ describe('Image Slider', () => {
         )
 
         expect(component.getByTestId('ImageSlider-arrow')).toHaveClass(
-            'ImageSlider-arrow-5'
+            'ImageSliderButtonWrapper-arrow-8'
         )
         expect(component.getByTestId('ImageSlider-arrow')).toHaveStyle(
             'pointerEvents: auto'
@@ -257,6 +248,4 @@ describe('Image Slider', () => {
             'margin: 20px'
         )
     })
-
-    //TODO: remove unnecessary imports (package.json). These can be found on github
 })

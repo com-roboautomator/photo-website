@@ -11,7 +11,7 @@ interface ImageSliderProps extends WithStyles<typeof styles> {
     data: Collection[]
     startingIndex?: number
     mode: "Home" | "Gallery"
-    height: number
+    height?: number
     titleColour?: string
     title?: string
 }
@@ -109,7 +109,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                             selected={
                                                 this.state.selected - property.index
                                             }
-                                            height={this.props.height}
+                                            height={(this.props.height === undefined) ? 460 : this.props.height}
                                             collection={property}
                                         />
                                 )
