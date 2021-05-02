@@ -6,7 +6,6 @@ import Underscore from 'underscore'
 import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
 import ImageSliderTitle from './ImageSliderTitle'
 import Collection from '../../../assets/data/ImageDataStructure'
-import {v4 as uuid} from 'uuid'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: Collection[]
@@ -104,7 +103,6 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                             {properties.map((property: Collection) =>
                                 this.props.mode === 'Home' ? (
                                     <CollectionCardHome
-                                        //key={uuid()}
                                         collection={property}
                                         selected={
                                             this.state.selected ===
@@ -113,7 +111,6 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                     />
                                 ) : (
                                     <CollectionCardGallery
-                                        //key={uuid()}
                                         selected={
                                             this.state.selected - property.index
                                         }

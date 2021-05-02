@@ -1,7 +1,7 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
-import {data} from '../assets/data/HomeTestImages'
+import {home} from '../assets/data/Images'
 import PageTitle from './components/text/PageTitle'
 
 interface HomeProps extends WithStyles<typeof styles> {}
@@ -17,7 +17,7 @@ class Home extends React.Component<HomeProps> {
                         src="https://picsum.photos/id/1014/1500/200"
                     />
                     <div className={classes.wapper}>
-                        <ImageSlider height={280} mode="Home" data={data} />
+                        <ImageSlider height={280} mode="Home" data={home} />
                     </div>
                 </div>
             </main>

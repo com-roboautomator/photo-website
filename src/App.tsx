@@ -9,6 +9,7 @@ import NavigationBar from './pages/components/navigation/NavigationBar'
 import PageSignature from './pages/components/text/PageSignature'
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import Confirmation from './pages/contact/ConfirmationPage'
+import ImageViewer from './pages/viewer/ImageViewer'
 
 interface AppProps extends WithStyles<typeof styles> {}
 
@@ -28,12 +29,8 @@ class App extends React.Component<AppProps> {
                             <Route path="/" component={Home} exact />
                             <Route path="/gallery" component={Gallery} exact />
                             <Route
-                                path="/gallery/image/:imageId"
-                                render={(props) => <Gallery {...props} />}
-                            />
-                            <Route
-                                path="/gallery/collection/:collectionId"
-                                render={(props) => <Gallery {...props} />}
+                                path="/gallery/:collectionId"
+                                render={(props) => <ImageViewer {...props} />}
                             />
                             <Route path="/about" component={About} exact />
                             <Route path="/contact" component={Contact} exact />
