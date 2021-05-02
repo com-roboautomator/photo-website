@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import ArrowButton from '../Arrow'
+import ArrowButton from '../../navigation/Arrow'
 
 describe('Slider arrow buttons', () => {
     it('should render left arrow button', () => {

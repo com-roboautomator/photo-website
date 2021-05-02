@@ -1,6 +1,6 @@
 import {WithStyles, createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
-import Arrow from './Arrow'
+import Arrow from '../navigation/Arrow'
 
 interface ImageSliderButtonWrapperProps extends WithStyles<typeof styles> {
     length: number

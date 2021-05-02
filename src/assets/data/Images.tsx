@@ -568,17 +568,17 @@ export function findImageById(id: string) {
             if (id === collection[j].key) return collection[j]
         }
     }
-    for (var i = 0; i < home.length; i++) {
-        const collection = home[i].images
-        for (var j = 0; collection && collection.length < j; j++) {
-            if (id === collection[j].key) return collection[j]
+    for (var k = 0; k < home.length; k++) {
+        const collection = home[k].images
+        for (var l = 0; collection && collection.length < l; l++) {
+            if (id === collection[l].key) return collection[l]
         }
     }
 
-    for (var i = 0; i < urbanImages.length; i++) {
-        const collection = urbanImages[i].images
-        for (var j = 0; collection && collection.length < j; j++) {
-            if (id === collection[j].key) return collection[j]
+    for (var m = 0; m < urbanImages.length; m++) {
+        const collection = urbanImages[m].images
+        for (var n = 0; collection && collection.length < n; n++) {
+            if (id === collection[n].key) return collection[n]
         }
     }
 }

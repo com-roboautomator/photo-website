@@ -13,8 +13,9 @@ interface ArrowProps extends WithStyles<typeof styles> {
 class Arrow extends React.Component<ArrowProps> {
     render() {
         const props = this.props
+        const classes = props.classes
         return (
-            <div>
+            <div className={classes.container}> 
                 <Button
                     data-testid={`Arrow-Button-${props.orientation}`}
                     disabled={props.disabled}
@@ -36,6 +37,11 @@ class Arrow extends React.Component<ArrowProps> {
     }
 }
 
-const styles = () => createStyles({})
+const styles = () => createStyles({
+    container:{
+        zIndex: 99,
+        alignSelf: 'center',
+    }
+})
 
 export default withStyles(styles)(Arrow)
