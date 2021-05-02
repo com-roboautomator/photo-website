@@ -5,6 +5,7 @@ import { findCollectionById } from '../../assets/data/Images'
 import { image, placeholder } from '../../assets/data/ImageDataStructure'
 import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
+import ImageViewerIndex from './ImageViewerIndex'
 
 interface ImageViewerProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
     source?: string
@@ -74,37 +75,26 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
                     targetImage={(images === undefined) ? "" : images[this.state.index].url ?? ""}
                     previousImage={(images === undefined) ? "" : images[this.state.previousIndex].url ?? ""}
 
-                    //collection={collection}
                     collectionLength={images?.length ?? 0}
                     index={this.state.index}
                     next={this.next}
                     previous={this.previous}
                 />
+                <ImageViewerIndex indexValue={this.state.index} indexTotal={collectionLength} />
             </div>
-            // <div style={{background: 'red', height: '80vh', display: 'flex', justifyContent: 'center'}}>
-            //     <img src={(images === undefined) ? placeholder.url : images[0]?.url} alt="none" style={{height: '100%'}} />
-            // </div>
         )
     }
 }
 
 const styles = () =>
     createStyles({
-
         container: {
-            //background: 'red',
-
             display: 'flex',
             flexDirection: 'column',
 
             justifyContent: 'center',
             alignContent: 'center',
         },
-        title: {
-
-        },
-
-
     })
 
 export default withStyles(styles)(ImageViewer)

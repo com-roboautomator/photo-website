@@ -52,13 +52,7 @@ class ImageViewerViewport extends React.Component<ImageViewerViewportProps, Imag
 
     }
 
-    flipSwitch = () => {
-        const change = !this.state.switch
 
-        this.setState({
-            switch: change
-        })
-    }
 
     render() {
         const props = this.props
@@ -69,25 +63,21 @@ class ImageViewerViewport extends React.Component<ImageViewerViewportProps, Imag
 
         return (
             <div className={classes.container}>
-                <Arrow disabled={props.index <= 0} onClick={this.previous} orientation='Left' />
-                <div className={classes.wrapper}>
-                    <img
-                        className={(state.switch) ? classes.previous : classes.image}
-                        // style={{ zIndex: (state.switch) ? 1 : 99 }}
-                        src={(state.switch) ? state.previousUrl : props.targetImage}
-                        alt=""
-                    />
-                </div>
-                <div className={classes.wrapper}>
-                    <img
-                        className={(state.switch) ? classes.image : classes.previous}
-                        // style={{ zIndex: (state.switch) ? 99 : 1 }}
-                        src={(state.switch) ? props.targetImage : state.previousUrl}
-                        alt="" />
+                <img
+                    className={(state.switch) ? classes.previous : classes.image}
+                    src={(state.switch) ? state.previousUrl : props.targetImage}
+                    alt=""
+                />
 
+                <img
+                    className={(state.switch) ? classes.image : classes.previous}
+                    src={(state.switch) ? props.targetImage : state.previousUrl}
+                    alt=""
+                />
+                <div className={classes.button_wrapper}>
+                    <Arrow disabled={props.index <= 0} onClick={this.previous} orientation='Left' />
+                    <Arrow disabled={props.index >= props.collectionLength - 1} onClick={this.next} orientation='Right' />
                 </div>
-                <Arrow disabled={props.index >= props.collectionLength - 1} onClick={this.next} orientation='Right' />
-
             </div>
         )
     }
@@ -97,16 +87,16 @@ class ImageViewerViewport extends React.Component<ImageViewerViewportProps, Imag
 const styles = () => createStyles({
     container: {
 
-        //: 'red',
+        // background: 'green',
 
         alignSelf: 'center',
         justifySelf: 'center',
 
         display: 'flex',
         width: '70vw',
+        height: '70vh',
 
         justifyContent: 'center',
-
     },
     wrapper: {
         background: 'black'
@@ -123,7 +113,18 @@ const styles = () => createStyles({
         opacity: '0%',
         WebkitTransition: 'opacity 1s',
     },
+    button_wrapper: {
 
+        //background: 'red',
+
+        alignSelf: 'center',
+
+
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '50vw',
+
+    }
 })
 
 export default withStyles(styles)(ImageViewerViewport)
