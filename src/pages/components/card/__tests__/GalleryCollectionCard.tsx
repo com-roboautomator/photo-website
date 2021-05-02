@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import GalleryCollectionCard from '../GalleryCollectionCard'
-import {natureImages} from '../../../../assets/data/GalleryTestImagesNature'
+import {natureImages} from '../../../../assets/data/Images'
 
 describe('Gallery Collection Card', () => {
     it('should render correctly', () => {

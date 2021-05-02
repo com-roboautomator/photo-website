@@ -1,4 +1,4 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 
 interface ImageViewerIndexProps extends WithStyles<typeof styles> {
@@ -12,19 +12,20 @@ class ImageViewerIndex extends React.Component<ImageViewerIndexProps> {
         const classes = this.props.classes
         return (
             <div className={classes.container}>
-                {props.indexValue + 1 + " / " + props.indexTotal}
+                {props.indexValue + 1 + ' / ' + props.indexTotal}
             </div>
         )
     }
 }
 
-const styles = () => createStyles({
-    container: {
-        marginTop: '10px',
-        fontFamily: 'Open-Sans-Bold',
+const styles = () =>
+    createStyles({
+        container: {
+            marginTop: '10px',
+            fontFamily: 'Open-Sans-Bold',
 
-        alignSelf: 'center'
-    }
-})
+            alignSelf: 'center',
+        },
+    })
 
 export default withStyles(styles)(ImageViewerIndex)

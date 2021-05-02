@@ -1,5 +1,5 @@
 import collection from './ImageDataStructure'
-import { v4 as uuid } from 'uuid'
+import {v4 as uuid} from 'uuid'
 
 export const home: collection[] = [
     {
@@ -241,21 +241,24 @@ export const natureImages: collection[] = [
                 key: uuid(),
                 url: 'https://picsum.photos/id/1003/500',
                 title: 'Deer',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque. Sodales ut etiam sit amet nisl purus. Cursus euismod quis viverra nibh. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Tincidunt eget nullam non nisi est sit amet facilisis. Arcu non sodales neque sodales ut etiam sit. Non arcu risus quis varius quam quisque id diam. Pretium vulputate sapien nec sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada. A diam sollicitudin tempor id. Sapien eget mi proin sed libero enim sed faucibus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Odio euismod lacinia at quis risus sed. Viverra nam libero justo laoreet sit.',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque. Sodales ut etiam sit amet nisl purus. Cursus euismod quis viverra nibh. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Tincidunt eget nullam non nisi est sit amet facilisis. Arcu non sodales neque sodales ut etiam sit. Non arcu risus quis varius quam quisque id diam. Pretium vulputate sapien nec sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada. A diam sollicitudin tempor id. Sapien eget mi proin sed libero enim sed faucibus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Odio euismod lacinia at quis risus sed. Viverra nam libero justo laoreet sit.',
                 index: 0,
             },
             {
                 key: uuid(),
                 url: 'https://picsum.photos/id/1020/500',
                 title: 'Bear & Cub',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam libero justo laoreet sit amet cursus sit. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. In nisl nisi scelerisque eu ultrices vitae auctor eu. Sem viverra aliquet eget sit amet tellus cras adipiscing. Risus in hendrerit gravida rutrum quisque non tellus orci. Quis lectus nulla at volutpat diam ut venenatis tellus in. Tellus molestie nunc non blandit massa enim nec. Pharetra magna ac placerat vestibulum lectus. Erat pellentesque adipiscing commodo elit.',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam libero justo laoreet sit amet cursus sit. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. In nisl nisi scelerisque eu ultrices vitae auctor eu. Sem viverra aliquet eget sit amet tellus cras adipiscing. Risus in hendrerit gravida rutrum quisque non tellus orci. Quis lectus nulla at volutpat diam ut venenatis tellus in. Tellus molestie nunc non blandit massa enim nec. Pharetra magna ac placerat vestibulum lectus. Erat pellentesque adipiscing commodo elit.',
                 index: 1,
             },
             {
                 key: uuid(),
                 url: 'https://picsum.photos/id/1024/500',
                 title: 'Buzzard',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis. Enim neque volutpat ac tincidunt vitae semper. In pellentesque massa placerat duis ultricies. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Dictum at tempor commodo ullamcorper a lacus. Sed id semper risus in hendrerit. Aenean et tortor at risus viverra adipiscing at. Sed elementum tempus egestas sed sed. Ipsum a arcu cursus vitae. In dictum non consectetur a erat nam at lectus urna. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Viverra nam libero justo laoreet sit amet. Tristique magna sit amet purus gravida. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis.',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis. Enim neque volutpat ac tincidunt vitae semper. In pellentesque massa placerat duis ultricies. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Dictum at tempor commodo ullamcorper a lacus. Sed id semper risus in hendrerit. Aenean et tortor at risus viverra adipiscing at. Sed elementum tempus egestas sed sed. Ipsum a arcu cursus vitae. In dictum non consectetur a erat nam at lectus urna. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Viverra nam libero justo laoreet sit amet. Tristique magna sit amet purus gravida. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis.',
                 index: 2,
             },
             {
@@ -566,7 +569,7 @@ export function findImageById(id: string) {
     for (var i = 0; i < natureImages.length; i++) {
         const collection = natureImages[i].images
         for (var j = 0; collection && collection.length > j; j++) {
-            console.log(collection[j].key + " : " + id)
+            console.log(collection[j].key + ' : ' + id)
 
             if (id === collection[j].key) return collection[j]
         }

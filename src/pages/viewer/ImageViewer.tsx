@@ -1,14 +1,16 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
+import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
-import { findCollectionById } from '../../assets/data/Images'
-import { image, placeholder } from '../../assets/data/ImageDataStructure'
+import {RouteComponentProps} from 'react-router-dom'
+import {findCollectionById} from '../../assets/data/Images'
+import {image, placeholder} from '../../assets/data/ImageDataStructure'
 import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
 import ImageViewerIndex from './ImageViewerIndex'
 import ImageViewerDescription from './ImageViewerDescription'
 
-interface ImageViewerProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
+interface ImageViewerProps
+    extends WithStyles<typeof styles>,
+        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
     source?: string
 }
 
@@ -19,7 +21,6 @@ interface ImageViewerState {
 }
 
 class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
-
     // componentDidMount = () => {
     //     // This will become an API call based on the collection ID
     //     this.setState({
@@ -30,32 +31,32 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
 
     constructor(props: ImageViewerProps) {
         super(props)
-        this.state = ({
+        this.state = {
             index: 0,
             previousIndex: 0,
-        })
+        }
     }
 
     next = () => {
         const currentIndex = this.state.index
-        const updatedIndex = this.state.index + 1;
+        const updatedIndex = this.state.index + 1
         this.setState({
             previousIndex: currentIndex,
-            index: updatedIndex
+            index: updatedIndex,
         })
     }
 
     previous = () => {
         const currentIndex = this.state.index
-        const updatedIndex = this.state.index - 1;
+        const updatedIndex = this.state.index - 1
         this.setState({
             previousIndex: currentIndex,
-            index: updatedIndex
+            index: updatedIndex,
         })
     }
 
     render() {
-        const { collectionId } = this.props.match.params
+        const {collectionId} = this.props.match.params
         const collection = findCollectionById(collectionId)
         const images = collection?.images
 
@@ -63,19 +64,33 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
         const props = this.props
         const classes = this.props.classes
 
-        const collectionLength = (collection?.images === undefined) ? 0 : collection.images.length
-        const targetImage: image = (collection?.images === undefined) ? placeholder : collection?.images[state.index]
+        const collectionLength =
+            collection?.images === undefined ? 0 : collection.images.length
+        const targetImage: image =
+            collection?.images === undefined
+                ? placeholder
+                : collection?.images[state.index]
         return (
-
             <div className={classes.container}>
                 <ImageViewerTitle
-                    collectionTitle={collection?.title.toUpperCase() ?? ""}
-                    imageTitle={(images === undefined) ? "" : images[this.state.index].title.toUpperCase() ?? ""}
+                    collectionTitle={collection?.title.toUpperCase() ?? ''}
+                    imageTitle={
+                        images === undefined
+                            ? ''
+                            : images[this.state.index].title.toUpperCase() ?? ''
+                    }
                 />
                 <ImageViewerViewport
-                    targetImage={(images === undefined) ? "" : images[this.state.index].url ?? ""}
-                    previousImage={(images === undefined) ? "" : images[this.state.previousIndex].url ?? ""}
-
+                    targetImage={
+                        images === undefined
+                            ? ''
+                            : images[this.state.index].url ?? ''
+                    }
+                    previousImage={
+                        images === undefined
+                            ? ''
+                            : images[this.state.previousIndex].url ?? ''
+                    }
                     collectionLength={images?.length ?? 0}
                     index={this.state.index}
                     next={this.next}

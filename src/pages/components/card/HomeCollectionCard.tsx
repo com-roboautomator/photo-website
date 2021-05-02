@@ -1,7 +1,7 @@
-import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
+import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './HomeCollectionTag'
 
@@ -15,11 +15,12 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         const hrefLink: string = `gallery/${this.props.collection.key}`
-        const imageURL: string = this.props.collection.images === undefined
-            ? placeholder.url
-            : this.props.collection.images[
-                this.props.collection.titleImage ?? 0
-            ].url
+        const imageURL: string =
+            this.props.collection.images === undefined
+                ? placeholder.url
+                : this.props.collection.images[
+                      this.props.collection.titleImage ?? 0
+                  ].url
         return (
             <main
                 data-testid={`Collection-Card-${this.props.collection.title}`}>

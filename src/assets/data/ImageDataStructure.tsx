@@ -22,6 +22,6 @@ export const placeholder: image = {
     key: '44525db2-7e1d-4201-a07c-b7d11f686bf7',
     url: 'https://picsum.photos/id/250/500',
     title: 'Placeholder',
-    description: "",
+    description: '',
     index: 0,
 }

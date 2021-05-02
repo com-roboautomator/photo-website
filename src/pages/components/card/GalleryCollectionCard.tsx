@@ -1,7 +1,7 @@
-import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection, { placeholder } from '../../../assets/data/ImageDataStructure'
+import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
@@ -14,21 +14,19 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
     render() {
         const classes = this.props.classes
         const hrefLink: string = `gallery/${this.props.collection.key}`
-        const imageURL: string = this.props.collection.images === undefined
-            ? placeholder.url
-            : this.props.collection.images[
-                this.props.collection.titleImage ?? 0
-            ].url
+        const imageURL: string =
+            this.props.collection.images === undefined
+                ? placeholder.url
+                : this.props.collection.images[
+                      this.props.collection.titleImage ?? 0
+                  ].url
 
         return (
             <div
                 data-testid="Collection-Card-Spacing"
                 className={this.getLocationSpacing(this.props.selected)}>
                 <div className={classes.container}>
-                    <Link
-                        data-testid="Collection-Card-Link"
-                        href={hrefLink}
-                        >
+                    <Link data-testid="Collection-Card-Link" href={hrefLink}>
                         <div className={classes.image_wrapper}>
                             <img
                                 data-testid="Collection-Card-Image"
