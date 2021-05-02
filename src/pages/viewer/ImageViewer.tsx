@@ -6,6 +6,7 @@ import { image, placeholder } from '../../assets/data/ImageDataStructure'
 import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
 import ImageViewerIndex from './ImageViewerIndex'
+import ImageViewerDescription from './ImageViewerDescription'
 
 interface ImageViewerProps extends WithStyles<typeof styles>, React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
     source?: string
@@ -80,7 +81,14 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
                     next={this.next}
                     previous={this.previous}
                 />
-                <ImageViewerIndex indexValue={this.state.index} indexTotal={collectionLength} />
+                <ImageViewerIndex
+                    indexValue={this.state.index}
+                    indexTotal={collectionLength}
+                />
+                <ImageViewerDescription
+                    title={targetImage.title}
+                    text={targetImage.description}
+                />
             </div>
         )
     }
