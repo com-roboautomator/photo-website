@@ -1,18 +1,19 @@
-import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
+import { createStyles, WithStyles, withStyles } from '@material-ui/styles'
 import React from 'react'
 import ImageSlider from './components/card/ImageSlider'
-import {data} from '../assets/data/TestData'
+import { data } from '../assets/data/TestData'
+import PageTitle from './components/text/PageTitle'
 
-interface HomeProps extends WithStyles<typeof styles> {}
+interface HomeProps extends WithStyles<typeof styles> { }
 
 class Home extends React.Component<HomeProps> {
     render() {
         const classes = this.props.classes
         return (
             <main>
-                <div data-testid={'HOME PAGE'} className={classes.container}>
-                    <p className={classes.title}>HOME PAGE</p>
-                    <div>
+                <div data-testid={'Home-Page'} className={classes.container}>
+                    <PageTitle title="HOME" src="https://picsum.photos/id/1014/1500/200" />
+                    <div className={classes.wapper}>
                         <ImageSlider data={data} />
                     </div>
                 </div>
@@ -26,6 +27,10 @@ const styles = () =>
         container: {
             zIndex: 0,
             position: 'relative',
+        },
+        wapper: {
+            marginLeft: '80px',
+            marginRight: '80px',
         },
         description: {
             position: 'absolute',
