@@ -128,9 +128,6 @@ describe('Image Slider', () => {
         const component = render(<ImageSlider data={home} mode="Home" />)
 
         expect(component).toBeTruthy()
-        expect(component.getByTestId('ImageSlider-Container')).toHaveClass(
-            'ImageSlider-wrapper-2'
-        )
         expect(component.getByTestId('ImageSlider-Container')).toHaveStyle(
             'pointerEvents: auto'
         )
@@ -147,9 +144,6 @@ describe('Image Slider', () => {
             'overflowX: hidden'
         )
 
-        expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveClass(
-            'ImageSlider-card_slider-3'
-        )
         expect(component.getByTestId('ImageSlider-Card-Slider')).toHaveStyle(
             'pointerEvents: auto'
         )
@@ -163,9 +157,6 @@ describe('Image Slider', () => {
             'width: 370px'
         )
 
-        expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveClass(
-            'ImageSliderButtonWrapper-button_wrapper-7'
-        )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'zIndex: 99'
         )
@@ -189,10 +180,6 @@ describe('Image Slider', () => {
         )
         expect(component.getByTestId('ImageSlider-button-wrapper')).toHaveStyle(
             'background: linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)'
-        )
-
-        expect(component.getByTestId('ImageSlider-arrow')).toHaveClass(
-            'ImageSliderButtonWrapper-arrow-8'
         )
         expect(component.getByTestId('ImageSlider-arrow')).toHaveStyle(
             'pointerEvents: auto'

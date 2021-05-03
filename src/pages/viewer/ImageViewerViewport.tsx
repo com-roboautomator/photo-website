@@ -1,11 +1,9 @@
-import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
+import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
 import React from 'react'
 import Arrow from '../components/navigation/Arrow'
 
 interface ImageViewerViewportProps extends WithStyles<typeof styles> {
-    nextImage?: string
     targetImage: string
-    previousImage?: string
     collectionLength: number
     index: number
     next: () => void
@@ -25,7 +23,7 @@ class ImageViewerViewport extends React.Component<
         super(props)
 
         this.state = {
-            switch: false,
+            switch: true,
             previousUrl: '',
         }
     }
@@ -60,17 +58,21 @@ class ImageViewerViewport extends React.Component<
         return (
             <div className={classes.container}>
                 <img
+                    data-testid="Image-Viewer-Viewport-Previous-Image"
                     className={state.switch ? classes.previous : classes.image}
                     src={state.switch ? state.previousUrl : props.targetImage}
                     alt=""
                 />
-
                 <img
+                    data-testid="Image-Viewer-Viewport-Target-Image"
                     className={state.switch ? classes.image : classes.previous}
                     src={state.switch ? props.targetImage : state.previousUrl}
                     alt=""
                 />
-                <div className={classes.button_wrapper}>
+                <div
+                    className={classes.button_wrapper}
+                    id="Image-Viewer-Viewport-Button-Wrapper"
+                >
                     <Arrow
                         disabled={props.index <= 0}
                         onClick={this.previous}

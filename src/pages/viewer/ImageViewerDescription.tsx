@@ -1,4 +1,4 @@
-import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
+import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
 import React from 'react'
 
 interface ImageViewerDescriptionProps extends WithStyles<typeof styles> {
@@ -12,10 +12,18 @@ class ImageViewerDescription extends React.Component<ImageViewerDescriptionProps
         const props = this.props
         return (
             <div className={classes.container}>
-                <div className={classes.title}>
+                <div
+                    data-testid="Image-Viewer-Description-Title"
+                    className={classes.title}
+                >
                     {props.text === undefined ? '' : props.title}
                 </div>
-                <div className={classes.text}>{props.text}</div>
+                <div
+                    data-testid="Image-Viewer-Description-Text"
+                    className={classes.text}
+                >
+                    {props.text}
+                </div>
             </div>
         )
     }
