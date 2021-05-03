@@ -1,9 +1,9 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import CollectionCard from './CollectionCard'
 import Arrow from './Arrow'
 import Underscore from 'underscore'
-import { ImageData } from '../../../assets/data/TestData'
+import {ImageData} from '../../../assets/data/TestData'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: ImageData[]
@@ -58,7 +58,7 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
 
     render() {
         const classes = this.props.classes
-        const { properties, property } = this.state
+        const {properties, property} = this.state
 
         return (
             <div
@@ -93,23 +93,22 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                     <div
                         className={classes.card_slider_wrapper}
                         style={{
-                            transform: `translateX(-${property.index * (100 / properties.length)
-                                }%)`,
+                            transform: `translateX(-${
+                                property.index * (100 / properties.length)
+                            }%)`,
                         }}>
-                        {properties.map(
-                            (property: ImageData) => (
-                                <CollectionCard
-                                    key={property.key}
-                                    coverSrc={property.url}
-                                    title={property.title}
-                                    selected={
-                                        this.state.selected === property.index
-                                    }
-                                    tagTitle={property.tagTitle}
-                                    tagColour={property.tagColour}
-                                />
-                            )
-                        )}
+                        {properties.map((property: ImageData) => (
+                            <CollectionCard
+                                key={property.key}
+                                coverSrc={property.url}
+                                title={property.title}
+                                selected={
+                                    this.state.selected === property.index
+                                }
+                                tagTitle={property.tagTitle}
+                                tagColour={property.tagColour}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { createStyles, Link, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import CollectionCardImage from './CollectionCardImage'
@@ -30,10 +30,13 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                         <Link
                             href={this.props.coverSrc}
                             target="_blank"
-                            underline="none"
-                        >
+                            underline="none">
                             <CollectionCardImage src={this.props.coverSrc} />
-                            <CollectionCardText title={this.props.title} tagTitle={this.props.tagTitle} tagColour={this.props.tagColour} />
+                            <CollectionCardText
+                                title={this.props.title}
+                                tagTitle={this.props.tagTitle}
+                                tagColour={this.props.tagColour}
+                            />
                         </Link>
                     </div>
                 </div>
@@ -70,7 +73,6 @@ const styles = () =>
             borderBottomRightRadius: '25px',
             boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
         },
-
     })
 
 export default withStyles(styles)(CollectionCard)
