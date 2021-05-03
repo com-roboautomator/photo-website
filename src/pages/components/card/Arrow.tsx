@@ -21,14 +21,13 @@ class Arrow extends React.Component<ArrowProps> {
                     onClick={props.onClick}>
                     <img
                         data-testid="Arrow-Button-Image"
+                        className={
+                            props.orientation === 'Left'
+                                ? props.classes.left
+                                : props.classes.right
+                        }
                         src={props.disabled ? ArrowDisabled : ArrowEnabled}
-                        alt=""
-                        width="40"
-                        style={{
-                            transform: `rotate(${
-                                props.orientation === 'Left' ? 180 : 0
-                            }deg)`,
-                        }}
+                        alt="nata"
                     />
                 </Button>
             </div>
@@ -36,6 +35,15 @@ class Arrow extends React.Component<ArrowProps> {
     }
 }
 
-const styles = () => createStyles({})
+const styles = () =>
+    createStyles({
+        left: {
+            width: '40px',
+            transform: 'rotate(180deg)',
+        },
+        right: {
+            width: '40px',
+        },
+    })
 
 export default withStyles(styles)(Arrow)

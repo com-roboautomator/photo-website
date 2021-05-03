@@ -102,51 +102,6 @@ const styles = () =>
             borderBottomRightRadius: '25px',
             boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
         },
-        image: {
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-        },
-        image_wrapper: {
-            position: 'relative',
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-        },
-        text_wrapper: {
-            position: 'relative',
-            zIndex: 99,
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-            fontSize: '100%',
-            color: 'black',
-            borderBottomLeftRadius: '25px',
-            borderBottomRightRadius: '25px',
-            borderTop: '1px solid gray',
-            height: '45px',
-        },
-        icon: {
-            paddingLeft: '20px',
-            alignSelf: 'center',
-        },
-        text: {
-            fontFamily: 'Open-Sans-Regular',
-            fontStyle: 'normal',
-            textAlign: 'left',
-            position: 'relative',
-            paddingLeft: '10px',
-            width: '75%',
-            alignSelf: 'center',
-        },
-        tag: {
-            position: 'relative',
-            paddingLeft: '10px',
-            paddingRight: '20px',
-            width: '25%',
-            alignSelf: 'center',
-        },
     })
 
 export default withStyles(styles)(CollectionCard)

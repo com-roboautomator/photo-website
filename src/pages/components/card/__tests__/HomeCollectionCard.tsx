@@ -50,7 +50,7 @@ describe('Home Collection Card', () => {
 
         expect(component).toBeTruthy()
         expect(component.getByTestId('Collection-Card-Spacing')).toHaveClass(
-            'CollectionCard-spacing_selected-10'
+            'CollectionCard-spacing_selected-11'
         )
         expect(component.getByTestId('Collection-Card-Spacing')).toHaveStyle(
             'pointerEvents: auto'
@@ -101,7 +101,7 @@ describe('Home Collection Card', () => {
             '200'
         )
         expect(component.getByTestId('Collection-Card-Image')).toHaveClass(
-            'CollectionCard-image-22'
+            'CollectionCardImage-layout-24'
         )
         expect(component.getByTestId('Collection-Card-Image')).toHaveStyle(
             'borderTopLeftRadius: 25px'
@@ -126,7 +126,7 @@ describe('Home Collection Card', () => {
         expect(component).toBeTruthy()
         expect(
             component.getByTestId('Collection-Card-Text-Wrapper')
-        ).toHaveClass('CollectionCard-text_wrapper-33')
+        ).toHaveClass('CollectionCardText-text_wrapper-36')
         expect(
             component.getByTestId('Collection-Card-Text-Wrapper')
         ).toHaveStyle('position: relative')
@@ -200,7 +200,7 @@ describe('Home Collection Card', () => {
             component.getByTestId('Collection-Card-Title')
         ).toHaveTextContent('test-collection-card-title')
         expect(component.getByTestId('Collection-Card-Title')).toHaveClass(
-            'CollectionCard-text-53'
+            'CollectionCardText-text-58'
         )
         expect(component.getByTestId('Collection-Card-Title')).toHaveStyle(
             'fontFamily: Open-Sans-Regular'
