@@ -1,7 +1,7 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {Link} from 'react-router-dom'
-import LOGO from '../../../images/Logo.png'
+import LOGO from '../../../assets/images/Logo.png'
 
 interface LogoProps extends WithStyles<typeof styles> {}
 

@@ -1,6 +1,6 @@
 {
   "name": "photo-website",
-  "version": "0.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -16,6 +16,7 @@
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.1",
     "typescript": "^4.2.3",
+    "underscore": "^1.12.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -26,10 +27,16 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "eject": "react-scripts eject",
+    "format": "npx prettier --config .prettierrc.js \"src/**/*.(ts(x)?)\" --write",
     "cypress": "wait-on http://localhost:3000 && CI=true npx cypress run --headless",
     "integration": "concurrently --kill-others \"npm run start:nowatch\" \"npm run cypress\"",
-    "format": "npx prettier --config .prettierrc.js \"src/**/*.(ts(x)?)\" --write",
     "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -51,6 +58,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/react-router-transition": "^2.1.0",
     "@types/react-test-renderer": "^17.0.1",
+    "@types/underscore": "^1.11.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
     "concurrently": "^6.0.0",
@@ -73,6 +81,7 @@
       "!**/serviceWorker.ts",
       "!**/react-app-env.d.ts",
       "!**/index.tsx"
+
     ],
     "coverageThreshold": {
       "global": {

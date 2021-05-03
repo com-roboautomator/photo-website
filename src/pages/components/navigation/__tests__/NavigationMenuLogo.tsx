@@ -5,8 +5,8 @@ import Logo from '../NavigationMenuLogo'
 
 describe('Logo', () => {
     it('should render logo correctly', () => {
-        // When
-        // Given
+        //When
+        //Given
         const component = render(
             <BrowserRouter>
                 <Route>
@@ -15,15 +15,15 @@ describe('Logo', () => {
             </BrowserRouter>
         )
 
-        // Then
+        //Then
         expect(
             component.getByTestId('Menu-Logo').className.includes('logo')
         ).toBeTruthy()
     })
 
     it('should load image correct src', () => {
-        // When
-        // Given
+        //When
+        //Given
         const component = render(
             <BrowserRouter>
                 <Route>
@@ -34,7 +34,7 @@ describe('Logo', () => {
 
         const logo = component.getByTestId('Menu-Logo-Image')
 
-        // Then
+        //Then
         expect(logo).toHaveAttribute('src', 'Logo.png')
     })
 })

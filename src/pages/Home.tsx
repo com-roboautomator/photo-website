@@ -1,5 +1,7 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
+import ImageSlider from './components/card/ImageSlider'
+import {data} from '../assets/data/TestData'
 
 interface HomeProps extends WithStyles<typeof styles> {}
 
@@ -9,7 +11,10 @@ class Home extends React.Component<HomeProps> {
         return (
             <main>
                 <div data-testid={'HOME PAGE'} className={classes.container}>
-                    <div className={classes.description}>HOME PAGE</div>
+                    <p className={classes.title}>HOME PAGE</p>
+                    <div>
+                        <ImageSlider data={data} />
+                    </div>
                 </div>
             </main>
         )
@@ -22,7 +27,6 @@ const styles = () =>
             zIndex: 0,
             position: 'relative',
         },
-
         description: {
             position: 'absolute',
             width: '100%',
@@ -32,6 +36,11 @@ const styles = () =>
             textAlign: 'center',
             alignContent: 'center',
             zIndex: 0,
+        },
+        title: {
+            alignText: 'center',
+            fontFamily: 'Open-Sans-Regular',
+            fontSize: 50,
         },
     })
 

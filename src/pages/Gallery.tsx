@@ -2,12 +2,13 @@ import {WithStyles} from '@material-ui/core'
 import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
+import ImageViewer from './ImageViewer'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
         React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
-class Gallery extends React.Component<GalleryProps> {
+class Gallery extends React.Component<GalleryProps, any> {
     render() {
         const classes = this.props.classes
         const {imageId} = this.props.match.params
@@ -18,9 +19,14 @@ class Gallery extends React.Component<GalleryProps> {
                 <div data-testid={'GALLERY PAGE'}>
                     <div className={classes.container}>
                         <div className={classes.description}>
-                            GALLERY
+                            <p className={classes.title}>GALLERY</p>
                             <p>
-                                {imageId ? 'image id: ' + imageId : ''}{' '}
+                                {/* {alert(imageId)} */}
+                                {imageId ? (
+                                    <ImageViewer source={imageId} />
+                                ) : (
+                                    ''
+                                )}
                                 {collectionId
                                     ? 'collection id: ' + collectionId
                                     : ''}
@@ -37,18 +43,20 @@ const styles = () =>
     createStyles({
         container: {
             zIndex: 0,
-            position: 'relative',
         },
 
         description: {
-            position: 'absolute',
             width: '100%',
-            paddingTop: '5%',
             fontSize: 30,
-            fontFamily: 'Open Sans',
             textAlign: 'center',
             alignContent: 'center',
             zIndex: 0,
+            fontFamily: 'Open-Sans-Regular',
+        },
+
+        title: {
+            fontFamily: 'Open-Sans-Regular',
+            fontSize: 50,
         },
     })
 
