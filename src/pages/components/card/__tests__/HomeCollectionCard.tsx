@@ -100,9 +100,6 @@ describe('Home Collection Card', () => {
             'height',
             '200'
         )
-        expect(component.getByTestId('Collection-Card-Image')).toHaveClass(
-            'CollectionCardImage-layout-24'
-        )
         expect(component.getByTestId('Collection-Card-Image')).toHaveStyle(
             'borderTopLeftRadius: 25px'
         )
@@ -123,13 +120,6 @@ describe('Home Collection Card', () => {
             />
         )
 
-        expect(component).toBeTruthy()
-        expect(
-            component.getByTestId('Collection-Card-Text-Wrapper')
-        ).toHaveClass('CollectionCardText-text_wrapper-36')
-        expect(
-            component.getByTestId('Collection-Card-Text-Wrapper')
-        ).toHaveStyle('position: relative')
         expect(
             component.getByTestId('Collection-Card-Text-Wrapper')
         ).toHaveStyle('zIndex: 99')
@@ -199,9 +189,7 @@ describe('Home Collection Card', () => {
         expect(
             component.getByTestId('Collection-Card-Title')
         ).toHaveTextContent('test-collection-card-title')
-        expect(component.getByTestId('Collection-Card-Title')).toHaveClass(
-            'CollectionCardText-text-58'
-        )
+
         expect(component.getByTestId('Collection-Card-Title')).toHaveStyle(
             'fontFamily: Open-Sans-Regular'
         )

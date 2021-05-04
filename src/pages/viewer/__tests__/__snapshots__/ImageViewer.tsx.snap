@@ -65,15 +65,10 @@ exports[`Image Viewer renders correctly when there are no items 1`] = `
             className="MuiButton-label"
           >
             <img
-              alt=""
+              alt="nata"
+              className="Arrow-left-11"
               data-testid="Arrow-Button-Image"
               src="arrow-disabled.png"
-              style={
-                Object {
-                  "transform": "rotate(180deg)",
-                }
-              }
-              width="40"
             />
           </span>
         </button>
@@ -104,15 +99,10 @@ exports[`Image Viewer renders correctly when there are no items 1`] = `
             className="MuiButton-label"
           >
             <img
-              alt=""
+              alt="nata"
+              className="Arrow-right-12"
               data-testid="Arrow-Button-Image"
               src="arrow-disabled.png"
-              style={
-                Object {
-                  "transform": "rotate(0deg)",
-                }
-              }
-              width="40"
             />
           </span>
         </button>
@@ -120,22 +110,22 @@ exports[`Image Viewer renders correctly when there are no items 1`] = `
     </div>
   </div>
   <div
-    className="ImageViewerIndex-container-11"
+    className="ImageViewerIndex-container-13"
     data-testid="Image-Viewer-Index"
   >
     1 / 0
   </div>
   <div
-    className="ImageViewerDescription-container-12"
+    className="ImageViewerDescription-container-14"
   >
     <div
-      className="ImageViewerDescription-title-13"
+      className="ImageViewerDescription-title-15"
       data-testid="Image-Viewer-Description-Title"
     >
       Placeholder
     </div>
     <div
-      className="ImageViewerDescription-text-14"
+      className="ImageViewerDescription-text-16"
       data-testid="Image-Viewer-Description-Text"
     >
       

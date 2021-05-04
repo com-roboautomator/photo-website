@@ -2,7 +2,7 @@ import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
-import imageIcon from '../../../assets/images/icons/collection-image-o.png'
+import ImageIcon from '../../../assets/images/icons/collection-image-o.png'
 import CollectionTag from './HomeCollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
@@ -50,7 +50,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                             <img
                                 data-testid="Collection-Card-Image-Icon"
                                 className={classes.icon}
-                                src={imageIcon}
+                                src={ImageIcon}
                                 alt=""
                                 width={20}
                                 height={20}

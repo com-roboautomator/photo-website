@@ -1,6 +1,6 @@
 import {WithStyles, withStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
-import imageIcon from '../../../assets/images/icons/collection-image-w.png'
+import ImageIcon from '../../../assets/images/icons/collection-image-w.png'
 
 interface GalleryCollectionCardViewIconProps
     extends WithStyles<typeof styles> {}
@@ -11,7 +11,7 @@ class GalleryCollectionCardViewIcon extends React.Component<GalleryCollectionCar
         return (
             <div className={classes.container}>
                 <div className={classes.image}>
-                    <img src={imageIcon} alt="none" width="20" height="20" />
+                    <img src={ImageIcon} alt="none" width="20" height="20" />
                 </div>
                 <div className={classes.text}>VIEW</div>
             </div>

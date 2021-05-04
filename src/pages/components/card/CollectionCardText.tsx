@@ -1,7 +1,7 @@
 import {WithStyles, withStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
 import CollectionTag from './HomeCollectionTag'
-import imageIcon from '../../../assets/images/icons/collection-image-o.png'
+import ImageIcon from '../../../assets/images/icons/collection-image-o.png'
 
 interface CollectionCardTextProps extends WithStyles<typeof styles> {
     title: string
@@ -21,7 +21,7 @@ class CollectionCardText extends React.Component<CollectionCardTextProps> {
                 <img
                     data-testid="Collection-Card-Image-Icon"
                     className={classes.icon}
-                    src={imageIcon}
+                    src={ImageIcon}
                     alt=""
                     width={20}
                     height={20}
