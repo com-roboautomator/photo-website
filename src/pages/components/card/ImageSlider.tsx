@@ -6,7 +6,6 @@ import Underscore from 'underscore'
 import ImageSliderButtonWrapper from './ImageSliderButtonWrapper'
 import ImageSliderTitle from './ImageSliderTitle'
 import Collection from '../../../assets/data/ImageDataStructure'
-import {v4 as uuid} from 'uuid'
 
 interface ImageSliderProps extends WithStyles<typeof styles> {
     data: Collection[]

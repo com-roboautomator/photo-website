@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom/extend-expect'
 import {render} from '@testing-library/react'
-import {shallow} from 'enzyme'
-import {BrowserRouter, Route, Router} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import renderer from 'react-test-renderer'
 import ContactPage from '../ContactPage'
 
