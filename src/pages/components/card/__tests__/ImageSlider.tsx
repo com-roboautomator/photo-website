@@ -1,8 +1,8 @@
-import { fireEvent, render } from '@testing-library/react'
+import {fireEvent, render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import ImageSlider from '../ImageSlider'
-import { home } from '../../../../assets/data/Images'
+import {home} from '../../../../assets/data/Images'
 
 describe('Image Slider', () => {
     it('renders correctly when there are no items', () => {
@@ -25,10 +25,7 @@ describe('Image Slider', () => {
             component.getByTestId('Collection-Card-Urban Collection')
         ).toBeTruthy()
 
-
         fireEvent.click(component.getByTestId('Arrow-Button-Right'))
-
-
     })
 
     it('should decrement image index on arrow button click', () => {
@@ -45,9 +42,7 @@ describe('Image Slider', () => {
             component.getByTestId('Collection-Card-Animal Collection')
         ).toBeTruthy()
 
-
         fireEvent.click(component.getByTestId('Arrow-Button-Left'))
-
     })
 
     it('should increment image index on positive wheel move', () => {
@@ -61,14 +56,13 @@ describe('Image Slider', () => {
             component.getByTestId('Collection-Card-Urban Collection')
         ).toBeTruthy()
 
-
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
             deltaY: 30,
         })
     })
 
     it('should decrement image index on negative wheel move', () => {
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <ImageSlider data={home} startingIndex={3} mode="Home" />
         )
         const slider = getByTestId('ImageSlider-Card-Slider')

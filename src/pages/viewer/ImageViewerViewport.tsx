@@ -1,4 +1,4 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
+import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
 import Arrow from '../components/navigation/Arrow'
 
@@ -71,8 +71,7 @@ class ImageViewerViewport extends React.Component<
                 />
                 <div
                     className={classes.button_wrapper}
-                    id="Image-Viewer-Viewport-Button-Wrapper"
-                >
+                    id="Image-Viewer-Viewport-Button-Wrapper">
                     <Arrow
                         disabled={props.index <= 0}
                         onClick={this.previous}

@@ -1,8 +1,8 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
+import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
-import { findCollectionById } from '../../assets/data/Images'
-import { image, placeholder } from '../../assets/data/ImageDataStructure'
+import {RouteComponentProps} from 'react-router-dom'
+import {findCollectionById} from '../../assets/data/Images'
+import {image, placeholder} from '../../assets/data/ImageDataStructure'
 import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
 import ImageViewerIndex from './ImageViewerIndex'
@@ -10,7 +10,7 @@ import ImageViewerDescription from './ImageViewerDescription'
 
 interface ImageViewerProps
     extends WithStyles<typeof styles>,
-    React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
+        React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {
     //source?: string
 }
 
@@ -56,8 +56,7 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
     }
 
     render() {
-
-        var { collectionId } = this.props.match.params
+        var {collectionId} = this.props.match.params
         const collection = findCollectionById(collectionId)
         const images = collection?.images
 

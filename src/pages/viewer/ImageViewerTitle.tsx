@@ -1,4 +1,4 @@
-import { withStyles, WithStyles, createStyles } from '@material-ui/styles'
+import {withStyles, WithStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
 
 interface ImageViewerTitleProps extends WithStyles<typeof styles> {

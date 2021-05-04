@@ -1,8 +1,8 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
+import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
 import ArrowEnabled from '../../../assets/images/icons/arrow-enabled.png'
 import ArrowDisabled from '../../../assets/images/icons/arrow-disabled.png'
-import { Button } from '@material-ui/core'
+import {Button} from '@material-ui/core'
 
 interface ArrowProps extends WithStyles<typeof styles> {
     disabled: boolean
@@ -42,11 +42,11 @@ const styles = () =>
             zIndex: 99,
             alignSelf: 'center',
         },
-        left:{
+        left: {
             width: '40px',
             transform: 'rotate(180deg)',
         },
-        right:{
+        right: {
             width: '40px',
         },
     })

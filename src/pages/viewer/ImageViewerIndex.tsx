@@ -1,4 +1,4 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import {createStyles, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 
 interface ImageViewerIndexProps extends WithStyles<typeof styles> {
@@ -11,10 +11,7 @@ class ImageViewerIndex extends React.Component<ImageViewerIndexProps> {
         const props = this.props
         const classes = this.props.classes
         return (
-            <div
-                data-testid="Image-Viewer-Index"
-                className={classes.container}
-            >
+            <div data-testid="Image-Viewer-Index" className={classes.container}>
                 {props.indexValue + 1 + ' / ' + props.indexTotal}
             </div>
         )
