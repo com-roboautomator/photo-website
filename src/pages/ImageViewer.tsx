@@ -1,6 +1,6 @@
 import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import {data} from '../assets/data/TestData'
+import {data} from '../assets/data/HomeTestImages'
 
 interface ImageViewerProps extends WithStyles<typeof styles> {
     source?: string

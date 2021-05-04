@@ -1,12 +1,12 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 
-interface CollectionTagProps extends WithStyles<typeof styles> {
+interface HomeCollectionTagProps extends WithStyles<typeof styles> {
     title?: string
     colour?: string
 }
 
-class CollectionTag extends React.Component<CollectionTagProps> {
+class HomeCollectionTag extends React.Component<HomeCollectionTagProps> {
     render() {
         return (
             <div
@@ -35,4 +35,4 @@ const styles = () =>
         },
     })
 
-export default withStyles(styles)(CollectionTag)
+export default withStyles(styles)(HomeCollectionTag)
