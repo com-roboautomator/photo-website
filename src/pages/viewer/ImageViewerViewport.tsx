@@ -53,8 +53,6 @@ class ImageViewerViewport extends React.Component<
         const state = this.state
         const classes = this.props.classes
 
-        const change = this.state.switch
-
         return (
             <div className={classes.container}>
                 <img

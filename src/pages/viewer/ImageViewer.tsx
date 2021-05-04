@@ -61,7 +61,6 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
         const images = collection?.images
 
         const state = this.state
-        const props = this.props
         const classes = this.props.classes
 
         const collectionLength =

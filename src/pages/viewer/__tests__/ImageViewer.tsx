@@ -1,13 +1,7 @@
 import '@testing-library/jest-dom/extend-expect'
 import {render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import {
-    BrowserRouter,
-    Route,
-    Router,
-    useHistory,
-    useParams,
-} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import ImageViewer from '../ImageViewer'
 
 describe('Image Viewer', () => {

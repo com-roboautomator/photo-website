@@ -1,6 +1,6 @@
 import {WithStyles, withStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
-import CollectionTag from './CollectionTag'
+import CollectionTag from './HomeCollectionTag'
 import imageIcon from '../../../assets/images/icons/collection-image-o.png'
 
 interface CollectionCardTextProps extends WithStyles<typeof styles> {
