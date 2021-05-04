@@ -1,13 +1,16 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import CollectionCard from '../CollectionCard'
+import HomeCollectionCard from '../HomeCollectionCard'
 
-describe('Collection Card', () => {
+describe('Home Collection Card', () => {
     it('should render collection card spacing correctly when unselected', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={false}
             />
         )
@@ -35,9 +38,12 @@ describe('Collection Card', () => {
 
     it('should render collection card spacing correctly when selected', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={true}
             />
         )
@@ -71,9 +77,12 @@ describe('Collection Card', () => {
 
     it('should render card image correctly', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={true}
             />
         )
@@ -81,7 +90,7 @@ describe('Collection Card', () => {
         expect(component).toBeTruthy()
         expect(component.getByTestId('Collection-Card-Image')).toHaveAttribute(
             'src',
-            'source/location'
+            'https://picsum.photos/id/250/500'
         )
         expect(component.getByTestId('Collection-Card-Image')).toHaveAttribute(
             'width',
@@ -104,9 +113,12 @@ describe('Collection Card', () => {
 
     it('should render card text wrapper correctly', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={true}
             />
         )
@@ -149,9 +161,12 @@ describe('Collection Card', () => {
 
     it('should render card image icon correctly', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'Home-Collection-Card-Title',
+                    index: 0,
+                }}
                 selected={true}
             />
         )
@@ -170,9 +185,12 @@ describe('Collection Card', () => {
 
     it('should render card title correctly', () => {
         const component = render(
-            <CollectionCard
-                coverSrc="source/location"
-                title="test-collection-card-title"
+            <HomeCollectionCard
+                collection={{
+                    key: 'key',
+                    title: 'test-collection-card-title',
+                    index: 0,
+                }}
                 selected={true}
             />
         )

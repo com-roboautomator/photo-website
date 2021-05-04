@@ -1,153 +1,199 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image Slider renders correctly when there are no items 1`] = `
-<div
+<main
   className="ImageSlider-container-1"
-  data-testid="ImageSlider-Container"
 >
   <div
-    className="ImageSlider-button_wrapper-3"
-    data-testid="ImageSlider-button-wrapper"
+    className="ImageSliderTitle-hidden-6"
+    style={
+      Object {
+        "borderColor": undefined,
+      }
+    }
   >
-    <div
-      className="ImageSlider-arrow-5"
-    >
-      <div>
-        <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
-          data-testid="Arrow-Button-Left"
-          disabled={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={-1}
-          type="button"
-        >
-          <span
-            className="MuiButton-label"
-          >
-            <img
-              alt="nata"
-              className="Arrow-left-6"
-              data-testid="Arrow-Button-Image"
-              src="arrow-disabled.png"
-            />
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      className="ImageSlider-arrow-5"
-      data-testid="ImageSlider-arrow"
-    >
-      <div>
-        <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-text"
-          data-testid="Arrow-Button-Right"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="MuiButton-label"
-          >
-            <img
-              alt="nata"
-              className="Arrow-right-7"
-              data-testid="Arrow-Button-Image"
-              src="arrow-enabled.png"
-            />
-          </span>
-        </button>
-      </div>
-    </div>
+    
   </div>
   <div
-    className="ImageSlider-card_slider-2"
-    data-testid="ImageSlider-Card-Slider"
-    onWheel={[Function]}
+    className="ImageSlider-wrapper-2"
+    data-testid="ImageSlider-Container"
   >
     <div
-      className="ImageSlider-card_slider_wrapper-4"
+      className="ImageSliderButtonWrapper-button_wrapper-7"
+      data-testid="ImageSlider-button-wrapper"
       style={
         Object {
-          "transform": "translateX(-0%)",
+          "background": "linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)",
         }
       }
     >
-      <main
-        data-testid="Collection-Card-Nature Collection"
+      <div
+        className="ImageSliderButtonWrapper-arrow-8"
       >
         <div
-          className="CollectionCard-spacing_selected-8"
-          data-testid="Collection-Card-Spacing"
+          className="Arrow-container-9"
         >
-          <div
-            className="CollectionCard-container-10"
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+            data-testid="Arrow-Button-Left"
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            type="button"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <span
+              className="MuiButton-label"
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg"
-                width="350"
+                data-testid="Arrow-Button-Image"
+                src="arrow-disabled.png"
+                style={
+                  Object {
+                    "transform": "rotate(180deg)",
+                  }
+                }
+                width="40"
               />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="ImageSliderButtonWrapper-arrow-8"
+        data-testid="ImageSlider-arrow"
+      >
+        <div
+          className="Arrow-container-9"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text"
+            data-testid="Arrow-Button-Right"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <img
+                alt=""
+                data-testid="Arrow-Button-Image"
+                src="arrow-enabled.png"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                width="40"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ImageSlider-card_slider-3"
+      data-testid="ImageSlider-Card-Slider"
+      onWheel={[Function]}
+      style={
+        Object {
+          "height": "undefinedpx",
+        }
+      }
+    >
+      <div
+        className="ImageSlider-card_slider_wrapper-4"
+        style={
+          Object {
+            "transform": "translateX(-0%)",
+          }
+        }
+      >
+        <main
+          data-testid="Collection-Card-Nature Collection"
+        >
+          <div
+            className="CollectionCard-spacing_selected-10"
+            data-testid="Collection-Card-Spacing"
+          >
+            <div
+              className="CollectionCard-container-12"
+            >
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/befee15c-c770-4450-b71f-f20f820b3549"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1018/800"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Nature Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#47742c",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -157,60 +203,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Urban Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Urban Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/16bdf4fe-692d-4e11-8fd4-9ea37e3fc34d"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/101/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Urban Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -220,60 +274,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Animal Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Animal Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/2c615617-6372-4042-bce5-a97910a51b5a"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1024/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Animal Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -283,60 +345,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Mechanical Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Mechanical Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/3961f578-14ea-46aa-9b74-7f908fcd532b"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/111/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Mechanical Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#50b1d6",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -346,60 +416,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Party Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Party Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/37f92b19-2ea1-4742-b97b-81ed97e2e9c3"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/158/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Party Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -409,60 +487,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Second Nature Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Second Nature Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/6dcdba12-f48c-46cf-b1f6-07e8d1c5ed2b"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1018/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Second Nature Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -472,60 +558,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Second Urban Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Second Urban Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/f3a93006-d639-4abb-a39d-d5a8bb5c6ee4"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/101/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Second Urban Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -535,60 +629,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Second Animal Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Second Animal Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/d92210d9-1cd4-4fc1-b8ac-0c31bb25fc20"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1024/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Second Animal Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -598,60 +700,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Second Mechanical Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Second Mechanical Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/95c8774a-fe11-4307-a142-0716d96812fc"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/111/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Second Mechanical Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -661,60 +771,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Second Party Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Second Party Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/fbd49627-6bdf-4ae2-b1ac-e51e6e758e40"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/158/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Second Party Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -724,60 +842,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Wedding Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Wedding Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1013/4256/2832.jpg?hmac=UmYgZfqY_sNtHdug0Gd73bHFyf1VvzFWzPXSr5VTnDA"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1013/4256/2832.jpg?hmac=UmYgZfqY_sNtHdug0Gd73bHFyf1VvzFWzPXSr5VTnDA"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/7d92f616-aed7-4e1e-87fb-8fc0c31dcdcd"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1013/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Wedding Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -787,60 +913,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-Sport Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-Sport Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/1023/3955/2094.jpg?hmac=AW_7mARdoPWuI7sr6SG8t-2fScyyewuNscwMWtQRawU"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/1023/3955/2094.jpg?hmac=AW_7mARdoPWuI7sr6SG8t-2fScyyewuNscwMWtQRawU"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/7a561d3c-302c-41fa-b9c9-8f00c67e1e19"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/1023/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   Sport Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -850,60 +984,68 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
-      <main
-        data-testid="Collection-Card-People Collection"
-      >
-        <div
-          className="CollectionCard-spacing_unselected-9"
-          data-testid="Collection-Card-Spacing"
+        </main>
+        <main
+          data-testid="Collection-Card-People Collection"
         >
           <div
-            className="CollectionCard-container-10"
+            className="CollectionCard-spacing_unselected-11"
+            data-testid="Collection-Card-Spacing"
           >
-            <a
-              className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-              href="https://i.picsum.photos/id/375/5184/3456.jpg?hmac=3OUWWnSmq1CUXU7cmTnctSvhQYvyME_osftkbJynX04"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              target="_blank"
+            <div
+              className="CollectionCard-container-12"
             >
-              <img
-                alt=""
-                className="CollectionCardImage-layout-11"
-                data-testid="Collection-Card-Image"
-                height="200"
-                src="https://i.picsum.photos/id/375/5184/3456.jpg?hmac=3OUWWnSmq1CUXU7cmTnctSvhQYvyME_osftkbJynX04"
-                width="350"
-              />
+              <a
+                className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                href="gallery/d5fbdc4f-b41b-4086-a661-f32020b29e3b"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="CollectionCard-image_wrapper-14"
+                >
+                  <img
+                    alt=""
+                    className="CollectionCard-image-13"
+                    data-testid="Collection-Card-Image"
+                    height="200"
+                    src="https://picsum.photos/id/375/200"
+                    width="350"
+                  />
+                </div>
+              </a>
               <div
-                className="CollectionCardText-text_wrapper-13"
+                className="CollectionCard-text_wrapper-15"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-14"
+                  className="CollectionCard-icon-16"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-15"
+                  className="CollectionCard-text-17"
                   data-testid="Collection-Card-Title"
                 >
                   People Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-16"
+                  className="CollectionCard-tag-18"
                 >
                   <div
-                    className="CollectionTag-layout-17"
                     data-testid="tag-layout"
                     style={
                       Object {
                         "background": "#323232",
+                        "borderRadius": "7px",
+                        "color": "white",
+                        "fontFamily": "Open-Sans-Bold",
+                        "fontSize": 14,
+                        "padding": 5,
+                        "textAlign": "center",
                       }
                     }
                   >
@@ -913,9 +1055,9 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
               </div>
             </a>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </div>
-</div>
+</main>
 `;

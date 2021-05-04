@@ -1,32 +1,26 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/styles'
+import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
 import PageTitle from './components/text/PageTitle'
 import ProfileImage from './components/text/ProfileImage'
-import { text } from '../assets/data/AboutPageText'
+import {text} from '../assets/data/AboutPageText'
 
-interface AboutProps extends WithStyles<typeof styles> { }
+interface AboutProps extends WithStyles<typeof styles> {}
 
 class About extends React.Component<AboutProps> {
     render() {
         const classes = this.props.classes
         return (
             <main>
-                <PageTitle title="ABOUT" src="https://picsum.photos/id/10/1500/200" />
-                <div
-                    data-testid="About-Page"
-                    className={classes.container}
-                >
+                <PageTitle
+                    title="ABOUT"
+                    src="https://picsum.photos/id/10/1500/200"
+                />
+                <div data-testid="About-Page" className={classes.container}>
                     <div className={classes.wrapper}>
-                        <div
-                            className={classes.profile_image}
-                        >
+                        <div className={classes.profile_image}>
                             <ProfileImage />
                         </div>
-                        <div
-                            className={classes.text}
-                        >
-                            {text}
-                        </div>
+                        <div className={classes.text}>{text}</div>
                     </div>
                 </div>
             </main>
@@ -36,7 +30,6 @@ class About extends React.Component<AboutProps> {
 
 const styles = () =>
     createStyles({
-
         container: {
             display: 'flex',
             justifyContent: 'center',
@@ -55,9 +48,8 @@ const styles = () =>
         text: {
             whiteSpace: 'pre-wrap',
             fontFamily: 'Open-Sans-Regular',
-            color: '#5f5f5f'
+            color: '#5f5f5f',
         },
-
     })
 
 export default withStyles(styles)(About)

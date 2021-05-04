@@ -32,7 +32,10 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
                     <Button
                         text="CONTACT"
                         path="/contact"
-                        selected={location === '/contact'}
+                        selected={
+                            location === '/contact' ||
+                            location === '/contact/confirmation'
+                        }
                     />
                 </div>
             </div>

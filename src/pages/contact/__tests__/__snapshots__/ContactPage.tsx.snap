@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact Page should render correctly when there are no items 1`] = `
+<main
+  data-testid="Contact-Page"
+>
+  <div
+    className="PageTitle-container-4"
+    data-testid="PageTitle-Container"
+  >
+    <img
+      alt=""
+      className="PageTitle-image_loading-6"
+      data-testid="PageTitle-Image"
+      onLoad={[Function]}
+      src="https://picsum.photos/id/1058/1500/200"
+    />
+    <div
+      className="PageTitle-title_loading-7"
+      data-testid="PageTitle-Text"
+    >
+      CONTACT
+    </div>
+  </div>
+  <div
+    className="Contact-container-1"
+  >
+    <div
+      className="Contact-wrapper-2"
+    >
+      <p
+        className="Contact-header-3"
+      >
+        <b>
+          Contact Me
+        </b>
+        <br />
+        <br />
+        Please fill in this form and I will do my best to respond as soon as I can
+      </p>
+      <div
+        className="InputField-container-9"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+            data-testid="InputField-TextField-Full Name"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+            >
+              Full Name
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-12"
+                >
+                  <span>
+                    Full Name
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="InputField-container-9"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+            data-testid="InputField-TextField-Email Address"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+            >
+              Email Address
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-12"
+                >
+                  <span>
+                    Email Address
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="InputField-container-9"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+            data-testid="InputField-TextField-Message"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+            >
+              Message
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+              onClick={[Function]}
+            >
+              <textarea
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+                disabled={false}
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                rows={8}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-12"
+                >
+                  <span>
+                    Message
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="SubmitButton-container-14"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained SubmitButton-button-15 MuiButton-containedPrimary"
+          data-testid="Submit-Button"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Submit
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+`;

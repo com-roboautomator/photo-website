@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Viewer renders correctly when there are no items 1`] = `
+<div
+  className="ImageViewer-container-1"
+>
+  <div
+    className="ImageViewerTitle-container-2"
+  >
+    <div
+      className="ImageViewerTitle-collection_title-3"
+      data-testid="Image-Viewer-Title-Collection-Title"
+    >
+      
+    </div>
+    <div
+      className="ImageViewerTitle-image_title-4"
+      data-testid="Image-Viewer-Title-Image-Title"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="ImageViewerViewport-container-5"
+  >
+    <img
+      alt=""
+      className="ImageViewerViewport-previous-8"
+      data-testid="Image-Viewer-Viewport-Previous-Image"
+      src=""
+    />
+    <img
+      alt=""
+      className="ImageViewerViewport-image-7"
+      data-testid="Image-Viewer-Viewport-Target-Image"
+      src=""
+    />
+    <div
+      className="ImageViewerViewport-button_wrapper-9"
+      id="Image-Viewer-Viewport-Button-Wrapper"
+    >
+      <div
+        className="Arrow-container-10"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+          data-testid="Arrow-Button-Left"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <img
+              alt=""
+              data-testid="Arrow-Button-Image"
+              src="arrow-disabled.png"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              width="40"
+            />
+          </span>
+        </button>
+      </div>
+      <div
+        className="Arrow-container-10"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+          data-testid="Arrow-Button-Right"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <img
+              alt=""
+              data-testid="Arrow-Button-Image"
+              src="arrow-disabled.png"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              width="40"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ImageViewerIndex-container-11"
+    data-testid="Image-Viewer-Index"
+  >
+    1 / 0
+  </div>
+  <div
+    className="ImageViewerDescription-container-12"
+  >
+    <div
+      className="ImageViewerDescription-title-13"
+      data-testid="Image-Viewer-Description-Title"
+    >
+      Placeholder
+    </div>
+    <div
+      className="ImageViewerDescription-text-14"
+      data-testid="Image-Viewer-Description-Text"
+    >
+      
+    </div>
+  </div>
+</div>
+`;
