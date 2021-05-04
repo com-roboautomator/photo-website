@@ -15,11 +15,7 @@ describe('Slider arrow buttons', () => {
         )
         expect(component.getByTestId('Arrow-Button-Image')).toHaveAttribute(
             'alt',
-            ''
-        )
-        expect(component.getByTestId('Arrow-Button-Image')).toHaveAttribute(
-            'width',
-            '40'
+            'nata'
         )
 
         expect(component.getByTestId('Arrow-Button-Image')).toHaveStyle(
@@ -39,15 +35,7 @@ describe('Slider arrow buttons', () => {
         )
         expect(component.getByTestId('Arrow-Button-Image')).toHaveAttribute(
             'alt',
-            ''
-        )
-        expect(component.getByTestId('Arrow-Button-Image')).toHaveAttribute(
-            'width',
-            '40'
-        )
-
-        expect(component.getByTestId('Arrow-Button-Image')).toHaveStyle(
-            'transform: rotate(0deg)'
+            'nata'
         )
     })
 })

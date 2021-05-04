@@ -201,7 +201,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -272,7 +272,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -343,7 +343,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -414,7 +414,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -485,7 +485,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -556,7 +556,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -627,7 +627,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -698,7 +698,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -769,7 +769,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -840,7 +840,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -911,7 +911,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -982,7 +982,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
         <main
@@ -1053,7 +1053,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </main>
       </div>

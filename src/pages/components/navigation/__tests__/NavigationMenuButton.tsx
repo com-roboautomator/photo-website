@@ -4,13 +4,13 @@ import Button from '../NavigationMenuButton'
 
 describe('NavigationMenuButton', () => {
     it('should render correctly when selected', () => {
-        //When
-        //Given
+        // When
+        // Given
         const component = render(
             <Button text="Test" path="/path" selected={true} />
         )
 
-        //Then
+        // Then
         expect(component.getByTestId('Button-Test-Button')).toBeTruthy()
         expect(
             component.getByTestId('Button-Test').className.includes('wrapper')
@@ -28,13 +28,13 @@ describe('NavigationMenuButton', () => {
     })
 
     it('should render correctly when unselected', () => {
-        //When
-        //Given
+        // When
+        // Given
         const component = render(
             <Button text="Test" path="/path" selected={false} />
         )
 
-        //Then
+        // Then
         expect(component.getByTestId('Button-Test-Button')).toBeTruthy()
         expect(
             component.getByTestId('Button-Test').className.includes('wrapper')

@@ -1,0 +1,90 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Website Development
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - Makefile
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - Makefile
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Setup Node environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '15.3.0'
+
+      # Caches npm install cache
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      # Install dependencies
+      - name: Install dependencies
+        run: make install
+
+      # Runs linting
+      - name: Run ESLint
+        run: npm run lint
+
+      # Runs unit tests with coverage
+      - name: Run unit tests with coverage
+        run: make test
+
+      # Runs integration tests with coverage
+      - name: Run integration tests
+        run: make integration
+
+      # Make production build
+      - name: Build for production
+        run: make build
+
+  deployment:
+    name: Package and Deploy
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      # Tags repository with build versions of code
+      - name: Tagging repository
+        run: |
+          git tag $(make current_version)
+          git push origin $(make current_version)
