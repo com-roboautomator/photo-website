@@ -14,11 +14,11 @@ class Home extends React.Component<HomeProps> {
                 <div data-testid={'Home-Page'} className={classes.container}>
                     <PageTitle
                         title="HOME"
-                        height={40}
-                        src="https://picsum.photos/id/1014/1500/200"
+                        height={45}
+                        src="https://picsum.photos/id/1040/1500/200"
                     />
                     <div className={classes.wapper}>
-                        <ImageSlider height={280} mode="Home" data={home} />
+                        <ImageSlider height={270} mode="Home" data={home} />
                     </div>
                 </div>
             </main>
@@ -35,21 +35,7 @@ const styles = () =>
         wapper: {
             marginLeft: '80px',
             marginRight: '80px',
-        },
-        description: {
-            position: 'absolute',
-            width: '100%',
-            paddingTop: '5%',
-            fontSize: 30,
-            fontFamily: 'Open Sans',
-            textAlign: 'center',
-            alignContent: 'center',
-            zIndex: 0,
-        },
-        title: {
-            alignText: 'center',
-            fontFamily: 'Open-Sans-Regular',
-            fontSize: 50,
+            marginTop: '5vh',
         },
     })
 

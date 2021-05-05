@@ -104,6 +104,11 @@ class ImageSlider extends React.Component<ImageSliderProps, any> {
                                 this.props.mode === 'Home' ? (
                                     <CollectionCardHome
                                         collection={property}
+                                        height={
+                                            this.props.height
+                                                ? this.props.height
+                                                : 200
+                                        }
                                         selected={
                                             this.state.selected ===
                                             property.index
