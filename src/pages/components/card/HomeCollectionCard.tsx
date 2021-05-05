@@ -7,6 +7,7 @@ import CollectionTag from './HomeCollectionTag'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
     collection: collection
+    height: number
     selected: boolean
     onClick?: () => void
 }
@@ -40,7 +41,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                                     src={imageURL}
                                     alt=""
                                     width="350"
-                                    height="200"
+                                    height={this.props.height - 60}
                                 />
                             </div>
                         </Link>

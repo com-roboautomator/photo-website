@@ -20,7 +20,7 @@ class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperP
                 style={{
                     background:
                         this.props.mode === 'Home'
-                            ? 'linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)'
+                            ? 'linear-gradient(to right, white, transparent 30%), linear-gradient(to left, white, transparent 30%)'
                             : 'none',
                 }}>
                 <div className={classes.arrow}>
