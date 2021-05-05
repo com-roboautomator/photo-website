@@ -2,8 +2,8 @@ import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
 import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
-import ImageIcon from '../../../assets/images/icons/collection-image-o.png'
-import CollectionTag from './HomeCollectionTag'
+import HomeCollectionCardImage from './HomeCollectionCardImage'
+import HomeCollectionCardText from './HomeCollectionCardText'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
     collection: collection
@@ -15,6 +15,7 @@ interface CollectionCardProps extends WithStyles<typeof styles> {
 class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
+        const collection = this.props.collection
         const hrefLink: string = `gallery/${this.props.collection.key}`
         const imageURL: string =
             this.props.collection.images === undefined
@@ -24,50 +25,25 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                   ].url
         return (
             <main
-                data-testid={`Collection-Card-${this.props.collection.title}`}>
+                data-testid={`Home-Collection-Card-${this.props.collection.title}`}>
                 <div
-                    data-testid="Collection-Card-Spacing"
+                    data-testid="Home-Collection-Card-Spacing"
                     className={
                         this.props.selected
                             ? classes.spacing_selected
                             : classes.spacing_unselected
                     }>
-                    <div className={classes.container}>
-                        <Link href={hrefLink}>
-                            <div className={classes.image_wrapper}>
-                                <img
-                                    data-testid="Collection-Card-Image"
-                                    className={classes.image}
-                                    src={imageURL}
-                                    alt=""
-                                    width="350"
-                                    height={this.props.height - 60}
-                                />
-                            </div>
-                        </Link>
-                        <div
-                            data-testid="Collection-Card-Text-Wrapper"
-                            className={classes.text_wrapper}>
-                            <img
-                                data-testid="Collection-Card-Image-Icon"
-                                className={classes.icon}
-                                src={ImageIcon}
-                                alt=""
-                                width={20}
-                                height={20}
+                    <div
+                        className={classes.container}
+                        data-testid="Home-Collection-Card-Container">
+                        <Link href={hrefLink} style={{textDecoration: 'none'}}>
+                            <HomeCollectionCardImage src={imageURL} />
+                            <HomeCollectionCardText
+                                title={collection.title}
+                                tagTitle={collection.tagTitle}
+                                tagColour={collection.tagColour}
                             />
-                            <p
-                                data-testid="Collection-Card-Title"
-                                className={classes.text}>
-                                {this.props.collection.title}
-                            </p>
-                            <div className={classes.tag}>
-                                <CollectionTag
-                                    colour={this.props.collection.tagColour}
-                                    title={this.props.collection.tagTitle}
-                                />
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </main>
