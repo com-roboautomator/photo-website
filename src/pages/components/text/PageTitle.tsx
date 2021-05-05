@@ -1,11 +1,13 @@
 import {withStyles, WithStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
+import Signature from '../../../assets/images/Logo.png'
 
 interface PageTitleProps extends WithStyles<typeof styles> {
     title: string
     src?: string
     height?: number
     skipLoad?: boolean
+    signature?: boolean
 }
 
 interface PageTitleState {
@@ -50,6 +52,12 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                             : classes.title_loading
                     }>
                     {this.props.title}
+                </div>
+                <div className={classes.signature}>
+                    <img
+                        src={this.props.signature ? Signature : ''}
+                        alt=""
+                        width="25%"></img>
                 </div>
             </div>
         )
@@ -99,6 +107,17 @@ const styles = () =>
             borderLeft: '5px solid #7baab5',
             opacity: '100',
             transition: 'opacity ease-in 200ms, filter ease-in 200ms',
+        },
+        signature: {
+            display: 'flex',
+
+            width: '100%',
+            paddingBottom: '10px',
+            position: 'absolute',
+            alignSelf: 'flex-end',
+
+            justifyContent: 'center',
+            alignContent: 'center',
         },
     })
 

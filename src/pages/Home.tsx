@@ -15,6 +15,7 @@ class Home extends React.Component<HomeProps> {
                     <PageTitle
                         title="HOME"
                         height={45}
+                        signature={true}
                         src="https://picsum.photos/id/1040/1500/200"
                     />
                     <div className={classes.wapper}>
