@@ -4,6 +4,7 @@ import React from 'react'
 interface PageTitleProps extends WithStyles<typeof styles> {
     title: string
     src?: string
+    height?: number
     skipLoad?: boolean
 }
 
@@ -33,6 +34,11 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                             ? classes.image_loaded
                             : classes.image_loading
                     }
+                    style={{
+                        height: this.props.height
+                            ? `${this.props.height}vh`
+                            : '20vh',
+                    }}
                     src={this.props.src}
                     alt=""
                 />
@@ -58,13 +64,13 @@ const styles = () =>
         },
         image_loaded: {
             width: '100%',
-            height: '200px',
+            height: '40vh',
             opacity: '100',
             transition: 'opacity ease-in 200ms, filter ease-in 600ms',
         },
         image_loading: {
             width: '100%',
-            height: '200px',
+            height: '40vh',
             opacity: '0',
             filter: 'blur(2px)',
         },
