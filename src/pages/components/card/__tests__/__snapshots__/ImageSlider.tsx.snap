@@ -23,7 +23,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
       data-testid="ImageSlider-button-wrapper"
       style={
         Object {
-          "background": "linear-gradient(to right, white, transparent 50%), linear-gradient(to left, white, transparent 50%)",
+          "background": "linear-gradient(to right, white, transparent 30%), linear-gradient(to left, white, transparent 30%)",
         }
       }
     >
@@ -146,7 +146,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1018/800"
                     width="350"
                   />
@@ -212,7 +212,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/101/200"
                     width="350"
                   />
@@ -278,7 +278,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1024/200"
                     width="350"
                   />
@@ -344,7 +344,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/111/200"
                     width="350"
                   />
@@ -410,7 +410,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/158/200"
                     width="350"
                   />
@@ -476,7 +476,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1018/200"
                     width="350"
                   />
@@ -531,7 +531,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/5703c283-9c76-49b3-b2a6-b68764c1fdb2"
+                href="gallery/0a0b42e5-4cae-44e1-9c7a-45653583cf9f"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -542,7 +542,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/101/200"
                     width="350"
                   />
@@ -597,7 +597,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/431274a6-e3f8-4ba1-bca5-919cbeeeaefc"
+                href="gallery/bed42a6e-eaaa-4530-8f47-c83cbaf93be9"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -608,7 +608,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1024/200"
                     width="350"
                   />
@@ -663,7 +663,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/2f46413f-d933-4d53-bcd7-e912579a4230"
+                href="gallery/c9ac2a53-c068-4b24-822f-f7bdd234c4a4"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -674,7 +674,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/111/200"
                     width="350"
                   />
@@ -729,7 +729,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/b88d0718-1c4c-4150-a728-ad9278567cab"
+                href="gallery/5dce3705-6fa4-453f-b8ca-7d0c1e228d03"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -740,7 +740,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/158/200"
                     width="350"
                   />
@@ -795,7 +795,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/c846108f-46be-49eb-9493-0e98b2162143"
+                href="gallery/aab8bb23-3d3f-4880-8a3b-0b86d78edefc"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -806,7 +806,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1013/200"
                     width="350"
                   />
@@ -861,7 +861,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/ad02b658-1c1c-4180-b327-4a1fe624883c"
+                href="gallery/76527c89-62f3-4b57-9ebf-00c5aff35c76"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -872,7 +872,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/1023/200"
                     width="350"
                   />
@@ -927,7 +927,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <a
                 className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href="gallery/3d682862-003a-438d-90d3-e187b9dd74f9"
+                href="gallery/590dec86-711d-4e91-9796-2af192cee31d"
                 onBlur={[Function]}
                 onFocus={[Function]}
               >
@@ -938,7 +938,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
                     alt=""
                     className="CollectionCard-image-15"
                     data-testid="Collection-Card-Image"
-                    height="200"
+                    height={140}
                     src="https://picsum.photos/id/375/200"
                     width="350"
                   />
