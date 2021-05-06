@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Collection Card should match snapshot 1`] = `
+<div
+  className="GalleryCollectionCard-spacing_selected-1"
+  data-testid="Collection-Card-Spacing"
+>
+  <div
+    className="GalleryCollectionCard-container-5"
+  >
+    <a
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      data-testid="Collection-Card-Link"
+      href="gallery/017a317f-8285-4cfb-a4e7-668d85721b76"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        className="GalleryCollectionCard-image_wrapper-6"
+      >
+        <img
+          alt=""
+          data-testid="Collection-Card-Image"
+          height={530}
+          src="https://picsum.photos/id/1003/500"
+          width="350"
+        />
+        <div
+          className="GalleryCollectionCard-container-7"
+          data-testid="Gallery-Collection-Card-Text"
+        >
+          <div
+            className="GalleryCollectionCard-tag-8"
+            data-testid="Gallery-Collection-Card-Tag"
+            style={
+              Object {
+                "borderBottomColor": "#47742c",
+              }
+            }
+          >
+            NATURE
+          </div>
+          <div
+            className="GalleryCollectionCard-text-9"
+            data-testid="Gallery-Collection-Card-Content-Text"
+          >
+            Animal Collection
+            <div
+              className="GalleryCollectionCardItemsText-container-10"
+              data-testid="Gallery-Collection-Card-Items-Text"
+            >
+              10
+               Items
+            </div>
+          </div>
+          <div
+            className="GalleryCollectionCardViewIcon-container-11"
+          >
+            <div
+              className="GalleryCollectionCardViewIcon-image-12"
+            >
+              <img
+                alt="none"
+                data-testid="Gallery-Collection-Card-View-Icon-Image"
+                height="20"
+                src="collection-image-w.png"
+                width="20"
+              />
+            </div>
+            <div
+              className="GalleryCollectionCardViewIcon-text-13"
+              data-testid="Gallery-Collection-Card-View-Icon-Text"
+            >
+              VIEW
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;

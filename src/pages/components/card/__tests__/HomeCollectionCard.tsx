@@ -1,4 +1,5 @@
-import {render} from '@testing-library/react'
+import { render } from '@testing-library/react'
+import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import HomeCollectionCard from '../HomeCollectionCard'
 import collection, {
@@ -27,8 +28,21 @@ const testCollectionWithImage: collection = {
 }
 
 describe('Home Collection Card', () => {
+    it('should match snapshot', () => {
+        const ImageSliderRender = renderer
+            .create(
+                <HomeCollectionCard
+                    collection={testCollectionWithoutImage}
+                    height={200}
+                    selected={false}
+                />
+            )
+            .toJSON()
+        expect(ImageSliderRender).toMatchSnapshot()
+    })
+
     it('should render correctly', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithoutImage}
                 height={200}
@@ -41,7 +55,7 @@ describe('Home Collection Card', () => {
     })
 
     it('should render default image when no source is given', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithoutImage}
                 height={200}
@@ -56,7 +70,7 @@ describe('Home Collection Card', () => {
     })
 
     it('should render image with given source', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithImage}
                 height={200}
@@ -71,7 +85,7 @@ describe('Home Collection Card', () => {
     })
 
     it('should render text with given source', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithImage}
                 height={200}
@@ -86,7 +100,7 @@ describe('Home Collection Card', () => {
     })
 
     it('should render with correct spacing when selected', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithImage}
                 height={200}
@@ -104,7 +118,7 @@ describe('Home Collection Card', () => {
     })
 
     it('should render with correct spacing when unselected', () => {
-        const {getByTestId} = render(
+        const { getByTestId } = render(
             <HomeCollectionCard
                 collection={testCollectionWithImage}
                 height={200}
