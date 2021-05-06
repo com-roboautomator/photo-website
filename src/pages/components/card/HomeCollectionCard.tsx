@@ -36,7 +36,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                     <Link href={hrefLink} style={{textDecoration: 'none'}}>
                         <HomeCollectionCardImage
                             src={imageURL}
-                            height={this.props.height}
+                            height={this.props.height - 70} // remove the text height from image value
                         />
                         <HomeCollectionCardText
                             title={collection.title}

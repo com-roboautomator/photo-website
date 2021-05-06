@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import HomeCollectionTag from '../HomeCollectionTag'
+import HomeCollectionTag from '../HomeCollectionCardTag'
 
 describe('Home Collection Tag', () => {
     it('should render default values when no props given', () => {
