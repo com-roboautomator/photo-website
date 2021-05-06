@@ -2,9 +2,8 @@ import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 
 interface ImageSliderTitleProps extends WithStyles<typeof styles> {
-    text?: string
-    colour?: string
-    show?: boolean
+    text: string
+    colour: string
 }
 
 class ImageSliderTitle extends React.Component<ImageSliderTitleProps> {
@@ -13,10 +12,10 @@ class ImageSliderTitle extends React.Component<ImageSliderTitleProps> {
         const classes = this.props.classes
         return (
             <div
-                className={props.show ? classes.container : classes.hidden}
                 data-testid="Image-Slider-Title"
+                className={classes.container}
                 style={{borderColor: props.colour}}>
-                {props.show ? props.text?.toUpperCase() : ''}
+                {props.text?.toUpperCase() ?? ''}
             </div>
         )
     }
@@ -37,7 +36,6 @@ const styles = () =>
             marginTop: '50px',
             marginBottom: '30px',
         },
-        hidden: {},
     })
 
 export default withStyles(styles)(ImageSliderTitle)

@@ -1,8 +1,8 @@
-import { render } from '@testing-library/react'
+import {render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import GalleryCollectionCard from '../GalleryCollectionCard'
-import { natureImages } from '../../../../assets/data/Images'
+import {natureImages} from '../../../../assets/data/Images'
 
 describe('Gallery Collection Card', () => {
     it('should match snapshot', () => {
@@ -20,7 +20,7 @@ describe('Gallery Collection Card', () => {
     })
 
     it('should render correctly', () => {
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <GalleryCollectionCard
                 key="test-card-key"
                 height={550}
@@ -37,7 +37,7 @@ describe('Gallery Collection Card', () => {
     })
 
     it('should render target image correctly', () => {
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <GalleryCollectionCard
                 key="test-card-key"
                 height={550}
@@ -53,7 +53,7 @@ describe('Gallery Collection Card', () => {
     })
 
     it('should render immediate background image correctly', () => {
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <GalleryCollectionCard
                 key="test-card-key"
                 height={550}
@@ -78,7 +78,7 @@ describe('Gallery Collection Card', () => {
     })
 
     it('should render distance background image correctly', () => {
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <GalleryCollectionCard
                 key="test-card-key"
                 height={550}
