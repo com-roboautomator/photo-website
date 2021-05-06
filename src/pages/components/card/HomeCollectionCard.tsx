@@ -9,7 +9,6 @@ interface CollectionCardProps extends WithStyles<typeof styles> {
     collection: collection
     height: number
     selected: boolean
-    onClick?: () => void
 }
 
 class CollectionCard extends React.Component<CollectionCardProps> {
@@ -24,29 +23,29 @@ class CollectionCard extends React.Component<CollectionCardProps> {
                       this.props.collection.titleImage ?? 0
                   ].url
         return (
-            <main
-                data-testid={`Home-Collection-Card-${this.props.collection.title}`}>
+            <div
+                data-testid={`Home-Collection-Card-${this.props.collection.title}`}
+                className={
+                    this.props.selected
+                        ? classes.spacing_selected
+                        : classes.spacing_unselected
+                }>
                 <div
-                    data-testid="Home-Collection-Card-Spacing"
-                    className={
-                        this.props.selected
-                            ? classes.spacing_selected
-                            : classes.spacing_unselected
-                    }>
-                    <div
-                        className={classes.container}
-                        data-testid="Home-Collection-Card-Container">
-                        <Link href={hrefLink} style={{textDecoration: 'none'}}>
-                            <HomeCollectionCardImage src={imageURL} />
-                            <HomeCollectionCardText
-                                title={collection.title}
-                                tagTitle={collection.tagTitle}
-                                tagColour={collection.tagColour}
-                            />
-                        </Link>
-                    </div>
+                    className={classes.container}
+                    data-testid="Home-Collection-Card-Container">
+                    <Link href={hrefLink} style={{textDecoration: 'none'}}>
+                        <HomeCollectionCardImage
+                            src={imageURL}
+                            height={this.props.height}
+                        />
+                        <HomeCollectionCardText
+                            title={collection.title}
+                            tagTitle={collection.tagTitle}
+                            tagColour={collection.tagColour}
+                        />
+                    </Link>
                 </div>
-            </main>
+            </div>
         )
     }
 }
@@ -78,51 +77,6 @@ const styles = () =>
             borderBottomLeftRadius: '25px',
             borderBottomRightRadius: '25px',
             boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.6)',
-        },
-        image: {
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-        },
-        image_wrapper: {
-            position: 'relative',
-            borderTopLeftRadius: '25px',
-            borderTopRightRadius: '25px',
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-        },
-        text_wrapper: {
-            position: 'relative',
-            zIndex: 99,
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-            fontSize: '100%',
-            color: 'black',
-            borderBottomLeftRadius: '25px',
-            borderBottomRightRadius: '25px',
-            borderTop: '1px solid gray',
-            height: '45px',
-        },
-        icon: {
-            paddingLeft: '20px',
-            alignSelf: 'center',
-        },
-        text: {
-            fontFamily: 'Open-Sans-Regular',
-            fontStyle: 'normal',
-            textAlign: 'left',
-            position: 'relative',
-            paddingLeft: '10px',
-            width: '75%',
-            alignSelf: 'center',
-        },
-        tag: {
-            position: 'relative',
-            paddingLeft: '10px',
-            paddingRight: '20px',
-            width: '25%',
-            alignSelf: 'center',
         },
     })
 

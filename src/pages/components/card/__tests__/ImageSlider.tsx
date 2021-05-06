@@ -19,10 +19,10 @@ describe('Image Slider', () => {
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Right')).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Nature Collection')
+            component.getByTestId('Home-Collection-Card-Nature Collection')
         ).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Urban Collection')
+            component.getByTestId('Home-Collection-Card-Urban Collection')
         ).toBeTruthy()
 
         fireEvent.click(component.getByTestId('Arrow-Button-Right'))
@@ -36,10 +36,10 @@ describe('Image Slider', () => {
         expect(component).toBeTruthy()
         expect(component.getByTestId('Arrow-Button-Left')).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Mechanical Collection')
+            component.getByTestId('Home-Collection-Card-Mechanical Collection')
         ).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Animal Collection')
+            component.getByTestId('Home-Collection-Card-Animal Collection')
         ).toBeTruthy()
 
         fireEvent.click(component.getByTestId('Arrow-Button-Left'))
@@ -50,10 +50,10 @@ describe('Image Slider', () => {
 
         expect(component.getByTestId('ImageSlider-Card-Slider')).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Nature Collection')
+            component.getByTestId('Home-Collection-Card-Nature Collection')
         ).toBeTruthy()
         expect(
-            component.getByTestId('Collection-Card-Urban Collection')
+            component.getByTestId('Home-Collection-Card-Urban Collection')
         ).toBeTruthy()
 
         fireEvent.wheel(component.getByTestId('ImageSlider-Card-Slider'), {
@@ -66,8 +66,10 @@ describe('Image Slider', () => {
             <ImageSlider data={home} startingIndex={3} mode="Home" />
         )
         const slider = getByTestId('ImageSlider-Card-Slider')
-        const mecCard = getByTestId('Collection-Card-Mechanical Collection')
-        const aniCard = getByTestId('Collection-Card-Animal Collection')
+        const mecCard = getByTestId(
+            'Home-Collection-Card-Mechanical Collection'
+        )
+        const aniCard = getByTestId('Home-Collection-Card-Animal Collection')
 
         expect(slider).toBeInTheDocument()
         expect(mecCard).toBeInTheDocument()
