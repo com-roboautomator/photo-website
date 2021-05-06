@@ -6,6 +6,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
 >
   <div
     className="ImageSliderTitle-hidden-6"
+    data-testid="Image-Slider-Title"
     style={
       Object {
         "borderColor": undefined,
@@ -144,35 +145,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1018/800"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Nature Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -208,35 +209,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/101/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Urban Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -272,35 +273,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1024/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Animal Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -336,35 +337,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/111/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Mechanical Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -400,35 +401,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/158/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Party Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -464,35 +465,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1018/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Second Nature Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -517,7 +518,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/23d4a85c-b08f-4f8d-9e83-055af4b538e5"
+              href="gallery/685598ae-8ce9-4966-9767-d66c6b6ada68"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -528,35 +529,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/101/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Second Urban Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -581,7 +582,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/90563348-458c-43db-8754-ee003cd78886"
+              href="gallery/87b39fb8-2a0f-463b-b279-7deefb98b1a8"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -592,35 +593,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1024/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Second Animal Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -645,7 +646,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/57215613-5204-400d-9bac-66eee9383903"
+              href="gallery/6e203bdf-65ff-4185-94ec-6bce9d7fb7ff"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -656,35 +657,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/111/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Second Mechanical Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -709,7 +710,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/12478d6e-6609-4978-a947-585910168c43"
+              href="gallery/50107301-13a3-488d-b3d8-e2d4ff4d4c5c"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -720,35 +721,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/158/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Second Party Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -773,7 +774,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/00bc3915-d776-4ac7-815b-079901002683"
+              href="gallery/8c6b46b0-445a-4f1d-90c5-2ba5916864a1"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -784,35 +785,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1013/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Wedding Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -837,7 +838,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/92160e93-b95b-4351-bfb7-72f55a7f8496"
+              href="gallery/030bb5f0-4302-4956-ba98-c509e6c16c7c"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -848,35 +849,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/1023/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   Sport Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
@@ -901,7 +902,7 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
           >
             <a
               className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="gallery/7967d259-0081-4f89-ac25-9174fc23b36c"
+              href="gallery/7eb60def-ffce-4b96-8319-f58e3fa2b70e"
               onBlur={[Function]}
               onFocus={[Function]}
               style={
@@ -912,35 +913,35 @@ exports[`Image Slider renders correctly when there are no items 1`] = `
             >
               <img
                 alt=""
-                className="CollectionCardImage-layout-21"
+                className="CollectionCardImage-layout-15"
                 data-testid="Collection-Card-Image"
                 height={200}
                 src="https://picsum.photos/id/375/200"
                 width="350"
               />
               <div
-                className="CollectionCardText-text_wrapper-23"
+                className="CollectionCardText-text_wrapper-17"
                 data-testid="Collection-Card-Text-Wrapper"
               >
                 <img
                   alt=""
-                  className="CollectionCardText-icon-24"
+                  className="CollectionCardText-icon-18"
                   data-testid="Collection-Card-Image-Icon"
                   height={20}
                   src="collection-image-o.png"
                   width={20}
                 />
                 <p
-                  className="CollectionCardText-text-25"
+                  className="CollectionCardText-text-19"
                   data-testid="Collection-Card-Title"
                 >
                   People Collection
                 </p>
                 <div
-                  className="CollectionCardText-tag-26"
+                  className="CollectionCardText-tag-20"
                 >
                   <div
-                    className="HomeCollectionTag-layout-27"
+                    className="HomeCollectionTag-layout-21"
                     data-testid="tag-layout"
                     style={
                       Object {
