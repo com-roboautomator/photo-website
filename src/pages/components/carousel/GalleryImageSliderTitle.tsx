@@ -15,7 +15,7 @@ class ImageSliderTitle extends React.Component<ImageSliderTitleProps> {
                 data-testid="Image-Slider-Title"
                 className={classes.container}
                 style={{borderColor: props.colour}}>
-                {props.text?.toUpperCase() ?? ''}
+                {props.text.toUpperCase()}
             </div>
         )
     }

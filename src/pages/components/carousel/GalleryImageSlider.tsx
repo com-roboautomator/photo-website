@@ -6,7 +6,7 @@ import {
 import AbstractImageSlider from './AbstractImageSlider'
 
 import Collection from '../../../assets/data/ImageDataStructure'
-import ImageSliderTitle from './ImageSliderTitle'
+import ImageSliderTitle from './GalleryImageSliderTitle'
 import GalleryImageSliderButtonWrapper from './GalleryImageSliderButtonWrapper'
 import GalleryCollectionCard from '../card/GalleryCollectionCard'
 

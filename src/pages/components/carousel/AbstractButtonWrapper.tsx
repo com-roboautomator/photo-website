@@ -1,6 +1,6 @@
 import {createStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import Arrow from '../navigation/Arrow'
+import Arrow from './Arrow'
 
 export interface AbstractButtonWrapperProps extends WithStyles<typeof styles> {
     length: number

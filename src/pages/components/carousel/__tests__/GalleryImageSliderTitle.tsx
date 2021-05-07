@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import ImageSliderTitle from '../ImageSliderTitle'
+import ImageSliderTitle from '../GalleryImageSliderTitle'
 
 describe('Image Slider Title', () => {
     it('should render correctly', () => {
