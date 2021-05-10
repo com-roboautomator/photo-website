@@ -3,7 +3,7 @@
 exports[`Gallery Collection Card should match snapshot 1`] = `
 <div
   className="GalleryCollectionCard-spacing_selected-1"
-  data-testid="Collection-Card-Spacing"
+  data-testid="Collection-Card-Animal Collection"
 >
   <div
     className="GalleryCollectionCard-container-5"

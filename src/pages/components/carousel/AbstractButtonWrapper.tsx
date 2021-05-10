@@ -15,7 +15,9 @@ class AbstractButtonWrapper<
     render() {
         const classes = this.props.classes
         return (
-            <div className={classes.button_wrapper}>
+            <div
+                data-testid="Buttom-Wrapper"
+                className={classes.button_wrapper}>
                 <div className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === 0}
@@ -23,7 +25,7 @@ class AbstractButtonWrapper<
                         orientation={'Left'}
                     />
                 </div>
-                <div data-testid="ImageSlider-arrow" className={classes.arrow}>
+                <div className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === this.props.length - 1}
                         onClick={this.props.next}

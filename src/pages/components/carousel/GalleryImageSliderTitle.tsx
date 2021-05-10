@@ -2,8 +2,8 @@ import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 
 interface ImageSliderTitleProps extends WithStyles<typeof styles> {
-    text: string
-    colour: string
+    text?: string
+    colour?: string
 }
 
 class ImageSliderTitle extends React.Component<ImageSliderTitleProps> {
@@ -15,7 +15,7 @@ class ImageSliderTitle extends React.Component<ImageSliderTitleProps> {
                 data-testid="Image-Slider-Title"
                 className={classes.container}
                 style={{borderColor: props.colour}}>
-                {props.text.toUpperCase()}
+                {props.text?.toUpperCase() ?? ''}
             </div>
         )
     }

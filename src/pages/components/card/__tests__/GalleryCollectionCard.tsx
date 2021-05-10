@@ -30,7 +30,9 @@ describe('Gallery Collection Card', () => {
         )
 
         expect(getByTestId).toBeTruthy()
-        expect(getByTestId('Collection-Card-Spacing')).toBeInTheDocument()
+        expect(
+            getByTestId('Collection-Card-Animal Collection')
+        ).toBeInTheDocument()
         expect(getByTestId('Collection-Card-Link')).toBeInTheDocument()
         expect(getByTestId('Collection-Card-Image')).toBeInTheDocument()
         expect(getByTestId('Gallery-Collection-Card-Text')).toBeInTheDocument()
@@ -47,7 +49,7 @@ describe('Gallery Collection Card', () => {
         )
 
         expect(getByTestId).toBeTruthy()
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'transform: scale(1)'
         )
     })
@@ -63,16 +65,16 @@ describe('Gallery Collection Card', () => {
         )
 
         expect(getByTestId).toBeTruthy()
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'transform: scale(0.8)'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'marginLeft: -100px'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'marginRight: -100px'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'filter: blur(1px)'
         )
     })
@@ -88,16 +90,16 @@ describe('Gallery Collection Card', () => {
         )
 
         expect(getByTestId).toBeTruthy()
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'transform: scale(0.5)'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'marginLeft: -100px'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'marginRight: -100px'
         )
-        expect(getByTestId('Collection-Card-Spacing')).toHaveStyle(
+        expect(getByTestId('Collection-Card-Animal Collection')).toHaveStyle(
             'filter: blur(4px)'
         )
     })

@@ -4,7 +4,6 @@ import {
     AbstractImageSliderState,
 } from './AbstractImageSlider'
 import AbstractImageSlider from './AbstractImageSlider'
-
 import Collection from '../../../assets/data/ImageDataStructure'
 import ImageSliderTitle from './GalleryImageSliderTitle'
 import GalleryImageSliderButtonWrapper from './GalleryImageSliderButtonWrapper'
@@ -38,7 +37,6 @@ class ImageSlider extends AbstractImageSlider<
         return (
             <main className={classes.container}>
                 <ImageSliderTitle
-                    show={true}
                     text={this.props.title}
                     colour={this.props.titleColour}
                 />
