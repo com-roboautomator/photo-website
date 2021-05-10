@@ -1,10 +1,9 @@
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import GalleryPage from '../GalleryPage'
-import { BrowserRouter, Route } from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 
 describe('Gallery Page', () => {
-
     it('should match snapshot', () => {
         const navigationBarRender = renderer
             .create(
@@ -18,5 +17,4 @@ describe('Gallery Page', () => {
 
         expect(navigationBarRender).toMatchSnapshot()
     })
-
 })
