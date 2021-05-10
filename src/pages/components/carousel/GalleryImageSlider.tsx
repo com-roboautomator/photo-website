@@ -114,4 +114,4 @@ const styles = () =>
         },
     })
 
-export default withStyles(styles)(ImageSlider)
+    export default withStyles(styles)(ImageSlider)
