@@ -6,6 +6,7 @@ import HomeCollectionCardImage from './HomeCollectionCardImage'
 import HomeCollectionCardText from './HomeCollectionCardText'
 
 interface CollectionCardProps extends WithStyles<typeof styles> {
+    key?: string
     collection: collection
     height: number
     selected: boolean

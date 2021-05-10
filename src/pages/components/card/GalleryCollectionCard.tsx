@@ -5,6 +5,7 @@ import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
+    key?: string
     selected: number
     height: number
     collection: collection
