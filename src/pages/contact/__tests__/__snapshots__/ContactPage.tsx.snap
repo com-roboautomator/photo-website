@@ -14,12 +14,27 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
       data-testid="PageTitle-Image"
       onLoad={[Function]}
       src="https://picsum.photos/id/1058/1500/200"
+      style={
+        Object {
+          "height": "20vh",
+        }
+      }
     />
     <div
       className="PageTitle-title_loading-7"
       data-testid="PageTitle-Text"
     >
       CONTACT
+    </div>
+    <div
+      className="PageTitle-signature-9"
+    >
+      <img
+        alt=""
+        data-testid="PageTitle-Signature"
+        src=""
+        width="25%"
+      />
     </div>
   </div>
   <div
@@ -39,7 +54,7 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
         Please fill in this form and I will do my best to respond as soon as I can
       </p>
       <div
-        className="InputField-container-9"
+        className="InputField-container-10"
       >
         <div
           className="MuiFormControl-root MuiFormControl-fullWidth"
@@ -72,10 +87,10 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
               />
               <fieldset
                 aria-hidden={true}
-                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+                className="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-12"
+                  className="PrivateNotchedOutline-legendLabelled-13"
                 >
                   <span>
                     Full Name
@@ -88,7 +103,7 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
         </div>
       </div>
       <div
-        className="InputField-container-9"
+        className="InputField-container-10"
       >
         <div
           className="MuiFormControl-root MuiFormControl-fullWidth"
@@ -121,10 +136,10 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
               />
               <fieldset
                 aria-hidden={true}
-                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+                className="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-12"
+                  className="PrivateNotchedOutline-legendLabelled-13"
                 >
                   <span>
                     Email Address
@@ -137,7 +152,7 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
         </div>
       </div>
       <div
-        className="InputField-container-9"
+        className="InputField-container-10"
       >
         <div
           className="MuiFormControl-root MuiFormControl-fullWidth"
@@ -170,10 +185,10 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
               />
               <fieldset
                 aria-hidden={true}
-                className="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
+                className="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-12"
+                  className="PrivateNotchedOutline-legendLabelled-13"
                 >
                   <span>
                     Message
@@ -186,10 +201,10 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
         </div>
       </div>
       <div
-        className="SubmitButton-container-14"
+        className="SubmitButton-container-15"
       >
         <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained SubmitButton-button-15 MuiButton-containedPrimary"
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained SubmitButton-button-16 MuiButton-containedPrimary"
           data-testid="Submit-Button"
           disabled={false}
           onBlur={[Function]}

@@ -55,6 +55,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                 </div>
                 <div className={classes.signature}>
                     <img
+                        data-testid="PageTitle-Signature"
                         src={this.props.signature ? Signature : ''}
                         alt=""
                         width="25%"></img>

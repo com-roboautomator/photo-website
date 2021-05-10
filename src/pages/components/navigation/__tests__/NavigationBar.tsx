@@ -1,5 +1,6 @@
 import NavigationBar from '../NavigationBar'
 import {BrowserRouter, Route} from 'react-router-dom'
+import '@testing-library/jest-dom/extend-expect'
 import {render} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 
@@ -21,79 +22,77 @@ describe('NavigationBar', () => {
     it('should render NavigationBar', () => {
         // When
         // Given
-        const component = render(
+        const {getByTestId} = render(
             <BrowserRouter>
                 <Route render={(props: any) => <NavigationBar {...props} />} />
             </BrowserRouter>
         )
 
         // Then
-        expect(component.queryByTestId('NavigationBar')).toBeTruthy()
+        expect(getByTestId('NavigationBar')).toBeInTheDocument()
     })
 
     it('should render Home button', () => {
         // When
         // Given
-        const component = render(
+        const {getByTestId} = render(
             <BrowserRouter>
                 <Route render={(props: any) => <NavigationBar {...props} />} />
             </BrowserRouter>
         )
 
         // Then
-        expect(component.queryByTestId('Button-HOME')).toBeTruthy()
+        expect(getByTestId('Button-HOME')).toBeInTheDocument()
         expect(
-            component.getByTestId('Button-HOME-Button').firstChild?.textContent
+            getByTestId('Button-HOME-Button').firstChild?.textContent
         ).toEqual('HOME')
     })
 
     it('should render Gallery button', () => {
         // When
         // Given
-        const component = render(
+        const {getByTestId} = render(
             <BrowserRouter>
                 <Route render={(props: any) => <NavigationBar {...props} />} />
             </BrowserRouter>
         )
 
         // Then
-        expect(component.queryByTestId('Button-GALLERY')).toBeTruthy()
+        expect(getByTestId('Button-GALLERY')).toBeInTheDocument()
         expect(
-            component.getByTestId('Button-GALLERY-Button').firstChild
-                ?.textContent
+            getByTestId('Button-GALLERY-Button').firstChild?.textContent
         ).toEqual('GALLERY')
     })
 
     it('should render About button', () => {
         // When
         // Given
-        const component = render(
+        const {getByTestId} = render(
             <BrowserRouter>
                 <Route render={(props: any) => <NavigationBar {...props} />} />
             </BrowserRouter>
         )
 
         // Then
-        expect(component.queryByTestId('Button-ABOUT')).toBeTruthy()
+        expect(getByTestId('Button-ABOUT')).toBeInTheDocument()
         expect(
-            component.getByTestId('Button-ABOUT-Button').firstChild?.textContent
+            getByTestId('Button-ABOUT-Button').firstChild?.textContent
         ).toEqual('ABOUT')
     })
 
     it('should render Contact button', () => {
         // When
         // Given
-        const component = render(
+        const {getByTestId} = render(
             <BrowserRouter>
                 <Route render={(props: any) => <NavigationBar {...props} />} />
             </BrowserRouter>
         )
 
         // Then
-        expect(component.queryByTestId('Button-CONTACT')).toBeTruthy()
+        expect(getByTestId('Button-CONTACT')).toBeInTheDocument()
         expect(
-            component.getByTestId('Button-CONTACT-Button').firstChild
-                ?.textContent
+            getByTestId('Button-CONTACT-Button').firstChild?.textContent
         ).toEqual('CONTACT')
     })
 })

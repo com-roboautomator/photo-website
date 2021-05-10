@@ -3,6 +3,7 @@ import React from 'react'
 
 interface CollectionCardImageProps extends WithStyles<typeof styles> {
     src: string
+    height?: number
 }
 
 class CollectionCardImage extends React.Component<CollectionCardImageProps> {
@@ -16,7 +17,7 @@ class CollectionCardImage extends React.Component<CollectionCardImageProps> {
                 src={props.src}
                 alt=""
                 width="350"
-                height="200"
+                height={this.props.height ?? 200}
             />
         )
     }

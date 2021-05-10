@@ -1,8 +1,8 @@
 import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import PageTitle from './components/text/PageTitle'
-import ProfileImage from './components/text/ProfileImage'
-import {text} from '../assets/data/AboutPageText'
+import PageTitle from '../components/text/PageTitle'
+import ProfileImage from '../components/text/ProfileImage'
+import {text} from '../../assets/data/AboutPageText'
 
 interface AboutProps extends WithStyles<typeof styles> {}
 
@@ -20,7 +20,11 @@ class About extends React.Component<AboutProps> {
                         <div className={classes.profile_image}>
                             <ProfileImage />
                         </div>
-                        <div className={classes.text}>{text}</div>
+                        <div
+                            data-testid="About-Page-Text"
+                            className={classes.text}>
+                            {text}
+                        </div>
                     </div>
                 </div>
             </main>

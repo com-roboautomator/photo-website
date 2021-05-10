@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Image Slider should match snapshot 1`] = `
+<main
+  className="ImageSlider-container-1"
+>
+  <div
+    className="ImageSlider-wrapper-2"
+    data-testid="ImageSlider-Container"
+  >
+    <div
+      className="HomeImageSliderButtonWrapper-button_wrapper-5"
+      data-testid="ImageSlider-button-wrapper"
+      style={
+        Object {
+          "background": "linear-gradient(to right, white, transparent 30%), linear-gradient(to left, white, transparent 30%)",
+        }
+      }
+    >
+      <div
+        className="HomeImageSliderButtonWrapper-button_wrapper-5"
+        data-testid="Buttom-Wrapper"
+      >
+        <div
+          className="HomeImageSliderButtonWrapper-arrow-6"
+        >
+          <div
+            className="Arrow-container-7"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+              data-testid="Arrow-Button-Left"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                <img
+                  alt="nata"
+                  className="Arrow-left-8"
+                  data-testid="Arrow-Button-Image"
+                  src="arrow-disabled.png"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="HomeImageSliderButtonWrapper-arrow-6"
+        >
+          <div
+            className="Arrow-container-7"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-text"
+              data-testid="Arrow-Button-Right"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                <img
+                  alt="nata"
+                  className="Arrow-right-9"
+                  data-testid="Arrow-Button-Image"
+                  src="arrow-enabled.png"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ImageSlider-card_slider-3"
+      data-testid="ImageSlider-Card-Slider"
+      onWheel={[Function]}
+      style={
+        Object {
+          "height": "undefinedpx",
+        }
+      }
+    >
+      <div
+        className="ImageSlider-card_slider_wrapper-4"
+        style={
+          Object {
+            "transform": "translateX(-0%)",
+          }
+        }
+      >
+        <div
+          className="CollectionCard-spacing_selected-10"
+          data-testid="Home-Collection-Card-first-test-collection-title"
+        >
+          <div
+            className="CollectionCard-container-12"
+            data-testid="Home-Collection-Card-Container"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="gallery/first-test-collection-key"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <img
+                alt=""
+                className="CollectionCardImage-layout-13"
+                data-testid="Collection-Card-Image"
+                height={130}
+                src="test-image-url"
+                width="350"
+              />
+              <div
+                className="CollectionCardText-text_wrapper-15"
+                data-testid="Collection-Card-Text-Wrapper"
+              >
+                <img
+                  alt=""
+                  className="CollectionCardText-icon-16"
+                  data-testid="Collection-Card-Image-Icon"
+                  height={20}
+                  src="collection-image-o.png"
+                  width={20}
+                />
+                <p
+                  className="CollectionCardText-text-17"
+                  data-testid="Collection-Card-Title"
+                >
+                  first-test-collection-title
+                </p>
+                <div
+                  className="CollectionCardText-tag-18"
+                >
+                  <div
+                    className="HomeCollectionTag-layout-19"
+                    data-testid="tag-layout"
+                    style={
+                      Object {
+                        "background": "#323232",
+                      }
+                    }
+                  >
+                    Default
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="CollectionCard-spacing_unselected-11"
+          data-testid="Home-Collection-Card-second-test-collection-title"
+        >
+          <div
+            className="CollectionCard-container-12"
+            data-testid="Home-Collection-Card-Container"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="gallery/second-test-collection-key"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <img
+                alt=""
+                className="CollectionCardImage-layout-13"
+                data-testid="Collection-Card-Image"
+                height={130}
+                src="test-image-url"
+                width="350"
+              />
+              <div
+                className="CollectionCardText-text_wrapper-15"
+                data-testid="Collection-Card-Text-Wrapper"
+              >
+                <img
+                  alt=""
+                  className="CollectionCardText-icon-16"
+                  data-testid="Collection-Card-Image-Icon"
+                  height={20}
+                  src="collection-image-o.png"
+                  width={20}
+                />
+                <p
+                  className="CollectionCardText-text-17"
+                  data-testid="Collection-Card-Title"
+                >
+                  second-test-collection-title
+                </p>
+                <div
+                  className="CollectionCardText-tag-18"
+                >
+                  <div
+                    className="HomeCollectionTag-layout-19"
+                    data-testid="tag-layout"
+                    style={
+                      Object {
+                        "background": "#323232",
+                      }
+                    }
+                  >
+                    Default
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="CollectionCard-spacing_unselected-11"
+          data-testid="Home-Collection-Card-third-test-collection-title"
+        >
+          <div
+            className="CollectionCard-container-12"
+            data-testid="Home-Collection-Card-Container"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="gallery/third-test-collection-key"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <img
+                alt=""
+                className="CollectionCardImage-layout-13"
+                data-testid="Collection-Card-Image"
+                height={130}
+                src="test-image-url"
+                width="350"
+              />
+              <div
+                className="CollectionCardText-text_wrapper-15"
+                data-testid="Collection-Card-Text-Wrapper"
+              >
+                <img
+                  alt=""
+                  className="CollectionCardText-icon-16"
+                  data-testid="Collection-Card-Image-Icon"
+                  height={20}
+                  src="collection-image-o.png"
+                  width={20}
+                />
+                <p
+                  className="CollectionCardText-text-17"
+                  data-testid="Collection-Card-Title"
+                >
+                  third-test-collection-title
+                </p>
+                <div
+                  className="CollectionCardText-tag-18"
+                >
+                  <div
+                    className="HomeCollectionTag-layout-19"
+                    data-testid="tag-layout"
+                    style={
+                      Object {
+                        "background": "#323232",
+                      }
+                    }
+                  >
+                    Default
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;

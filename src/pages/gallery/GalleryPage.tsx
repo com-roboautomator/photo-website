@@ -2,9 +2,9 @@ import {WithStyles} from '@material-ui/core'
 import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
-import {natureImages} from '../assets/data/Images'
-import {urbanImages} from '../assets/data/Images'
-import ImageSlider from './components/card/ImageSlider'
+import {natureImages} from '../../assets/data/Images'
+import {urbanImages} from '../../assets/data/Images'
+import GalleryImageSlider from '../components/carousel/GalleryImageSlider'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
@@ -14,16 +14,14 @@ class Gallery extends React.Component<GalleryProps, any> {
     render() {
         return (
             <div data-testid="Gallery-Page">
-                <ImageSlider
+                <GalleryImageSlider
                     height={460}
-                    mode="Gallery"
                     data={natureImages}
                     titleColour={'#47742c'}
                     title="Nature & Life"
                 />
-                <ImageSlider
+                <GalleryImageSlider
                     height={460}
-                    mode="Gallery"
                     data={urbanImages}
                     titleColour={'gray'}
                     title="CityScapes & Architecture"

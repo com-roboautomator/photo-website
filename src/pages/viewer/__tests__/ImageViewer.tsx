@@ -5,7 +5,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import ImageViewer from '../ImageViewer'
 
 describe('Image Viewer', () => {
-    it('renders correctly when there are no items', () => {
+    it('should match snapshot', () => {
         const navigationBarRender = renderer
             .create(
                 <BrowserRouter>

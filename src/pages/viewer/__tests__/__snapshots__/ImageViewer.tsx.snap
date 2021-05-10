@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image Viewer renders correctly when there are no items 1`] = `
+exports[`Image Viewer should match snapshot 1`] = `
 <div
   className="ImageViewer-container-1"
 >

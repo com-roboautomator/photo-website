@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Collection Card should match snapshot 1`] = `
+<div
+  className="CollectionCard-spacing_unselected-2"
+  data-testid="Home-Collection-Card-test-collection-title"
+>
+  <div
+    className="CollectionCard-container-3"
+    data-testid="Home-Collection-Card-Container"
+  >
+    <a
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      href="gallery/test-collection-key"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <img
+        alt=""
+        className="CollectionCardImage-layout-4"
+        data-testid="Collection-Card-Image"
+        height={130}
+        src="https://picsum.photos/id/250/500"
+        width="350"
+      />
+      <div
+        className="CollectionCardText-text_wrapper-6"
+        data-testid="Collection-Card-Text-Wrapper"
+      >
+        <img
+          alt=""
+          className="CollectionCardText-icon-7"
+          data-testid="Collection-Card-Image-Icon"
+          height={20}
+          src="collection-image-o.png"
+          width={20}
+        />
+        <p
+          className="CollectionCardText-text-8"
+          data-testid="Collection-Card-Title"
+        >
+          test-collection-title
+        </p>
+        <div
+          className="CollectionCardText-tag-9"
+        >
+          <div
+            className="HomeCollectionTag-layout-10"
+            data-testid="tag-layout"
+            style={
+              Object {
+                "background": "#323232",
+              }
+            }
+          >
+            Default
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;

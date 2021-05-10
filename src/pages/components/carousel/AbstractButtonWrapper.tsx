@@ -1,28 +1,23 @@
-import {WithStyles, createStyles, withStyles} from '@material-ui/styles'
+import {createStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import Arrow from '../navigation/Arrow'
+import Arrow from './Arrow'
 
-interface ImageSliderButtonWrapperProps extends WithStyles<typeof styles> {
+export interface AbstractButtonWrapperProps extends WithStyles<typeof styles> {
     length: number
     index: number
-    mode: 'Gallery' | 'Home'
     previous?: () => void
     next?: () => void
 }
 
-class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperProps> {
+class AbstractButtonWrapper<
+    T extends AbstractButtonWrapperProps
+> extends React.Component<T, {}> {
     render() {
         const classes = this.props.classes
         return (
             <div
-                data-testid="ImageSlider-button-wrapper"
-                className={classes.button_wrapper}
-                style={{
-                    background:
-                        this.props.mode === 'Home'
-                            ? 'linear-gradient(to right, white, transparent 30%), linear-gradient(to left, white, transparent 30%)'
-                            : 'none',
-                }}>
+                data-testid="Buttom-Wrapper"
+                className={classes.button_wrapper}>
                 <div className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === 0}
@@ -30,7 +25,7 @@ class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperP
                         orientation={'Left'}
                     />
                 </div>
-                <div data-testid="ImageSlider-arrow" className={classes.arrow}>
+                <div className={classes.arrow}>
                     <Arrow
                         disabled={this.props.index === this.props.length - 1}
                         onClick={this.props.next}
@@ -42,7 +37,7 @@ class ImageSliderButtonWrapper extends React.Component<ImageSliderButtonWrapperP
     }
 }
 
-const styles = () =>
+export const styles = () =>
     createStyles({
         button_wrapper: {
             zIndex: 99,
@@ -61,4 +56,4 @@ const styles = () =>
         },
     })
 
-export default withStyles(styles)(ImageSliderButtonWrapper)
+export default AbstractButtonWrapper

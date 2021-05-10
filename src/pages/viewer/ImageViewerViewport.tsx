@@ -1,6 +1,6 @@
 import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
-import Arrow from '../components/navigation/Arrow'
+import Arrow from '../components/carousel/Arrow'
 
 interface ImageViewerViewportProps extends WithStyles<typeof styles> {
     targetImage: string

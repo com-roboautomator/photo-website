@@ -5,6 +5,7 @@ import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
+    key?: string
     selected: number
     height: number
     collection: collection
@@ -23,7 +24,7 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
 
         return (
             <div
-                data-testid="Collection-Card-Spacing"
+                data-testid={`Collection-Card-${this.props.collection.title}`}
                 className={this.getLocationSpacing(this.props.selected)}>
                 <div className={classes.container}>
                     <Link data-testid="Collection-Card-Link" href={hrefLink}>

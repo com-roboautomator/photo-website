@@ -11,9 +11,19 @@ class GalleryCollectionCardViewIcon extends React.Component<GalleryCollectionCar
         return (
             <div className={classes.container}>
                 <div className={classes.image}>
-                    <img src={ImageIcon} alt="none" width="20" height="20" />
+                    <img
+                        data-testid="Gallery-Collection-Card-View-Icon-Image"
+                        src={ImageIcon}
+                        alt="none"
+                        width="20"
+                        height="20"
+                    />
                 </div>
-                <div className={classes.text}>VIEW</div>
+                <div
+                    data-testid="Gallery-Collection-Card-View-Icon-Text"
+                    className={classes.text}>
+                    VIEW
+                </div>
             </div>
         )
     }

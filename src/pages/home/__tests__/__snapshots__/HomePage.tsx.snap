@@ -1,0 +1,1000 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page should match snapshot 1`] = `
+<main>
+  <div
+    className="Home-container-1"
+    data-testid="Home-Page"
+  >
+    <div
+      className="PageTitle-container-3"
+      data-testid="PageTitle-Container"
+    >
+      <img
+        alt=""
+        className="PageTitle-image_loading-5"
+        data-testid="PageTitle-Image"
+        onLoad={[Function]}
+        src="https://picsum.photos/id/1040/1500/200"
+        style={
+          Object {
+            "height": "45vh",
+          }
+        }
+      />
+      <div
+        className="PageTitle-title_loading-6"
+        data-testid="PageTitle-Text"
+      >
+        HOME
+      </div>
+      <div
+        className="PageTitle-signature-8"
+      >
+        <img
+          alt=""
+          data-testid="PageTitle-Signature"
+          src="Logo.png"
+          width="25%"
+        />
+      </div>
+    </div>
+    <div
+      className="Home-wapper-2"
+    >
+      <main
+        className="ImageSlider-container-9"
+      >
+        <div
+          className="ImageSlider-wrapper-10"
+          data-testid="ImageSlider-Container"
+        >
+          <div
+            className="HomeImageSliderButtonWrapper-button_wrapper-13"
+            data-testid="ImageSlider-button-wrapper"
+            style={
+              Object {
+                "background": "linear-gradient(to right, white, transparent 30%), linear-gradient(to left, white, transparent 30%)",
+              }
+            }
+          >
+            <div
+              className="HomeImageSliderButtonWrapper-button_wrapper-13"
+              data-testid="Buttom-Wrapper"
+            >
+              <div
+                className="HomeImageSliderButtonWrapper-arrow-14"
+              >
+                <div
+                  className="Arrow-container-15"
+                >
+                  <button
+                    className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+                    data-testid="Arrow-Button-Left"
+                    disabled={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={-1}
+                    type="button"
+                  >
+                    <span
+                      className="MuiButton-label"
+                    >
+                      <img
+                        alt="nata"
+                        className="Arrow-left-16"
+                        data-testid="Arrow-Button-Image"
+                        src="arrow-disabled.png"
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                className="HomeImageSliderButtonWrapper-arrow-14"
+              >
+                <div
+                  className="Arrow-container-15"
+                >
+                  <button
+                    className="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-testid="Arrow-Button-Right"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="button"
+                  >
+                    <span
+                      className="MuiButton-label"
+                    >
+                      <img
+                        alt="nata"
+                        className="Arrow-right-17"
+                        data-testid="Arrow-Button-Image"
+                        src="arrow-enabled.png"
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="ImageSlider-card_slider-11"
+            data-testid="ImageSlider-Card-Slider"
+            onWheel={[Function]}
+            style={
+              Object {
+                "height": "270px",
+              }
+            }
+          >
+            <div
+              className="ImageSlider-card_slider_wrapper-12"
+              style={
+                Object {
+                  "transform": "translateX(-0%)",
+                }
+              }
+            >
+              <div
+                className="CollectionCard-spacing_selected-18"
+                data-testid="Home-Collection-Card-Nature Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/befee15c-c770-4450-b71f-f20f820b3549"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1018/800"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Nature Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#47742c",
+                            }
+                          }
+                        >
+                          Nature
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Urban Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/16bdf4fe-692d-4e11-8fd4-9ea37e3fc34d"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/101/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Urban Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Urban
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Animal Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/2c615617-6372-4042-bce5-a97910a51b5a"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1024/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Animal Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Nature
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Mechanical Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/3961f578-14ea-46aa-9b74-7f908fcd532b"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/111/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Mechanical Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#50b1d6",
+                            }
+                          }
+                        >
+                          Technology
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Party Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/37f92b19-2ea1-4742-b97b-81ed97e2e9c3"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/158/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Party Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Second Nature Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/6dcdba12-f48c-46cf-b1f6-07e8d1c5ed2b"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1018/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Second Nature Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Second Urban Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/c7dfa1ad-8b1e-4b13-afc6-d18fd75d608b"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/101/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Second Urban Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Second Animal Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/f22fef0b-ca81-4e64-ba8b-76d37024f57d"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1024/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Second Animal Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Second Mechanical Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/e8aabd1d-38df-492e-8462-9982cfaa43bb"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/111/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Second Mechanical Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Second Party Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/3b548a94-f131-4b60-ad62-a19988db8f2b"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/158/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Second Party Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Wedding Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/44b9d33d-3e38-4e77-b7e7-89b090ef2383"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1013/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Wedding Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-Sport Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/8b4dffd7-f627-4ad5-96fd-4f2b4d9e7293"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/1023/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        Sport Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="CollectionCard-spacing_unselected-19"
+                data-testid="Home-Collection-Card-People Collection"
+              >
+                <div
+                  className="CollectionCard-container-20"
+                  data-testid="Home-Collection-Card-Container"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="gallery/c1db4899-de49-4950-a593-3f8a5e1e5b6a"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    style={
+                      Object {
+                        "textDecoration": "none",
+                      }
+                    }
+                  >
+                    <img
+                      alt=""
+                      className="CollectionCardImage-layout-21"
+                      data-testid="Collection-Card-Image"
+                      height={200}
+                      src="https://picsum.photos/id/375/200"
+                      width="350"
+                    />
+                    <div
+                      className="CollectionCardText-text_wrapper-23"
+                      data-testid="Collection-Card-Text-Wrapper"
+                    >
+                      <img
+                        alt=""
+                        className="CollectionCardText-icon-24"
+                        data-testid="Collection-Card-Image-Icon"
+                        height={20}
+                        src="collection-image-o.png"
+                        width={20}
+                      />
+                      <p
+                        className="CollectionCardText-text-25"
+                        data-testid="Collection-Card-Title"
+                      >
+                        People Collection
+                      </p>
+                      <div
+                        className="CollectionCardText-tag-26"
+                      >
+                        <div
+                          className="HomeCollectionTag-layout-27"
+                          data-testid="tag-layout"
+                          style={
+                            Object {
+                              "background": "#323232",
+                            }
+                          }
+                        >
+                          Default
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</main>
+`;
