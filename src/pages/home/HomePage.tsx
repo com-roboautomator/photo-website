@@ -1,8 +1,8 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
-import HomeImageSlider from './components/carousel/HomeImageSlider'
-import {home} from '../assets/data/Images'
-import PageTitle from './components/text/PageTitle'
+import HomeImageSlider from '../components/carousel/HomeImageSlider'
+import {home} from '../../assets/data/Images'
+import PageTitle from '../components/text/PageTitle'
 
 interface HomeProps extends WithStyles<typeof styles> {}
 

@@ -2,9 +2,9 @@ import {WithStyles} from '@material-ui/core'
 import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
-import {natureImages} from '../assets/data/Images'
-import {urbanImages} from '../assets/data/Images'
-import GalleryImageSlider from './components/carousel/GalleryImageSlider'
+import {natureImages} from '../../assets/data/Images'
+import {urbanImages} from '../../assets/data/Images'
+import GalleryImageSlider from '../components/carousel/GalleryImageSlider'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,

@@ -31,6 +31,7 @@ exports[`Contact Page should render correctly when there are no items 1`] = `
     >
       <img
         alt=""
+        data-testid="PageTitle-Signature"
         src=""
         width="25%"
       />
