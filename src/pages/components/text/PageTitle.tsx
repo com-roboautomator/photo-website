@@ -1,4 +1,4 @@
-import { withStyles, WithStyles, createStyles } from '@material-ui/styles'
+import {withStyles, WithStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
 import Signature from '../../../assets/images/Logo.png'
 
@@ -30,7 +30,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                 className={classes.container}>
                 <img
                     data-testid="PageTitle-Image"
-                    onLoad={() => this.setState({ loaded: true })}
+                    onLoad={() => this.setState({loaded: true})}
                     className={
                         this.state.loaded
                             ? classes.image_loaded
@@ -58,8 +58,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                         data-testid="PageTitle-Signature"
                         src={this.props.signature ? Signature : ''}
                         alt=""
-                        width="25%">
-                    </img>
+                        width="25%"></img>
                 </div>
             </div>
         )
