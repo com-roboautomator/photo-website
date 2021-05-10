@@ -1,6 +1,6 @@
-import { fireEvent, render } from '@testing-library/react'
+import {fireEvent, render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import renderer, { act } from 'react-test-renderer'
+import renderer from 'react-test-renderer'
 import collection from 'src/assets/data/ImageDataStructure'
 import HomeImageSlider from '../HomeImageSlider'
 
@@ -50,7 +50,6 @@ const coll: collection[] = [
 ]
 
 describe('Home Image Slider', () => {
-
     it('should match snapshot', () => {
         const ImageSliderRender = renderer
             .create(<HomeImageSlider data={coll} />)
@@ -59,18 +58,17 @@ describe('Home Image Slider', () => {
     })
 
     it('should render correctly', () => {
-
-        const { getByTestId } = render(<HomeImageSlider data={coll} />)
+        const {getByTestId} = render(<HomeImageSlider data={coll} />)
 
         expect(getByTestId('ImageSlider-Container')).toBeInTheDocument()
         expect(getByTestId('ImageSlider-Card-Slider')).toBeInTheDocument()
-        expect(getByTestId('Home-Collection-Card-first-test-collection-title')).toBeInTheDocument()
-
+        expect(
+            getByTestId('Home-Collection-Card-first-test-collection-title')
+        ).toBeInTheDocument()
     })
 
     it('should increment image on button press', () => {
-
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <HomeImageSlider data={coll} startingIndex={0} />
         )
 
@@ -81,7 +79,7 @@ describe('Home Image Slider', () => {
             'Home-Collection-Card-second-test-collection-title'
         )
 
-        expect(firstImage).toHaveStyle({ opacity: '100%', transform: 'scale(1)' })
+        expect(firstImage).toHaveStyle({opacity: '100%', transform: 'scale(1)'})
         expect(secondImage).toHaveStyle({
             opacity: '90%',
             transform: 'scale(0.8)',
@@ -97,12 +95,10 @@ describe('Home Image Slider', () => {
             opacity: '100%',
             transform: 'scale(1)',
         })
-
     })
 
     it('should decrement image on button press', () => {
-
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <HomeImageSlider data={coll} startingIndex={1} />
         )
 
@@ -117,7 +113,10 @@ describe('Home Image Slider', () => {
             opacity: '90%',
             transform: 'scale(0.8)',
         })
-        expect(secondImage).toHaveStyle({ opacity: '100%', transform: 'scale(1)' })
+        expect(secondImage).toHaveStyle({
+            opacity: '100%',
+            transform: 'scale(1)',
+        })
 
         fireEvent.click(getByTestId('Arrow-Button-Left'))
 
@@ -129,12 +128,10 @@ describe('Home Image Slider', () => {
             opacity: '90%',
             transform: 'scale(0.8)',
         })
-
     })
 
     it('should move on mouse scroll', () => {
-
-        const { getByTestId } = render(
+        const {getByTestId} = render(
             <HomeImageSlider data={coll} startingIndex={0} />
         )
 
@@ -145,7 +142,7 @@ describe('Home Image Slider', () => {
             'Home-Collection-Card-second-test-collection-title'
         )
 
-        expect(firstImage).toHaveStyle({ opacity: '100%', transform: 'scale(1)' })
+        expect(firstImage).toHaveStyle({opacity: '100%', transform: 'scale(1)'})
         expect(secondImage).toHaveStyle({
             opacity: '90%',
             transform: 'scale(0.8)',
@@ -154,7 +151,6 @@ describe('Home Image Slider', () => {
         fireEvent.wheel(getByTestId('ImageSlider-Card-Slider'), {
             deltaY: 30,
         })
-        
 
         expect(firstImage).toHaveStyle({
             opacity: '90%',
@@ -164,8 +160,5 @@ describe('Home Image Slider', () => {
             opacity: '100%',
             transform: 'scale(1)',
         })
-        
-
     })
-
 })
