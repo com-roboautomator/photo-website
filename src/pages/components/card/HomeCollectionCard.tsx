@@ -16,7 +16,7 @@ class CollectionCard extends React.Component<CollectionCardProps> {
     render() {
         const classes = this.props.classes
         const collection = this.props.collection
-        const hrefLink: string = `gallery/${this.props.collection.key}`
+        const hrefLink: string = `gallery/${this.props.collection.id}`
         const imageURL: string =
             this.props.collection.images === undefined
                 ? placeholder.url

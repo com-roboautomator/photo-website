@@ -14,7 +14,7 @@ interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
 class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> {
     render() {
         const classes = this.props.classes
-        const hrefLink: string = `gallery/${this.props.collection.key}`
+        const hrefLink: string = `gallery/${this.props.collection.id}`
         const imageURL: string =
             this.props.collection.images === undefined
                 ? placeholder.url

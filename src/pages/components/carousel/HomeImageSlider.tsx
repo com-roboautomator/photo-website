@@ -57,7 +57,7 @@ class ImageSlider extends AbstractImageSlider<
                             }}>
                             {properties.map((property: Collection) => (
                                 <HomeCollectionCard
-                                    key={property.key}
+                                    key={property.id}
                                     collection={property}
                                     height={
                                         this.props.height

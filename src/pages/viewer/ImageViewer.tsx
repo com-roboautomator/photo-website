@@ -2,7 +2,10 @@ import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import {findCollectionById} from '../../assets/data/Images'
-import {image, placeholder} from '../../assets/data/ImageDataStructure'
+import collection, {
+    image,
+    placeholder,
+} from '../../assets/data/ImageDataStructure'
 import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
 import ImageViewerIndex from './ImageViewerIndex'
@@ -15,25 +18,40 @@ interface ImageViewerProps
 }
 
 interface ImageViewerState {
-    //collection: any
+    collection: collection
     index: number
     previousIndex: number
 }
 
 class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
-    // componentDidMount = () => {
-    //     // This will become an API call based on the collection ID
-    //     this.setState({
-    //         //collection: natureImages[0]
-    //         index: 0
-    //     })
-    // }
+    componentDidMount = () => {
+        var {collectionId} = this.props.match.params
+        console.log('http://localhost:8080/collection/' + collectionId)
+        fetch(
+            'http://localhost:8080/collection/' +
+                this.props.match.params.collectionId,
+            {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        )
+            .then((response) => response.json())
+            .then((response) => {
+                console.log(response)
+                this.setState({
+                    collection: response,
+                })
+            })
+    }
 
     constructor(props: ImageViewerProps) {
         super(props)
         this.state = {
             index: 0,
             previousIndex: 0,
+            collection: {id: 'null key', title: 'null title', index: 0},
         }
     }
 
@@ -56,8 +74,13 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
     }
 
     render() {
+        if (this.state.collection === null) {
+            console.log('returning')
+            return <div />
+        }
+
         var {collectionId} = this.props.match.params
-        const collection = findCollectionById(collectionId)
+        const collection = this.state.collection
         const images = collection?.images
 
         const state = this.state
@@ -69,6 +92,7 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
             collection?.images === undefined
                 ? placeholder
                 : collection?.images[state.index]
+
         return (
             <div className={classes.container}>
                 <ImageViewerTitle

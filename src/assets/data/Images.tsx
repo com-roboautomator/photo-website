@@ -3,7 +3,7 @@ import {v4 as uuid} from 'uuid'
 
 export const home: collection[] = [
     {
-        key: 'befee15c-c770-4450-b71f-f20f820b3549',
+        id: 'befee15c-c770-4450-b71f-f20f820b3549',
         // url:
         //     'https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg',
         title: 'Nature Collection',
@@ -22,7 +22,7 @@ export const home: collection[] = [
     },
 
     {
-        key: '16bdf4fe-692d-4e11-8fd4-9ea37e3fc34d',
+        id: '16bdf4fe-692d-4e11-8fd4-9ea37e3fc34d',
         // url:
         //     'https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs',
         title: 'Urban Collection',
@@ -40,7 +40,7 @@ export const home: collection[] = [
     },
 
     {
-        key: '2c615617-6372-4042-bce5-a97910a51b5a',
+        id: '2c615617-6372-4042-bce5-a97910a51b5a',
         // url:
         //     'https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII',
         title: 'Animal Collection',
@@ -59,7 +59,7 @@ export const home: collection[] = [
     },
 
     {
-        key: '3961f578-14ea-46aa-9b74-7f908fcd532b',
+        id: '3961f578-14ea-46aa-9b74-7f908fcd532b',
         // url:
         //     'https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ',
         title: 'Mechanical Collection',
@@ -78,7 +78,7 @@ export const home: collection[] = [
     },
 
     {
-        key: '37f92b19-2ea1-4742-b97b-81ed97e2e9c3',
+        id: '37f92b19-2ea1-4742-b97b-81ed97e2e9c3',
         // url:
         //     'https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c',
         title: 'Party Collection',
@@ -94,7 +94,7 @@ export const home: collection[] = [
         ],
     },
     {
-        key: '6dcdba12-f48c-46cf-b1f6-07e8d1c5ed2b',
+        id: '6dcdba12-f48c-46cf-b1f6-07e8d1c5ed2b',
         // url:
         //     'https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg',
         title: 'Second Nature Collection',
@@ -111,7 +111,7 @@ export const home: collection[] = [
     },
 
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs',
         title: 'Second Urban Collection',
@@ -128,7 +128,7 @@ export const home: collection[] = [
     },
 
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/1024/1920/1280.jpg?hmac=-PIpG7j_fRwN8Qtfnsc3M8-kC3yb0XYOBfVzlPSuVII',
         title: 'Second Animal Collection',
@@ -145,7 +145,7 @@ export const home: collection[] = [
     },
 
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ',
         title: 'Second Mechanical Collection',
@@ -162,7 +162,7 @@ export const home: collection[] = [
     },
 
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/158/4836/3224.jpg?hmac=Gu_3j3HxZgR74iw1sV0wcwlnSZSeCi7zDWLcjblOp_c',
         title: 'Second Party Collection',
@@ -178,7 +178,7 @@ export const home: collection[] = [
         ],
     },
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/1013/4256/2832.jpg?hmac=UmYgZfqY_sNtHdug0Gd73bHFyf1VvzFWzPXSr5VTnDA',
         title: 'Wedding Collection',
@@ -194,7 +194,7 @@ export const home: collection[] = [
         ],
     },
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/1023/3955/2094.jpg?hmac=AW_7mARdoPWuI7sr6SG8t-2fScyyewuNscwMWtQRawU',
         title: 'Sport Collection',
@@ -210,7 +210,7 @@ export const home: collection[] = [
         ],
     },
     {
-        key: uuid(),
+        id: uuid(),
         // url:
         //     'https://i.picsum.photos/id/375/5184/3456.jpg?hmac=3OUWWnSmq1CUXU7cmTnctSvhQYvyME_osftkbJynX04',
         title: 'People Collection',
@@ -229,7 +229,7 @@ export const home: collection[] = [
 
 export const natureImages: collection[] = [
     {
-        key: '017a317f-8285-4cfb-a4e7-668d85721b76',
+        id: '017a317f-8285-4cfb-a4e7-668d85721b76',
         title: 'Animal Collection',
         titleImage: 0,
         tagTitle: 'Nature',
@@ -307,7 +307,7 @@ export const natureImages: collection[] = [
     },
 
     {
-        key: 'b97bf8c2-6ab5-45e5-b363-dace717b8ed5',
+        id: 'b97bf8c2-6ab5-45e5-b363-dace717b8ed5',
         title: 'Landscape Collection',
         titleImage: 1,
         tagTitle: 'Nature',
@@ -337,7 +337,7 @@ export const natureImages: collection[] = [
     },
 
     {
-        key: '12352dd6-255c-4e38-9230-a96723bf9c5d',
+        id: '12352dd6-255c-4e38-9230-a96723bf9c5d',
         title: 'Romance Collection',
         tagTitle: 'Life',
         tagColour: '#7baab5',
@@ -360,7 +360,7 @@ export const natureImages: collection[] = [
     },
 
     {
-        key: 'ffdf5e29-408c-44e9-a453-78ba0adb91f5',
+        id: 'ffdf5e29-408c-44e9-a453-78ba0adb91f5',
         title: 'Extreme Sporting Collection',
         tagTitle: 'Life',
         tagColour: '#7baab5',
@@ -383,7 +383,7 @@ export const natureImages: collection[] = [
     },
 
     {
-        key: 'a2cb8bb1-0d7e-445d-b977-be97c616aed3',
+        id: 'a2cb8bb1-0d7e-445d-b977-be97c616aed3',
         title: 'Party Collection',
         tagTitle: 'Life',
         tagColour: '#7baab5',
@@ -402,7 +402,7 @@ export const natureImages: collection[] = [
 
 export const urbanImages: collection[] = [
     {
-        key: '20716a73-c26a-41b1-b309-93f219f14bd2',
+        id: '20716a73-c26a-41b1-b309-93f219f14bd2',
         titleImage: 4,
         title: 'Buildings Collection',
         tagTitle: 'Architecture',
@@ -450,7 +450,7 @@ export const urbanImages: collection[] = [
     },
 
     {
-        key: '7216f8b0-55eb-4a2c-949c-e46948ecb1d8',
+        id: '7216f8b0-55eb-4a2c-949c-e46948ecb1d8',
         titleImage: 0,
         title: 'Transport Collection',
         tagTitle: 'Cityscapes',
@@ -486,7 +486,7 @@ export const urbanImages: collection[] = [
     },
 
     {
-        key: 'af28d1d2-fcd7-4138-9090-a0e6ac2a38fe',
+        id: 'af28d1d2-fcd7-4138-9090-a0e6ac2a38fe',
         titleImage: 2,
         title: 'Historic Building Collection',
         tagTitle: 'Architecture',
@@ -516,7 +516,7 @@ export const urbanImages: collection[] = [
     },
 
     {
-        key: '5e5e0130-cd61-43b1-9275-0020dba39cc7',
+        id: '5e5e0130-cd61-43b1-9275-0020dba39cc7',
         titleImage: 5,
         title: 'Cityscapes Collection',
         tagTitle: 'Cityscapes',
@@ -592,14 +592,14 @@ export function findImageById(id: string) {
 export function findCollectionById(id: string) {
     for (var i = 0; i < natureImages.length; i++) {
         const collection = natureImages[i]
-        if (id === collection.key) return collection
+        if (id === collection.id) return collection
     }
     for (var k = 0; k < urbanImages.length; k++) {
         const collection = urbanImages[k]
-        if (id === collection.key) return collection
+        if (id === collection.id) return collection
     }
     for (var m = 0; m < home.length; m++) {
         const collection = home[m]
-        if (id === collection.key) return collection
+        if (id === collection.id) return collection
     }
 }

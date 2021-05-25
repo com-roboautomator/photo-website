@@ -32,8 +32,8 @@ class Home extends React.Component<HomeProps, HomeState> {
                 this.setState({
                     data: response,
                 })
-                //console.log(this.state.data)
-                return response
+                console.log(this.state.data)
+                //return response
             })
     }
 

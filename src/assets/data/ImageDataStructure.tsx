@@ -1,5 +1,5 @@
 export default interface collection {
-    key: string
+    id: string
     title: string
     index: number
 

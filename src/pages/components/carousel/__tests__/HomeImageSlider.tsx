@@ -6,7 +6,7 @@ import HomeImageSlider from '../HomeImageSlider'
 
 const coll: collection[] = [
     {
-        key: 'first-test-collection-key',
+        id: 'first-test-collection-key',
         title: 'first-test-collection-title',
         index: 0,
 
@@ -20,7 +20,7 @@ const coll: collection[] = [
         ],
     },
     {
-        key: 'second-test-collection-key',
+        id: 'second-test-collection-key',
         title: 'second-test-collection-title',
         index: 1,
 
@@ -34,7 +34,7 @@ const coll: collection[] = [
         ],
     },
     {
-        key: 'third-test-collection-key',
+        id: 'third-test-collection-key',
         title: 'third-test-collection-title',
         index: 2,
 

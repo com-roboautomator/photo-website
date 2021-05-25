@@ -7,13 +7,13 @@ import collection, {
 } from '../../../../assets/data/ImageDataStructure'
 
 const testCollectionWithoutImage: collection = {
-    key: 'test-collection-key',
+    id: 'test-collection-key',
     title: 'test-collection-title',
     index: 0,
 }
 
 const testCollectionWithImage: collection = {
-    key: 'test-collection-key',
+    id: 'test-collection-key',
     title: 'test-collection-title',
     images: [
         {
