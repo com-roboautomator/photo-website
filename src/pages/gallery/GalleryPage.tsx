@@ -3,8 +3,6 @@ import {createStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import slider from 'src/assets/data/ImageDataStructure'
-import {natureImages} from '../../assets/data/Images'
-import {urbanImages} from '../../assets/data/Images'
 import GalleryImageSlider from '../components/carousel/GalleryImageSlider'
 
 interface GalleryProps
@@ -35,16 +33,13 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
                 this.setState({
                     slider: response,
                 })
-                console.log(this.state.slider[0].collections)
             })
     }
 
     render() {
         if (this.state.slider.length === 0) {
-            console.log('returning')
             return <div />
         }
-        //console.log(`sliders: ${this.state.slider}`)
 
         var sliders = this.state.slider
         return (
@@ -58,29 +53,6 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
                         title={slider.title}
                     />
                 ))}
-
-                {/* <GalleryImageSlider
-                    height={460}
-                    data={this.state.slider[0].collection}
-                    titleColour={'#47742c'}
-                    title="Nature & Life"
-                /> */}
-                {/* <GalleryImageSlider
-                    height={460}
-                    data={urbanImages}
-                    titleColour={'gray'}
-                    title="CityScapes & Architecture"
-                /> */}
-                {/* <p>
-                    {imageId ? (
-                        <ImageViewer source={imageId} />
-                    ) : (
-                        ''
-                    )}
-                    {collectionId
-                        ? 'collection id: ' + collectionId
-                        : ''}
-                </p> */}
             </div>
         )
     }

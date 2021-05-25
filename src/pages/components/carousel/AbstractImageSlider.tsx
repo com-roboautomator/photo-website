@@ -1,7 +1,6 @@
 import {createStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import Underscore from 'underscore'
-
 import {collection} from '../../../assets/data/ImageDataStructure'
 
 export interface AbstractImageSliderProps extends WithStyles<typeof styles> {

@@ -6,6 +6,7 @@ import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {
     key?: string
+    index?: number
     selected: number
     height: number
     collection: collection

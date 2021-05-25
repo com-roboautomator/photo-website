@@ -1,7 +1,6 @@
 import {createStyles, WithStyles, withStyles} from '@material-ui/styles'
 import React from 'react'
 import HomeImageSlider from '../components/carousel/HomeImageSlider'
-import {home} from '../../assets/data/Images'
 import PageTitle from '../components/text/PageTitle'
 import {collection} from 'src/assets/data/ImageDataStructure'
 
@@ -55,7 +54,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                     />
                     {console.log(this.state.data)}
                     <div className={classes.wapper}>
-                        <HomeImageSlider height={270} data={this.state.data} />
+                        <HomeImageSlider height={300} data={this.state.data} />
                     </div>
                 </div>
             </main>
