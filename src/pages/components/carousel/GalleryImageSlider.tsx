@@ -4,22 +4,22 @@ import {
     AbstractImageSliderState,
 } from './AbstractImageSlider'
 import AbstractImageSlider from './AbstractImageSlider'
-import Collection from '../../../assets/data/ImageDataStructure'
+import {collection} from '../../../assets/data/ImageDataStructure'
 import ImageSliderTitle from './GalleryImageSliderTitle'
 import GalleryImageSliderButtonWrapper from './GalleryImageSliderButtonWrapper'
 import GalleryCollectionCard from '../card/GalleryCollectionCard'
 
-interface HomeImageSliderProps extends AbstractImageSliderProps {
+interface GalleryImageSliderProps extends AbstractImageSliderProps {
     titleColour?: string
     title?: string
 }
-interface HomeImageSliderState extends AbstractImageSliderState {}
+interface GalleryImageSliderState extends AbstractImageSliderState {}
 
-class ImageSlider extends AbstractImageSlider<
-    HomeImageSliderProps,
-    HomeImageSliderState
+class GalleryImageSlider extends AbstractImageSlider<
+    GalleryImageSliderProps,
+    GalleryImageSliderState
 > {
-    constructor(props: HomeImageSliderProps) {
+    constructor(props: GalleryImageSliderProps) {
         super(props)
         this.state = {
             selected: this.props.startingIndex ? this.props.startingIndex : 0,
@@ -64,7 +64,7 @@ class ImageSlider extends AbstractImageSlider<
                                     (properties.length + 1.3)
                                 }%)`,
                             }}>
-                            {properties.map((property: Collection) => (
+                            {properties.map((property: collection) => (
                                 <GalleryCollectionCard
                                     key={property.id}
                                     collection={property}
@@ -115,4 +115,4 @@ const styles = () =>
         },
     })
 
-export default withStyles(styles)(ImageSlider)
+export default withStyles(styles)(GalleryImageSlider)

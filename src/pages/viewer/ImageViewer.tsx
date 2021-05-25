@@ -2,7 +2,8 @@ import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import {findCollectionById} from '../../assets/data/Images'
-import collection, {
+import {
+    collection,
     image,
     placeholder,
 } from '../../assets/data/ImageDataStructure'

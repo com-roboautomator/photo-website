@@ -1,7 +1,7 @@
 import {createStyles, Link, withStyles, WithStyles} from '@material-ui/core'
 import React from 'react'
 import '../../../assets/css/OpenSans-Light.ttf'
-import collection, {placeholder} from '../../../assets/data/ImageDataStructure'
+import {collection, placeholder} from '../../../assets/data/ImageDataStructure'
 import GalleryCollectionCardText from './GalleryCollectionCardText'
 
 interface GalleryCollectionCardProps extends WithStyles<typeof styles> {

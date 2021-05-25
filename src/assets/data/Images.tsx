@@ -1,4 +1,4 @@
-import collection from './ImageDataStructure'
+import {collection} from './ImageDataStructure'
 import {v4 as uuid} from 'uuid'
 
 export const home: collection[] = [

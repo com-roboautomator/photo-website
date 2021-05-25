@@ -1,4 +1,11 @@
-export default interface collection {
+export default interface slider {
+    id: string
+    colour: string
+    title: string
+    collections: collection[]
+}
+
+export interface collection {
     id: string
     title: string
     index: number

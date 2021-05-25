@@ -3,7 +3,7 @@ import React from 'react'
 import HomeImageSlider from '../components/carousel/HomeImageSlider'
 import {home} from '../../assets/data/Images'
 import PageTitle from '../components/text/PageTitle'
-import collection from 'src/assets/data/ImageDataStructure'
+import {collection} from 'src/assets/data/ImageDataStructure'
 
 interface HomeProps extends WithStyles<typeof styles> {}
 

@@ -4,7 +4,7 @@ import {
     AbstractImageSliderState,
 } from './AbstractImageSlider'
 import AbstractImageSlider from './AbstractImageSlider'
-import Collection from '../../../assets/data/ImageDataStructure'
+import {collection} from '../../../assets/data/ImageDataStructure'
 import HomeImageSliderButtonWrapper from './HomeImageSliderButtonWrapper'
 import HomeCollectionCard from '../card/HomeCollectionCard'
 
@@ -55,7 +55,7 @@ class ImageSlider extends AbstractImageSlider<
                                     (property.index * 100) / properties.length
                                 }%)`,
                             }}>
-                            {properties.map((property: Collection) => (
+                            {properties.map((property: collection) => (
                                 <HomeCollectionCard
                                     key={property.id}
                                     collection={property}
