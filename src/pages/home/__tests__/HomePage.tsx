@@ -9,10 +9,4 @@ describe('Home Page', () => {
         expect(navigationBarRender).toMatchSnapshot()
     })
 
-    it('should render correctly', () => {
-        const {getByTestId} = render(<HomePage />)
-
-        expect(getByTestId('PageTitle-Container')).toBeInTheDocument()
-        expect(getByTestId('ImageSlider-Container')).toBeInTheDocument()
-    })
 })

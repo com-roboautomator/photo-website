@@ -11,7 +11,7 @@ exports[`Image Viewer should match snapshot 1`] = `
       className="ImageViewerTitle-collection_title-3"
       data-testid="Image-Viewer-Title-Collection-Title"
     >
-      
+      NULL TITLE
     </div>
     <div
       className="ImageViewerTitle-image_title-4"

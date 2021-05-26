@@ -2,7 +2,7 @@
 
 exports[`Gallery Image Slider should match snapshot 1`] = `
 <main
-  className="ImageSlider-container-1"
+  className="GalleryImageSlider-container-1"
 >
   <div
     className="ImageSliderTitle-container-5"
@@ -16,7 +16,7 @@ exports[`Gallery Image Slider should match snapshot 1`] = `
     
   </div>
   <div
-    className="ImageSlider-wrapper-2"
+    className="GalleryImageSlider-wrapper-2"
     data-testid="ImageSlider-Container"
   >
     <div
@@ -101,7 +101,7 @@ exports[`Gallery Image Slider should match snapshot 1`] = `
       </div>
     </div>
     <div
-      className="ImageSlider-card_slider-3"
+      className="GalleryImageSlider-card_slider-3"
       data-testid="ImageSlider-Card-Slider"
       onWheel={[Function]}
       style={
@@ -111,7 +111,7 @@ exports[`Gallery Image Slider should match snapshot 1`] = `
       }
     >
       <div
-        className="ImageSlider-card_slider_wrapper-4"
+        className="GalleryImageSlider-card_slider_wrapper-4"
         style={
           Object {
             "transform": "translateX(-0%)",
