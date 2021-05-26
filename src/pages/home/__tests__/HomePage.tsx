@@ -8,5 +8,4 @@ describe('Home Page', () => {
         const navigationBarRender = renderer.create(<HomePage />).toJSON()
         expect(navigationBarRender).toMatchSnapshot()
     })
-
 })
