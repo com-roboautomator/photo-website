@@ -4,6 +4,7 @@ import React from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import slider from 'src/assets/data/ImageDataStructure'
 import GalleryImageSlider from '../components/carousel/GalleryImageSlider'
+import {settings} from '../../assets/settings.json'
 
 interface GalleryProps
     extends WithStyles<typeof styles>,
@@ -22,7 +23,7 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/slider', {
+        fetch(settings.domain + settings.port + '/slider', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json',

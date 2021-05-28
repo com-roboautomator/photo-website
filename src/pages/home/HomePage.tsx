@@ -3,6 +3,7 @@ import React from 'react'
 import HomeImageSlider from '../components/carousel/HomeImageSlider'
 import PageTitle from '../components/text/PageTitle'
 import {collection} from 'src/assets/data/ImageDataStructure'
+import {settings} from '../../assets/settings.json'
 
 interface HomeProps extends WithStyles<typeof styles> {}
 
@@ -19,7 +20,8 @@ class Home extends React.Component<HomeProps, HomeState> {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/collection', {
+        console.log(settings.domain + settings.port + '/collection')
+        fetch(settings.domain + settings.port + '/collection', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json',

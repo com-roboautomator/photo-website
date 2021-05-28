@@ -10,6 +10,7 @@ import ImageViewerTitle from './ImageViewerTitle'
 import ImageViewerViewport from './ImageViewerViewport'
 import ImageViewerIndex from './ImageViewerIndex'
 import ImageViewerDescription from './ImageViewerDescription'
+import {settings} from '../../assets/settings.json'
 
 interface ImageViewerProps
     extends WithStyles<typeof styles>,
@@ -23,10 +24,10 @@ interface ImageViewerState {
 
 class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
     componentDidMount = () => {
-        var {collectionId} = this.props.match.params
-        console.log('http://localhost:8080/collection/' + collectionId)
         fetch(
-            'http://localhost:8080/collection/' +
+            settings.domain +
+                settings.port +
+                '/collection/' +
                 this.props.match.params.collectionId,
             {
                 method: 'get',
