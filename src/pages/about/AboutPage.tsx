@@ -13,7 +13,7 @@ class About extends React.Component<AboutProps> {
             <main>
                 <PageTitle
                     title="ABOUT"
-                    src="https://picsum.photos/id/10/1500/200"
+                    src="https://doneux-website.s3.eu-west-2.amazonaws.com/e44e11d6-553e-4683-af53-219c8d1ad0a3.jpg"
                 />
                 <div data-testid="About-Page" className={classes.container}>
                     <div className={classes.wrapper}>

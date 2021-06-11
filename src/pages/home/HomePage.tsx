@@ -48,7 +48,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                 <div data-testid={'Home-Page'} className={classes.container}>
                     <PageTitle
                         title="HOME"
-                        height={50}
+                        height={40}
                         signature={true}
                         src="https://doneux-website.s3.eu-west-2.amazonaws.com/448769db-e12c-424d-86ce-f4a4024d4174.jpg"
                     />

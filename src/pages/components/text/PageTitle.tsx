@@ -75,12 +75,14 @@ const styles = () =>
             width: '100%',
             height: '40vh',
             opacity: '100',
+            objectFit: 'cover',
             transition: 'opacity ease-in 200ms, filter ease-in 600ms',
         },
         image_loading: {
             width: '100%',
             height: '40vh',
             opacity: '0',
+            objectFit: 'cover',
             filter: 'blur(2px)',
         },
         title_loading: {
