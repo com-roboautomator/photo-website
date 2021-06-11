@@ -9,7 +9,7 @@ exports[`Gallery Image Slider should match snapshot 1`] = `
     data-testid="Image-Slider-Title"
     style={
       Object {
-        "borderColor": undefined,
+        "borderColor": "",
       }
     }
   >

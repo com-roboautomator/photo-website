@@ -1,26 +1,21 @@
 import '@testing-library/jest-dom/extend-expect'
 import {fireEvent, render} from '@testing-library/react'
+import { collection } from 'src/assets/data/ImageDataStructure'
 import ImageViewerViewport from '../ImageViewerViewport'
 
 describe('Image Viewer Viewport', () => {
+
+    const collection: collection = {id:'id', title:'test-title', index:0, images:[] }
+
     it('should render correctly', () => {
         const {getByTestId} = render(
             <ImageViewerViewport
-                targetImage="target-image-url"
-                collectionLength={1}
+                collection={collection}
                 index={0}
                 next={() => {}}
                 previous={() => {}}
             />
         )
-
-        const prevImg = getByTestId('Image-Viewer-Viewport-Previous-Image')
-        expect(prevImg).toBeInTheDocument()
-        expect(prevImg).toHaveAttribute('src', '')
-
-        const targImg = getByTestId('Image-Viewer-Viewport-Target-Image')
-        expect(targImg).toBeInTheDocument()
-        expect(targImg).toHaveAttribute('src', 'target-image-url')
 
         const lftArw = getByTestId('Arrow-Button-Left')
         expect(lftArw).toBeInTheDocument()
@@ -35,8 +30,7 @@ describe('Image Viewer Viewport', () => {
 
         const {getByTestId} = render(
             <ImageViewerViewport
-                targetImage="target-image-url"
-                collectionLength={1}
+                collection={collection}
                 index={0}
                 next={mockRightMethod()}
                 previous={mockLeftMethod()}

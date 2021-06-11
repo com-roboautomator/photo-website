@@ -41,7 +41,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                             ? `${this.props.height}vh`
                             : '20vh',
                     }}
-                    src={this.props.src}
+                    src={this.props.src ?? ''}
                     alt=""
                 />
                 <div

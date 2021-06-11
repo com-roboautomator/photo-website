@@ -50,7 +50,12 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
         this.state = {
             index: 0,
             previousIndex: 0,
-            collection: {id: 'null key', title: 'null title', index: 0},
+            collection: {
+                id: 'null key',
+                images: [],
+                title: 'null title',
+                index: 0,
+            },
         }
     }
 
@@ -73,9 +78,16 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
     }
 
     render() {
-        if (this.state.collection === null) {
+        if (
+            this.state.collection === null ||
+            this.state.collection.images.length === 0
+        ) {
             console.log('returning')
             return <div />
+        }
+
+        for (let x = 0; x < this.state.collection.images.length; x++) {
+            this.setState({index: x})
         }
 
         const collection = this.state.collection
@@ -102,13 +114,8 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
                     }
                 />
                 <ImageViewerViewport
-                    targetImage={
-                        images === undefined
-                            ? ''
-                            : images[this.state.index].url ?? ''
-                    }
-                    collectionLength={images?.length ?? 0}
                     index={this.state.index}
+                    collection={this.state.collection}
                     next={this.next}
                     previous={this.previous}
                 />
@@ -118,7 +125,7 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
                 />
                 <ImageViewerDescription
                     title={targetImage.title}
-                    text={targetImage.description}
+                    text={targetImage.description ?? ''}
                 />
             </div>
         )

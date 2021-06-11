@@ -6,20 +6,47 @@ interface ImageViewerDescriptionProps extends WithStyles<typeof styles> {
     text?: string
 }
 
-class ImageViewerDescription extends React.Component<ImageViewerDescriptionProps> {
+interface ImageViewerDescriptionState {
+    loaded: boolean
+}
+
+class ImageViewerDescription extends React.Component<
+    ImageViewerDescriptionProps,
+    ImageViewerDescriptionState
+> {
+    constructor(props: ImageViewerDescriptionProps) {
+        super(props)
+        this.state = {
+            loaded: true,
+        }
+    }
+
+    componentDidUpdate = () => {
+        //this.setState({loaded: false})
+    }
+
     render() {
         const classes = this.props.classes
         const props = this.props
+
         return (
             <div className={classes.container}>
                 <div
                     data-testid="Image-Viewer-Description-Title"
-                    className={classes.title}>
-                    {props.text === undefined ? '' : props.title}
+                    className={
+                        this.state.loaded ? classes.title : classes.preload
+                    }>
+                    {props.text === undefined ||
+                    props.text === null ||
+                    props.text.length === 0
+                        ? ''
+                        : props.title}
                 </div>
                 <div
                     data-testid="Image-Viewer-Description-Text"
-                    className={classes.text}>
+                    className={
+                        this.state.loaded ? classes.text : classes.preload
+                    }>
                     {props.text}
                 </div>
             </div>
@@ -30,15 +57,24 @@ class ImageViewerDescription extends React.Component<ImageViewerDescriptionProps
 const styles = () =>
     createStyles({
         container: {
-            width: '50vw',
+            width: '70vw',
             alignSelf: 'center',
         },
+        preload: {
+            opacity: '0%',
+            WebkitTransition: 'opacity 1s',
+        },
         title: {
-            fontFamily: 'Open-Sans-Bold',
+            fontFamily: 'Open-Sans-Regular',
+            opacity: '100%',
+            fontWeight: 'bold',
+            WebkitTransition: 'opacity 1s',
             textAlign: 'left',
         },
         text: {
             fontFamily: 'Open-Sans-Regular',
+            opacity: '100%',
+            WebkitTransition: 'opacity 1s',
             textAlign: 'left',
         },
     })

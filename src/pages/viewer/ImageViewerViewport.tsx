@@ -1,83 +1,58 @@
 import {createStyles, withStyles, WithStyles} from '@material-ui/styles'
 import React from 'react'
+import {collection, image} from 'src/assets/data/ImageDataStructure'
 import Arrow from '../components/carousel/Arrow'
 
 interface ImageViewerViewportProps extends WithStyles<typeof styles> {
-    targetImage: string
-    collectionLength: number
     index: number
+    collection: collection
     next: () => void
     previous: () => void
 }
 
-interface ImageViewerViewportState {
-    switch: Boolean
-    previousUrl: string
-}
-
-class ImageViewerViewport extends React.Component<
-    ImageViewerViewportProps,
-    ImageViewerViewportState
-> {
-    constructor(props: ImageViewerViewportProps) {
-        super(props)
-
-        this.state = {
-            switch: true,
-            previousUrl: '',
+class ImageViewerViewport extends React.Component<ImageViewerViewportProps> {
+    getIndex = (index: number) => {
+        if (index < 0) {
+            return 0
         }
-    }
-
-    next = () => {
-        const previous = this.props.targetImage
-        const change = !this.state.switch
-        this.setState({
-            switch: change,
-            previousUrl: previous,
-        })
-        this.props.next()
-    }
-
-    previous = () => {
-        const previous = this.props.targetImage
-        const change = !this.state.switch
-        this.setState({
-            switch: change,
-            previousUrl: previous,
-        })
-        this.props.previous()
+        if (index > this.props.collection.images.length) {
+            return this.props.collection.images.length
+        }
+        return index
     }
 
     render() {
         const props = this.props
-        const state = this.state
         const classes = this.props.classes
 
         return (
             <div className={classes.container}>
-                <img
-                    data-testid="Image-Viewer-Viewport-Previous-Image"
-                    className={state.switch ? classes.previous : classes.image}
-                    src={state.switch ? state.previousUrl : props.targetImage}
-                    alt=""
-                />
-                <img
-                    data-testid="Image-Viewer-Viewport-Target-Image"
-                    className={state.switch ? classes.image : classes.previous}
-                    src={state.switch ? props.targetImage : state.previousUrl}
-                    alt=""
-                />
+                <div className={classes.background} />
+                {this.props.collection.images.map((property: image) => (
+                    <img
+                        className={
+                            property.index === this.props.index
+                                ? classes.target
+                                : classes.hidden
+                        }
+                        src={property.url}
+                        alt=""
+                    />
+                ))}
+
                 <div
                     className={classes.button_wrapper}
                     id="Image-Viewer-Viewport-Button-Wrapper">
                     <Arrow
                         disabled={props.index <= 0}
-                        onClick={this.previous}
+                        onClick={this.props.previous}
                         orientation="Left"
                     />
                     <Arrow
-                        disabled={props.index >= props.collectionLength - 1}
-                        onClick={this.next}
+                        disabled={
+                            props.index >= props.collection.images.length - 1
+                        }
+                        onClick={this.props.next}
                         orientation="Right"
                     />
                 </div>
@@ -90,10 +65,10 @@ const styles = () =>
     createStyles({
         container: {
             alignSelf: 'center',
-            justifySelf: 'center',
+            justifySelf: 'flex-start',
 
             display: 'flex',
-            width: '70vw',
+            width: '80vw',
             height: '70vh',
 
             justifyContent: 'center',
@@ -101,24 +76,40 @@ const styles = () =>
         wrapper: {
             background: 'black',
         },
-        image: {
-            height: '70vh',
+        target: {
+            flex: 1,
+            maxWidth: '65vw',
+            maxHeight: '60vh',
             opacity: '100%',
             position: 'absolute',
-            WebkitTransition: 'opacity 1s',
+            transform: 'scale(1)',
+            alignSelf: 'center',
+            WebkitTransition: 'opacity 1s, transform 0.8s',
         },
-        previous: {
-            height: '70vh',
-            position: 'absolute',
+        hidden: {
+            flex: 1,
+            maxWidth: '65vw',
+            maxHeight: '60vh',
             opacity: '0%',
-            WebkitTransition: 'opacity 1s',
+            position: 'absolute',
+            transform: 'scale(0.9)',
+            alignSelf: 'center',
+            WebkitTransition: 'opacity 0.5s, transform 0.8s',
+        },
+        background: {
+            position: 'absolute',
+            alignSelf: 'center',
+            filter: 'blur(15px)',
+            opacity: '60%',
+            background: '#d3d3d3',
+            width: '70vw',
+            height: '65vh',
         },
         button_wrapper: {
             alignSelf: 'center',
-
             display: 'flex',
             justifyContent: 'space-between',
-            width: '50vw',
+            width: '80vw',
         },
     })
 

@@ -30,6 +30,10 @@ class ImageSlider extends AbstractImageSlider<
         const classes = this.props.classes
         const {properties, property} = this.state
 
+        for (let x = 0; x < properties.length; x++) {
+            properties[x].index = x
+        }
+
         return (
             <main className={classes.container}>
                 <div

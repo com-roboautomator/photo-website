@@ -31,8 +31,7 @@ const styles = () =>
     createStyles({
         container: {
             display: 'flex',
-            marginTop: '20px',
-            marginBottom: '20px',
+            marginTop: '40px',
 
             alignSelf: 'center',
             justifySelf: 'center',

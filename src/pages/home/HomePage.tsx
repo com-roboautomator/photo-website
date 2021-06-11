@@ -29,12 +29,10 @@ class Home extends React.Component<HomeProps, HomeState> {
         })
             .then((response) => response.json())
             .then((response) => {
-                //console.log(response)
                 this.setState({
                     data: response,
                 })
                 console.log(this.state.data)
-                //return response
             })
     }
 
@@ -50,9 +48,9 @@ class Home extends React.Component<HomeProps, HomeState> {
                 <div data-testid={'Home-Page'} className={classes.container}>
                     <PageTitle
                         title="HOME"
-                        height={45}
+                        height={50}
                         signature={true}
-                        src="https://picsum.photos/id/1040/1500/200"
+                        src="https://doneux-website.s3.eu-west-2.amazonaws.com/448769db-e12c-424d-86ce-f4a4024d4174.jpg"
                     />
                     {console.log(this.state.data)}
                     <div className={classes.wapper}>

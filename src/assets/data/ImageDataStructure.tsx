@@ -10,7 +10,7 @@ export interface collection {
     title: string
     index: number
 
-    images?: image[]
+    images: image[]
     titleImage?: number
 
     tagTitle?: string

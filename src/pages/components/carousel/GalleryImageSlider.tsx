@@ -41,8 +41,8 @@ class GalleryImageSlider extends AbstractImageSlider<
         return (
             <main className={classes.container}>
                 <ImageSliderTitle
-                    text={this.props.title}
-                    colour={this.props.titleColour}
+                    text={this.props.title ?? ''}
+                    colour={this.props.titleColour ?? ''}
                 />
                 <div
                     data-testid="ImageSlider-Container"
