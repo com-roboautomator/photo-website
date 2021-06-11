@@ -87,7 +87,7 @@ class ImageViewer extends React.Component<ImageViewerProps, ImageViewerState> {
         }
 
         for (let x = 0; x < this.state.collection.images.length; x++) {
-            this.setState({index: x})
+            this.state.collection.images[x].index = x
         }
 
         const collection = this.state.collection

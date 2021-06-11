@@ -13,10 +13,13 @@ class CollectionCardImage extends React.Component<CollectionCardImageProps> {
         return (
             <img
                 data-testid="Collection-Card-Image"
+                style={{
+                    objectFit: 'cover',
+                }}
                 className={classes.layout}
                 src={props.src}
                 alt=""
-                width="350"
+                width={350}
                 height={this.props.height ?? 200}
             />
         )
@@ -31,6 +34,7 @@ const styles = () =>
             borderTopRightRadius: '25px',
             display: 'flex',
             flex: 1,
+            //width: 350,
             flexDirection: 'row',
         },
     })

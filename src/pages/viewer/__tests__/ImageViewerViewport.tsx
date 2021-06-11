@@ -1,11 +1,15 @@
 import '@testing-library/jest-dom/extend-expect'
 import {fireEvent, render} from '@testing-library/react'
-import { collection } from 'src/assets/data/ImageDataStructure'
+import {collection} from 'src/assets/data/ImageDataStructure'
 import ImageViewerViewport from '../ImageViewerViewport'
 
 describe('Image Viewer Viewport', () => {
-
-    const collection: collection = {id:'id', title:'test-title', index:0, images:[] }
+    const collection: collection = {
+        id: 'id',
+        title: 'test-title',
+        index: 0,
+        images: [],
+    }
 
     it('should render correctly', () => {
         const {getByTestId} = render(

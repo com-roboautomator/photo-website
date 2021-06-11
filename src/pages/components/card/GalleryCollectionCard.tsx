@@ -33,14 +33,15 @@ class GalleryCollectionCard extends React.Component<GalleryCollectionCardProps> 
                             <img
                                 data-testid="Collection-Card-Image"
                                 src={imageURL}
+                                style={{objectFit: 'cover'}}
                                 alt=""
                                 width="350"
                                 height={this.props.height - 20}
                             />
                             <GalleryCollectionCardText
                                 text={this.props.collection.title}
-                                tagTitle={this.props.collection.tagTitle}
-                                colour={this.props.collection.tagColour}
+                                tagTitle={this.props.collection.tagTitle ?? ''}
+                                colour={this.props.collection.tagColour ?? ''}
                                 itemNumber={
                                     this.props.collection.images?.length
                                 }
