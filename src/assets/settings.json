@@ -1,6 +1,6 @@
 {
     "settings": {
-        "domain": "http://localhost:",
+        "domain": "http://ec2-18-169-153-147.eu-west-2.compute.amazonaws.com:",
         "port": "8080"
     }
-}
+}   
