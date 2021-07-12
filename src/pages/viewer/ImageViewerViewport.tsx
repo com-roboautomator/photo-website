@@ -84,7 +84,7 @@ const styles = () =>
             position: 'absolute',
             transform: 'scale(1)',
             alignSelf: 'center',
-            WebkitTransition: 'opacity 1s, transform 0.8s',
+            WebkitTransition: 'opacity 1s, transform 0.5s',
         },
         hidden: {
             flex: 1,
@@ -94,7 +94,7 @@ const styles = () =>
             position: 'absolute',
             transform: 'scale(0.9)',
             alignSelf: 'center',
-            WebkitTransition: 'opacity 0.5s, transform 0.8s',
+            WebkitTransition: 'opacity 0.5s, transform 0.5s',
         },
         background: {
             position: 'absolute',
