@@ -11,7 +11,7 @@ interface GalleryProps
         React.PropsWithChildren<RouteComponentProps<any, any, unknown>> {}
 
 interface GalleryState {
-    slider: slider[]    
+    slider: slider[]
 }
 
 class Gallery extends React.Component<GalleryProps, GalleryState> {

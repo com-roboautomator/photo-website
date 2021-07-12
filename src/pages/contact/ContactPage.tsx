@@ -17,9 +17,9 @@ class Contact extends React.Component<ContactProps & RouterProps, any> {
     constructor(props: ContactProps & RouterProps) {
         super(props)
         this.state = {
-            name: this.props.presetName,
-            address: this.props.presetAddress,
-            message: this.props.presetMessage,
+            name: this.props.presetName ?? '',
+            address: this.props.presetAddress ?? '',
+            message: this.props.presetMessage ?? '',
 
             nameError: '',
             addressError: '',
@@ -77,19 +77,28 @@ class Contact extends React.Component<ContactProps & RouterProps, any> {
 
     handleNameUpdate(inputName: string) {
         this.setState({
-            name: inputName ? inputName : this.state.name,
+            name:
+                inputName || inputName.length === 0
+                    ? inputName
+                    : this.state.name,
         })
     }
 
     handleAddressUpdate(inputAddress: string) {
         this.setState({
-            address: inputAddress ? inputAddress : this.state.address,
+            address:
+                inputAddress || inputAddress.length === 0
+                    ? inputAddress
+                    : this.state.address,
         })
     }
 
     handleMessageUpdate(inputMessage: string) {
         this.setState({
-            message: inputMessage ? inputMessage : this.state.inputMessage,
+            message:
+                inputMessage || inputMessage.length === 0
+                    ? inputMessage
+                    : this.state.inputMessage,
         })
     }
 
