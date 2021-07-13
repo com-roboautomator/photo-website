@@ -1,6 +1,6 @@
 import {withStyles, WithStyles, createStyles} from '@material-ui/styles'
 import React from 'react'
-import Signature from '../../../assets/images/Logo.png'
+import Signature from '../../../assets/images/logo-white.png'
 
 interface PageTitleProps extends WithStyles<typeof styles> {
     title: string
@@ -57,8 +57,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                     <img
                         data-testid="PageTitle-Signature"
                         src={this.props.signature ? Signature : ''}
-                        alt=""
-                        width="25%"></img>
+                        alt=""></img>
                 </div>
             </div>
         )

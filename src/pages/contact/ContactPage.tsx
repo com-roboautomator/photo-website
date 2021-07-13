@@ -33,7 +33,8 @@ class Contact extends React.Component<ContactProps & RouterProps, any> {
             <main data-testid="Contact-Page">
                 <PageTitle
                     title="CONTACT"
-                    src="https://doneux-website.s3.eu-west-2.amazonaws.com/fd1f733e-2cdf-46ec-b1eb-3e5e55a98a93.jpg"
+                    // src="https://doneux-website.s3.eu-west-2.amazonaws.com/fd1f733e-2cdf-46ec-b1eb-3e5e55a98a93.jpg"
+                    src="https://doneux-website.s3.eu-west-2.amazonaws.com/dba6cf0e-9c33-4955-baab-7f87ac91bf2b.jpg"
                 />
                 <div className={classes.container}>
                     <div className={classes.wrapper}>

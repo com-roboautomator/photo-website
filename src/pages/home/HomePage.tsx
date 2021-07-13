@@ -50,7 +50,8 @@ class Home extends React.Component<HomeProps, HomeState> {
                         title="HOME"
                         height={40}
                         signature={true}
-                        src="https://doneux-website.s3.eu-west-2.amazonaws.com/448769db-e12c-424d-86ce-f4a4024d4174.jpg"
+                        // src="https://doneux-website.s3.eu-west-2.amazonaws.com/448769db-e12c-424d-86ce-f4a4024d4174.jpg"
+                        src="https://doneux-website.s3.eu-west-2.amazonaws.com/fd1f733e-2cdf-46ec-b1eb-3e5e55a98a93.jpg"
                     />
                     {console.log(this.state.data)}
                     <div className={classes.wapper}>
