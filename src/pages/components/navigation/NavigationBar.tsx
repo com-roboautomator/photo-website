@@ -47,7 +47,7 @@ const styles = () =>
     createStyles({
         container: {
             zIndex: 99,
-            position: 'relative',
+            //position: 'relative',
             display: 'flex',
             flex: 1,
             flexDirection: 'row',
