@@ -21,7 +21,8 @@ class NavigationMenuLogo extends React.Component<LogoProps> {
 const styles = () =>
     createStyles({
         logo: {
-            paddingLeft: '70px',
+            paddingLeft: '5%',
+            width: '25vw',
         },
     })
 

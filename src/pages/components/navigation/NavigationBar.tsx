@@ -13,10 +13,14 @@ class NavigationBar extends React.Component<NavigationBarProps, any> {
     render() {
         const classes = this.props.classes
         const location = this.props.location.pathname
-
+        let conditionalLogo
+        if (window.innerWidth > 300) {
+            conditionalLogo = <Logo />
+        }
         return (
             <div className={classes.container} data-testid={'NavigationBar'}>
-                <Logo />
+                {conditionalLogo}
+
                 <div className={classes.items_container}>
                     <Button text="HOME" path="/" selected={location === '/'} />
                     <Button
@@ -47,14 +51,14 @@ const styles = () =>
     createStyles({
         container: {
             zIndex: 99,
-            //position: 'relative',
+            position: 'relative',
             display: 'flex',
             flex: 1,
             flexDirection: 'row',
             alignContent: 'center',
             justifyContent: 'space-between',
             boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.9)',
-            paddingRight: 80,
+            paddingRight: '8%',
         },
         items_container: {
             display: 'flex',

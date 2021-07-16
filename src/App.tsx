@@ -14,11 +14,31 @@ import ImageViewer from './pages/viewer/ImageViewer'
 interface AppProps extends WithStyles<typeof styles> {}
 
 class App extends React.Component<AppProps> {
+    getWindowDimensions = () => {
+        const {innerWidth: width, innerHeight: height} = window
+        return {
+            width,
+            height,
+        }
+    }
+
     render() {
         document.title = 'Sara Doneux Photography'
         const classes = this.props.classes
+
+        window.addEventListener('resize', () => {
+            this.forceUpdate()
+        })
         return (
-            <main className={classes.page_container}>
+            <main
+                className={classes.page_container}
+                style={{
+                    width:
+                        // this.getWindowDimensions().width < 1000
+                        //     ? 1000
+                        //     :
+                        this.getWindowDimensions().width,
+                }}>
                 <BrowserRouter>
                     <div className={classes.header}>
                         <Route
@@ -57,6 +77,7 @@ const styles = () =>
         page_container: {
             position: 'relative',
             minHeight: '100vh',
+            minWidth: '700px',
         },
         header: {},
         content_wrap: {

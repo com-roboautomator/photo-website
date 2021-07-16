@@ -56,6 +56,7 @@ class PageTitle extends React.Component<PageTitleProps, PageTitleState> {
                 <div className={classes.signature}>
                     <img
                         data-testid="PageTitle-Signature"
+                        width={window.innerWidth < 400 ? '250px' : '30%'}
                         src={this.props.signature ? Signature : ''}
                         alt=""></img>
                 </div>
@@ -101,9 +102,9 @@ const styles = () =>
             position: 'absolute',
             alignSelf: 'center',
             fontFamily: 'Open-Sans-Regular',
-            fontSize: '35px',
+            fontSize: '3vh',
             color: 'white',
-            marginLeft: '150px',
+            marginLeft: '5vw',
             marginTop: '40px',
             paddingLeft: '10px',
             borderLeft: '5px solid #7baab5',
